@@ -1,0 +1,12 @@
+---
+---
+
+@import "minima";
+
+img[src*="#thumbnail"] {
+   width:120px;
+   height:150px;
+}
+
+.post-title { font-size: 26px; letter-spacing: -1px; line-height: 2; }
+

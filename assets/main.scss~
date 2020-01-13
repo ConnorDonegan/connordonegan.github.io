@@ -1,0 +1,10 @@
+---
+---
+
+@import "minima";
+
+img[src*="#thumbnail"] {
+   width:120px;
+   height:150px;
+}
+

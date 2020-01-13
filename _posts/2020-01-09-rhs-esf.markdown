@@ -1,0 +1,10 @@
+---
+layout: post
+title: "Bayesian spatial filtering"
+---
+
+This paper proposes a Bayesian method for spatial regression using eigenvector spatial filtering (ESF) and Piironen and Vehtari’s (2017) regularized horseshoe (RHS) prior. ESF models are most often estimated using variable selection procedures such as stepwise selection, but in the absence of a Bayesian model averaging procedure variable selection methods cannot properly account for parameter uncertainty. Hierarchical shrinkage priors such as the RHS address the foregoing concerns in a computationally efficient manner by encoding prior information about spatial filters into an adaptive prior distribution which shrinks posterior estimates towards zero in the absence of a strong signal while only minimally regularizing coefficients of important eigenvectors.
+
+The paper also reports results from a large simulation study which compares the performance of the proposed Bayesian model (RHS-ESF) to alternative spatial models under a variety of spatial autocorrelation scenarios and model specifications. The RHS-ESF model performance matched that of the SAR model from which the data was generated. The study also highlights that reliable uncertainty estimates require greater attention to spatial autocorrelation in covariates than is commonly found in practice. A demonstration analysis of 2016 U.S. Presidential election results further evidences robustness of results to hyper-prior specifications as well as the advantages of estimating spatial models using the Stan probabilistic programming language.
+
+Connor Donegan. "Bayesian estimation of spatial filters with Moran's eigenvectors and hierarchical shrinkage priors."  <a href="{{ site.url}}/assets/Donegan_2020_bayesESF.pdf" download>PDF [pre-print]</a>
