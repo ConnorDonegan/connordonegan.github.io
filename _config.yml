@@ -18,20 +18,22 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-p-name: Contact
+author: Connor Donegan
 title:  Connor Donegan
 email: Connor.Donegan@UTDallas.edu
 description: >- # this means to ignore newlines until "baseurl:" 
         Spatial statistics, public health and inequality
 baseurl: #"https://connordonegan.github.io" # the subpath of your site, e.g. /blog
-url: #"https://connordonegan.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://connordonegan.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: 
-github_username: # ConnorDonegan
+github_username: 
 
 # Build settings
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
 # Exclude from processing.
 # The following items will not be processed, by default.
