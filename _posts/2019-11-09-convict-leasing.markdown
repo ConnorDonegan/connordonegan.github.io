@@ -11,4 +11,4 @@ While certain demographic groups (e.g. white women) were spared the indignities 
 
 In response to repeated attempts to abolish the system, officials aimed to recast the palpably barbaric institution as particularly suitable for the purpose of repressing the state’s increasingly non-agricultural black working class, dubbed the "criminal class."
 
-Connor Donegan. "The making of Florida's 'criminal class:' race, modernity and convict leasing program, 1877-1919." *Florida Historical Quarterly* 97.4 (2019), pp. 408-434. <a href="{{ site.url}}/assets/Donegan_2019_Florida.pdf" download>PDF [pre-print]</a>
+Donegan, Connor. 2019. "The making of Florida's 'criminal class:' race, modernity and convict leasing program, 1877-1919." *Florida Historical Quarterly* 97.4: pp. 408-434. <a href="https://osf.io/2wj7s" download>PDF [pre-print]</a>
