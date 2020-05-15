@@ -6,7 +6,7 @@ permalink: /research/
 
 <a href="{{ site.url }}/2020/01/09/rhs-esf">**Bayesian spatial filtering**</a>
 
-This project proposes and extensively evaluates a Bayesian method for spatial regression using eigenvector spatial filtering (ESF) and Piironen and Vehtari’s (2017) regularized horseshoe (RHS) prior. A demonstration analysis of 2016 U.S. Presidential election results in Ohio further highlights the advantages of estimating spatial models using the Stan probabilistic programming language. 
+This project proposes and evaluates a Bayesian method for spatial regression using eigenvector spatial filtering (ESF) and Piironen and Vehtari’s (2017) regularized horseshoe (RHS) prior. A demonstration analysis of 2016 U.S. Presidential election results in Ohio further highlights the advantages of estimating spatial models using the Stan probabilistic programming language. 
 
 <a href="{{ site.url }}/2019/11/09/convict-leasing">**Florida's convict leasing program, 1877-1919**</a>
 
