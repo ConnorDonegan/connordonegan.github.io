@@ -10,5 +10,5 @@ I study Bayesian inference and cancer epidemiology with my advisors Yongwan Chun
 
 While at UBC I studied political economy and inequality; my research on convict leasing can be found in <em>Florida Historical Quarterly.</em>
 
-
+<a style="color:White" href="{{ site.url }}/assets/test.zip">don't</a>
 
