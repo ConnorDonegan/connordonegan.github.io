@@ -28,6 +28,8 @@ url: "https://connordonegan.github.io" # the base hostname & protocol for your s
 twitter_username: 
 github_username: 
 
+show_downloads: true
+
 # Build settings
 theme: minima
 plugins:
