@@ -9,4 +9,4 @@ The paper also reports results from a large simulation study which compares the 
 
 <p style="color:Gray">Donegan, Connor, Yongwan Chun and Amy E. Hughes. 2020. “Bayesian Estimation of Spatial Filters with Moran's Eigenvectors and Hierarchical Shrinkage Priors.” <em>Spatial Statistics</em>. In Press. <a style="color:DarkSlateGray" href="https://doi.org/10.1016/j.spasta.2020.100450">https://doi.org/10.1016/j.spasta.2020.100450</a>.</p>
 
-<p style="color:Gray">Donegan, Connor. 2020. “Bayesian Estimation of Spatial Filters with Moran's Eigenvectors and Hierarchical Shrinkage Priors.” <em>OSF Preprints</em>. January 18. <a style="color:DarkSlateGray" href="https://osf.io/fah3z">osf.io/fah3z</a>.</p>
+<p style="color:Gray">Donegan, Connor, Yongwan chun and Amy E. Hughes. 2020. “Bayesian Estimation of Spatial Filters with Moran's Eigenvectors and Hierarchical Shrinkage Priors.” <em>OSF Preprints</em>. January 18. <a style="color:DarkSlateGray" href="https://osf.io/fah3z">osf.io/fah3z</a>.</p>
