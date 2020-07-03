@@ -1,0 +1,10 @@
+---
+layout: post
+title: "geostan: Bayesian Spatial Analysis with Stan"
+---
+
+The **geostan** package provides a user-friendly interface to Bayesian models for areal data including
+<a style="color:DarkSlateGray" href="{{ site.url }}/2020/01/09/rhs-esf">spatial filtering</a> and auto-regressive models.
+It provides an interface between R spatial analysis packages and Bayesian spatial models fit using the Stan programming language. It is designed for accessibility and promotion of sound spatial analysis workflows. The package is still under development and will be released to CRAN later this year. You can see a demonstration and find installation instructions for the development version on the project's <a style="color:DarkSlateGray" href="https://github.com/ConnorDonegan/geostan">github repository</a>.
+
+<p style="color:Gray">Donegan, Connor. 2020. “geostan: Bayesian Spatial Analysis with Stan.” R package version 0.0.1. <a style="color:DarkSlateGray" href="https://github.com/ConnorDonegan/geostan">https://github.com/ConnorDonegan/geostan</a> </p>

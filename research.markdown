@@ -4,6 +4,10 @@ title: Research
 permalink: /research/
 ---
 
+<a style="color:Black" href="{{ site.url }}/2020/07/01/geostan">**geostan R package: Bayesian Spatial Analysis with Stan**</a>
+
+*geostan* is a user-friendly R package for Bayesian spatial analysis. It provides an interface between R spatial analysis packages and Bayesian spatial models fit using the Stan programming language.
+
 <a style="color:Black" href="{{ site.url }}/2020/01/09/rhs-esf">**Bayesian spatial filtering**</a>
 
 This project proposes and evaluates a Bayesian method for spatial regression using eigenvector spatial filtering (ESF) and Piironen and Vehtari’s (2017) regularized horseshoe (RHS) prior. A demonstration analysis of 2016 U.S. Presidential election results in Ohio further highlights the advantages of estimating spatial models using the Stan probabilistic programming language. 
