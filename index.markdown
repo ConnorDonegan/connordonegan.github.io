@@ -9,12 +9,12 @@ layout: page
 
 **Current affiliations**
 
-Doctoral student (2019- )<br/>
-
-<p>Geospatial Information Sciences<br/>
+<p>Doctoral student (2019- )<br/>	
+Geospatial Information Sciences<br/>
 University of Texas at Dallas<br/></p>
 
-<p>Population and Data Sciences<br/>
+<p>Research Assistant (2019-)<br/>
+Population and Data Sciences<br/>
 University of Texas Southwestern Medical Center<br/></p>
 
 **Previous**
