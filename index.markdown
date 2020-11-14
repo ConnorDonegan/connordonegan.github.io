@@ -5,8 +5,6 @@
 layout: page
 ---
 
-![me]({{ site.url }}/assets/img/headshot.jpg#thumbnail)
-
 **Current affiliations**
 
 <p>Doctoral student (2019- )<br/>	

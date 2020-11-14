@@ -4,18 +4,12 @@ title: Research
 permalink: /research/
 ---
 
-<a style="color:Black" href="{{ site.url }}/2020/07/01/geostan">**geostan R package: Bayesian Spatial Analysis with Stan**</a>
+<p style="color:Gray">Donegan, Connor. 2020. “geostan: Bayesian Spatial Analysis.” R package version 0.0.1. <a style="color:DarkSlateGray" href="https://github.com/ConnorDonegan/geostan">https://github.com/ConnorDonegan/geostan</a> </p>
 
-*geostan* is a user-friendly R package for Bayesian spatial analysis. It provides an interface between R spatial analysis packages and Bayesian spatial models fit using the Stan programming language.
+<p style="color:Gray">Donegan, Connor, Yongwan chun and Amy E. Hughes. 2020. “Bayesian Estimation of Spatial Filters with Moran's Eigenvectors and Hierarchical Shrinkage Priors.” <em>OSF Preprints</em>. January 18. <a style="color:DarkSlateGray" href="https://osf.io/fah3z">osf.io/fah3z</a>.</p>
 
-<a style="color:Black" href="{{ site.url }}/2020/01/09/rhs-esf">**Bayesian spatial filtering**</a>
 
-This project proposes and evaluates a Bayesian method for spatial regression using eigenvector spatial filtering (ESF) and Piironen and Vehtari’s (2017) regularized horseshoe (RHS) prior. A demonstration analysis of 2016 U.S. Presidential election results in Ohio further highlights the advantages of estimating spatial models using the Stan probabilistic programming language. 
+<p style="color:Gray">Donegan, Connor. 2019. "The making of Florida's 'criminal class:' race, modernity and convict leasing program, 1877-1919." <em>Florida Historical Quarterly</em> 97.4: pp. 408-434. <a style="color:DarkSlateGray" href="https://osf.io/2wj7s" download>PDF [pre-print]</a></p>
 
-<a style="color:Black" href="{{ site.url }}/2019/11/09/convict-leasing">**Florida's convict leasing program, 1877-1919**</a>
+<p style="color:Gray">Leonard, T., Hughes, A. E., Donegan, C., Santillan, A., &amp; Pruitt, S. L. (2018). Overlapping geographic clusters of food security and health: Where do social determinants and health outcomes converge in the U.S? <em>SSM - Population Health</em>, 5, 160-170. <a style="color:DarkSlateGray" href="https://doi.org/10.1016/j.ssmph.2018.06.006">https://doi.org/10.1016/j.ssmph.2018.06.006</a></p>
 
-Under the State of Florida’s convict leasing program (1877-1919) over 10,000 Floridians and visitors served sentences of hard labor at the pain of the lash. This project draws on over four decades of reports on the prison system by the Florida Department of Agriculture, including geographic sentencing data, data on prisoner characteristics, minutes from the Board of Pardons and additional materials held in the Convict Lease Subject Files in the Florida State Archives.
-
-<a style="color:Black" href="{{ site.url }}/2018/01/01/food-insecurity">**Social determinants of health and food insecurity**</a>
-
-We identified overlapping geographic clusters of food insecurity and health across U.S. counties to identify potential shared mechanisms for geographic disparities in health and food insecurity. Generally consistent patterns in spatial overlaps between food security and health indicate potential for shared causal mechanisms. Identified regions and county-level characteristics associated with being located inside of overlapping clusters may be used in future place-based intervention and policy.
