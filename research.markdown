@@ -6,7 +6,7 @@ permalink: /research/
 
 <p style="color:Gray">Donegan, Connor. 2020. “geostan: Bayesian Spatial Analysis.” R package version 0.0.1. <a style="color:DarkSlateGray" href="https://github.com/ConnorDonegan/geostan">https://github.com/ConnorDonegan/geostan</a> </p>
 
-<p style="color:Gray">Donegan, Connor, Yongwan chun and Amy E. Hughes. 2020. “Bayesian Estimation of Spatial Filters with Moran's Eigenvectors and Hierarchical Shrinkage Priors.” <em>OSF Preprints</em>. January 18. <a style="color:DarkSlateGray" href="https://osf.io/fah3z">osf.io/fah3z</a>.</p>
+<p style="color:Gray">Donegan, Connor, Yongwan chun and Amy E. Hughes. 2020. “Bayesian Estimation of Spatial Filters with Moran's Eigenvectors and Hierarchical Shrinkage Priors.” <em>Spatial Statistics</em> 38: 100450. <a style="color:DarkSlateGray" href="https://osf.io/fah3z">osf.io/fah3z</a>.</p>
 
 
 <p style="color:Gray">Donegan, Connor. 2019. "The making of Florida's 'criminal class:' race, modernity and convict leasing program, 1877-1919." <em>Florida Historical Quarterly</em> 97.4: pp. 408-434. <a style="color:DarkSlateGray" href="https://osf.io/2wj7s" download>PDF [pre-print]</a></p>
