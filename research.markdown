@@ -4,7 +4,7 @@ title: Research
 permalink: /research/
 ---
 
-<p style="color:Gray">Donegan, Connor. 2020. “geostan: Bayesian Spatial Analysis.” R package version 0.0.1. <a style="color:DarkSlateGray" href="https://github.com/ConnorDonegan/geostan">https://github.com/ConnorDonegan/geostan</a> </p>
+<p style="color:Gray">Donegan, Connor. 2020. “geostan: Bayesian Spatial Analysis.” R package version 0.0.1. <a style="color:DarkSlateGray" href="{{ site.baseurl }}/geostan">connordonegan.github.io/geostan</a> </p>
 
 <p style="color:Gray">Donegan, Connor, Yongwan chun and Amy E. Hughes. 2020. “Bayesian Estimation of Spatial Filters with Moran's Eigenvectors and Hierarchical Shrinkage Priors.” <em>Spatial Statistics</em> 38: 100450. <a style="color:DarkSlateGray" href="https://osf.io/fah3z">osf.io/fah3z</a>.</p>
 
