@@ -11,7 +11,7 @@ layout: page
 Geospatial Information Sciences<br/>
 University of Texas at Dallas<br/></p>
 
-<p>Research Assistant (2019-)<br/>
+<p>Research assistant (2019-)<br/>
 Population and Data Sciences<br/>
 University of Texas Southwestern Medical Center<br/></p>
 
