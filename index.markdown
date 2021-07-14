@@ -7,11 +7,11 @@ layout: page
 
 **Current affiliations**
 
-<p>Doctoral student (2019- )<br/>	
+<p>Doctoral Candidate<br/>	
 Geospatial Information Sciences<br/>
 University of Texas at Dallas<br/></p>
 
-<p>Research assistant (2019-)<br/>
+<p>Research Assistant<br/>
 Population and Data Sciences<br/>
 University of Texas Southwestern Medical Center<br/></p>
 
