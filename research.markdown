@@ -4,7 +4,7 @@ title: Research
 permalink: /research/
 ---
 
-**Publications**
+**Papers**
 
 <p style="color:Gray">Donegan, Connor. 2021. "Spatial conditional autoregressive models in Stan." <em>OSF Preprints</em>. DOI: <a style="color:DarkSlateGray" href="https://osf.io/3ey65/">10.31219/osf.io/3ey65</a> Supplementary material: <a style="color:DarkSlateGray" href="https://osf.io/ewxut/">https://osf.io/ewxut/</a>.</p>
 
