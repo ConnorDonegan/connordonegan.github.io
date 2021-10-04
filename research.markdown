@@ -18,7 +18,8 @@ permalink: /research/
 
 **Development**
 
+<p style="color:Gray">Donegan, Connor. (2021). “geostan: Bayesian Spatial Analysis.” R package version 0.1.0. <a style="color:DarkSlateGray" href="{{ site.baseurl }}/geostan/">https://connordonegan.github.io/geostan/</a> </p>
+
 <p style="color:Gray">Donegan, Connor. 2021. "Flexible functions for ICAR, BYM, and BYM2 models in Stan” Code repository. <a style="color:DarkSlateGray" href="https://github.com/ConnorDonegan/Stan-IAR">https://github.com/ConnorDonegan/Stan-IAR</a> </p>
 
-<p style="color:Gray">Donegan, Connor. Forthcoming. “geostan: Bayesian Spatial Analysis.” R package version 0.0.1. [Under development] <a style="color:DarkSlateGray" href="{{ site.baseurl }}/geostan">connordonegan.github.io/geostan</a> </p>
 
