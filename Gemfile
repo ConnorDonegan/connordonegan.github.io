@@ -34,11 +34,17 @@ gem "wdm", "~> 0.1.1", :install_if => Gem.win_platform?
 
 ## dependabot alerts:
 
+# Upgrade rexml to version 3.25 or later
+gem "rexml", ">= 3.2.5"
+
+# Upgrade addressable to version 2.8.0 or higher
+gem "addressable", ">= 2.8.0"
+
 # Upgrade activesupport to version 6.0.3.1 or later. For example:
 gem "activesupport", ">= 6.0.3.1"
 
 # Upgrade nokogiri to version 1.11.0 or later. For example:
-gem "nokogiri", ">= 1.11.0"
+gem "nokogiri", ">= 1.11.4"
 
-# Upgrade kramdown to version 2.3.0 or later. For example:
+# Upgrade kramdown to version 2.3.0 or later: conflicts with github-pages. For example:
 #gem "kramdown", ">= 2.3.0"
