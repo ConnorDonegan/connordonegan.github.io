@@ -10,7 +10,7 @@ permalink: /research/
 
 <p style="color:Gray">Donegan, Connor, Yongwan Chun and Daniel A. Griffith (2021). "Modeling community health with areal data: Bayesian inference with survey standard errors and spatial structure" <em>International Journal of Environmental Research and Public Health</em> 18, no. 13: 6856. DOI: <a style="color:DarkSlateGray" href="https://doi.org/10.3390/ijerph18136856">10.3390/ijerph18136856</a> Supplementary material: <a style="color:DarkSlateGray" href="https://github.com/ConnorDonegan/survey-HBM">https://github.com/ConnorDonegan/survey-HBM</a>.</p>
 
-<p style="color:Gray">Donegan, Connor, Yongwan chun and Amy E. Hughes (2020). “Bayesian estimation of spatial filters with Moran's eigenvectors and hierarchical shrinkage priors.” <em>Spatial Statistics</em> 38: 100450. DOI: <a style="color:DarkSlateGray" href="https://doi.org/10.1016/j.spasta.2020.100450">10.1016/j.spasta.2020.100450</a> DOI (pre-print): <a style="color:DarkSlateGray" href="https://osf.io/fah3z">https://osf.io/fah3z/</a> Supplementary material: <a style="color:DarkSlateGray" href="https://osf.io/ewz9b/">https://osf.io/ewz9b/</a>.</p>
+<p style="color:Gray">Donegan, Connor, Yongwan Chun and Amy E. Hughes (2020). “Bayesian estimation of spatial filters with Moran's eigenvectors and hierarchical shrinkage priors.” <em>Spatial Statistics</em> 38: 100450. DOI: <a style="color:DarkSlateGray" href="https://doi.org/10.1016/j.spasta.2020.100450">10.1016/j.spasta.2020.100450</a> DOI (pre-print): <a style="color:DarkSlateGray" href="https://osf.io/fah3z">https://osf.io/fah3z/</a> Supplementary material: <a style="color:DarkSlateGray" href="https://osf.io/ewz9b/">https://osf.io/ewz9b/</a>.</p>
 
 <p style="color:Gray">Donegan, Connor (2019). "The making of Florida's 'criminal class:' race, modernity and convict leasing program, 1877-1919." <em>Florida Historical Quarterly</em> 97.4: pp. 408-434. DOI (pre-print): <a style="color:DarkSlateGray" href="https://osf.io/2wj7s" download>https://osf.io/2wj7s</a> Supplementary material: <a style="color:DarkSlateGray" href="https://osf.io/mwj2n/" download>https://osf.io/mwj2n/</a>.</p>
 
@@ -18,8 +18,16 @@ permalink: /research/
 
 **Development**
 
-<p style="color:Gray">Donegan, Connor (2021). “geostan: Bayesian Spatial Analysis.” R package version 0.1.0. <a style="color:DarkSlateGray" href="{{ site.baseurl }}/geostan/">https://connordonegan.github.io/geostan/</a> </p>
+<img src="/assets/surveil-logo.png" align="left" width="120" /> <br />
+<p style="color:Gray">Donegan, Connor (2021). “surveil: Public Health Surveillance.” R package version 0.1.0. <a style="color:DarkSlateGray" href="{{ site.baseurl }}/surveil/">https://connordonegan.github.io/surveil/</a> </p> 
 
-<p style="color:Gray">Donegan, Connor (2021). "Flexible functions for ICAR, BYM, and BYM2 models in Stan” Code repository. <a style="color:DarkSlateGray" href="https://github.com/ConnorDonegan/Stan-IAR">https://github.com/ConnorDonegan/Stan-IAR</a> </p>
+ <br />
+ 
+<img src="/assets/geostan-logo.png" align="left" width="120" /> <br />
+<p style="color:Gray">Donegan, Connor (2021). “geostan: Bayesian Spatial Analysis.” R package version 0.1.1. <a style="color:DarkSlateGray" href="{{ site.baseurl }}/geostan/">https://connordonegan.github.io/geostan/</a> </p>
+
+ <br />
+
+<p style="color:Gray">Donegan, Connor and Mitzi Morris (2021). "Flexible functions for ICAR, BYM, and BYM2 models in Stan.” Code repository. <a style="color:DarkSlateGray" href="https://github.com/ConnorDonegan/Stan-IAR">https://github.com/ConnorDonegan/Stan-IAR</a> </p>
 
 
