@@ -9,7 +9,7 @@ layout: page
 
 <p>Doctoral Candidate<br/>	
 Geospatial Information Sciences<br/>
-University of Texas at Dallas<br/></p>
+The University of Texas at Dallas<br/></p>
 
 <p>Research Assistant<br/>
 Population and Data Sciences<br/>
