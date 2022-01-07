@@ -5,7 +5,7 @@
 layout: page
 ---
 
-**Current affiliations**
+**Current**
 
 <p>Doctoral Candidate<br/>	
 Geospatial Information Sciences<br/>
