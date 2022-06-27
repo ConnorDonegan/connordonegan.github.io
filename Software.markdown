@@ -9,7 +9,7 @@ permalink: /software/
 <img src="/assets/surveil-logo.png" align="left" width="100" /> <br />
 <p style="color:Gray">Donegan, Connor (2021). “surveil: Public Health Surveillance.” R package version 0.1.0. <a style="color:DarkSlateGray" href="{{ site.baseurl }}/surveil/">https://connordonegan.github.io/surveil/</a> </p> 
 
-<p> The surveil R package provides time series models for routine public health surveillance tasks: model time trends in mortality or disease incidence rates to make inferences about levels of risk, cumulative and period percent change, age-standardized rates, and health inequalities. This software provides an accessible alternative to joinpoint regression, avoids piecewise linearity constraints, and provides users the flexibility to analyze custom quantities of interest with Markov chain Monte Carlo methods. Basic usage requires introductory-level R programming skills.</p>
+<p> The surveil R package provides time series models for routine public health surveillance tasks: model time trends in mortality or disease incidence rates to make inferences about levels of risk, cumulative and period percent change, age-standardized rates, and health inequalities. This software provides an accessible alternative to joinpoint regression. Basic usage requires introductory-level R programming skills.</p>
 
 <img src="/assets/geostan-logo.png" align="left" width="100" /> <br />
 <p style="color:Gray">Donegan, Connor (2021). “geostan: Bayesian Spatial Analysis.” R package version 0.2.0. <a style="color:DarkSlateGray" href="{{ site.baseurl }}/geostan/">https://connordonegan.github.io/geostan/</a> </p>
