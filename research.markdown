@@ -6,7 +6,7 @@ permalink: /research/
 
 **Papers**
 
-<p style="color:Gray">Donegan, Connor (2021). "Spatial conditional autoregressive models in Stan." <em>OSF Preprints</em>. DOI: <a style="color:DarkSlateGray" href="https://osf.io/3ey65/">10.31219/osf.io/3ey65</a> Supplementary material: <a style="color:DarkSlateGray" href="https://osf.io/ewxut/">https://osf.io/ewxut/</a>.</p>
+<p style="color:Gray">Donegan, Connor (2021). "Building spatial conditional autoregressive (CAR) models in the Stan programming language." <em>OSF Preprints</em>. DOI: <a style="color:DarkSlateGray" href="https://osf.io/3ey65/">10.31219/osf.io/3ey65</a> Supplementary material: <a style="color:DarkSlateGray" href="https://osf.io/ewxut/">https://osf.io/ewxut/</a>.</p>
 
 <p style="color:Gray">Donegan, Connor, Yongwan Chun and Daniel A. Griffith (2021). "Modeling community health with areal data: Bayesian inference with survey standard errors and spatial structure" <em>International Journal of Environmental Research and Public Health</em> 18, no. 13: 6856. DOI: <a style="color:DarkSlateGray" href="https://doi.org/10.3390/ijerph18136856">10.3390/ijerph18136856</a> Supplementary material: <a style="color:DarkSlateGray" href="https://github.com/ConnorDonegan/survey-HBM">https://github.com/ConnorDonegan/survey-HBM</a>.</p>
 
