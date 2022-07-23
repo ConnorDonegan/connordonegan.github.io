@@ -4,7 +4,7 @@ title: Research
 permalink: /research/
 ---
 
-<p style="color:Gray">Donegan, Connor, Amy E Hughes and Simon J Craddock Lee (In press). "Time series models for public health surveillance: Colorectal cancer prevention priorities and racial-ethnic inequalities in urban Texas, 1999-2018." <em>JMIR Public Health & Surveillance.</em></p>
+<p style="color:Gray">Donegan, Connor, Amy E Hughes and Simon J Craddock Lee (In press). "Colorectal Cancer Incidence, Inequality, and Prevention Priorities in Urban Texas: Surveillance Study with the surveil software package." <em>JMIR Public Health & Surveillance.</em></p>
 
 <p style="color:Gray">Donegan, Connor (2021). "Building spatial conditional autoregressive (CAR) models in the Stan programming language." <em>OSF Preprints</em>. DOI: <a style="color:DarkSlateGray" href="https://osf.io/3ey65/">10.31219/osf.io/3ey65</a> Supplementary material: <a style="color:DarkSlateGray" href="https://osf.io/ewxut/">https://osf.io/ewxut/</a>.</p>
 

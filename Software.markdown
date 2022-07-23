@@ -7,6 +7,7 @@ permalink: /software/
 **R packages**
 
 <img src="/assets/surveil-logo.png" align="left" width="100" /> <br />
+
 <p style="color:Gray">Donegan, Connor (2021). “surveil: Public health surveillance.” R package version 0.1.0. <a style="color:DarkSlateGray" href="{{ site.baseurl }}/surveil/">https://connordonegan.github.io/surveil/</a> </p> 
 
 <p> The surveil R package provides time series models for routine public health surveillance tasks: model time trends in mortality or disease incidence rates to make inferences about levels of risk, cumulative and period percent change, age-standardized rates, and health inequalities. This software provides an accessible alternative to joinpoint regression. Basic usage requires introductory-level R programming skills.</p>
