@@ -5,14 +5,14 @@
 layout: page
 ---
 
-  <div id="left" style="float:left; width:40%; color:Gray;">
+  <div id="left" style="float:left; width:45%; color:Gray;">
 
 <p>Doctoral Candidate<br/>	
 Geospatial Information Sciences<br/>
 The University of Texas at Dallas<br/></p>
 
 <p>Research Assistant<br/>
-Population and Data Sciences<br/>
+Peter O’Donnell Jr. School of Public Health<br/>
 UT Southwestern Medical Center<br/></p>
 
 <p>M.A. Geography (2013)<br/>
@@ -23,7 +23,7 @@ University of Minnesota
               
 </div>
 
-<div id="right" style="float:right; width:60%;">
+<div id="right" style="float:right; width:55%;">
   
 <p>My current research areas include Bayesian modeling for public health, spatial statistics, and health inequality. </p>
 
