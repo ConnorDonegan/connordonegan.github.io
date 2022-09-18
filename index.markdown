@@ -27,7 +27,7 @@ University of Minnesota
   
 <p>My current research areas include Bayesian modeling for public health, spatial statistics, and health inequality. </p>
 
-<p>My dissertation research includes developing methods and open-source software for population health surveillance research, applied research on colorectal cancer prevention in Texas, and exploring the methodological framework of plausible reasoning, as developed by the likes of Harold Jeffreys and George Po&#769;lya.
+<p>My dissertation research includes developing methods and open-source software for population health surveillance research, a case study on colorectal cancer prevention in Texas, and engagement with the methodological framework of plausible reasoning as developed by the likes of Harold Jeffreys and George Po&#769;lya.
 
  </p>
 
