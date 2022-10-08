@@ -31,7 +31,7 @@ University of Minnesota
 
  </p>
 
-<p> At UBC, my research was focused on the political economy of labor and race. My paper in <i>Florida Historical Quarterly</i> examines the state's convict leasing program (1877-1919), under which the state prison population was leased to private industry as an unpaid labor force. The paper discusses its rapid expansion in tandem with the lumber industry, its connection to debt peonage, the role of physicians in managing and defending the system, and its eventual demise.
+<p> At UBC, my research was focused on the political economy of labor and race. My paper in <i>Florida Historical Quarterly</i> examines the state's convict leasing program (1877-1919), under which the state prison population was leased to private industry as a bound labor force. The paper discusses its rapid expansion in tandem with the lumber industry, its connection to debt peonage, the role of physicians in managing and defending the system, and its eventual demise.
 
 </p>
 
