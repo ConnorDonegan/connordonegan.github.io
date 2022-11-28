@@ -31,7 +31,7 @@ University of Minnesota
 </p>
 
 <p>
-My ongoing dissertation research is structured by an engagement with the methodological framework of plausible reasoning, as developed by the likes of Harold Jeffreys and George Po&#769;lya. Through a pair of case studies---one in spatial statistics and the other in health geography---aims to contribute to the development of methodological principles that are suitable for reasoning about manifold causal notions (beyond the singular notion of the quantifiable "causal effect") with diverse forms of evidence. 
+My ongoing dissertation research is structured by an engagement with the methodological framework of plausible reasoning, as developed by the likes of Harold Jeffreys and George Po&#769;lya. Through a pair of case studies---one in spatial statistics and the other in health geography---the project aims to contribute to the development of methodological principles that are suitable for reasoning about manifold causal notions (beyond the singular notion of the quantifiable "causal effect") with diverse forms of evidence. 
 </p>
 
 
