@@ -25,14 +25,16 @@ University of Minnesota
 
 <div id="right" style="float:right; width:55%;">
   
-<p>My current research areas include Bayesian modeling for public health, spatial statistics, and health inequality. </p>
-
-<p>My dissertation research includes developing methods and open-source software for population health surveillance research, a case study on colorectal cancer prevention in Texas, and engagement with the methodological framework of plausible reasoning as developed by the likes of Harold Jeffreys and George Po&#769;lya.
-
- </p>
+<p>My current research areas include social inequalities in health, spatial statistics, and epistemology. </p>
 
 <p> At UBC, my research was focused on the political economy of labor and race. My paper in <i>Florida Historical Quarterly</i> examines the state's convict leasing program (1877-1919), under which the state prison population was leased to private industry as a bound labor force. The paper discusses its rapid expansion in tandem with the lumber industry, its connection to debt peonage, the role of physicians in managing and defending the system, and its eventual demise.
-
 </p>
+
+<p>
+My ongoing dissertation research is structured by an engagement with the methodological framework of plausible reasoning, as developed by the likes of Harold Jeffreys and George Po&#769;lya. Plausible reasoning is a fecund but often neglected approach to the philosophy of science which has many parallels to realist philosophies of science. Through a pair of case studies---one in spatial statistics and the other in public health---the dissertation explores a set of methodological principles that can be leveraged in problem-driven research. The work combines qualitative with quantitative research practices in an effort to contribute to the development of methods---especially for geography and the health sciences---that are suitable for reasoning about manifold causal notions (beyond the singular notion of the quantifiable "causal effect") with diverse forms of evidence.
+</p>
+
+
+
 
 </div>
