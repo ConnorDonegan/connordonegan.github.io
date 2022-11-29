@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Convict Leasing
+title: History of Convict Leasing 
 permalink: /florida/
 ---
 
