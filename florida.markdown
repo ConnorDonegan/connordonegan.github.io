@@ -35,11 +35,11 @@ After clear-cutting its way through southestern states to the north of Florida, 
 
 The supposed "healthfulness" of the prison population was a recurring, and highly contentious, theme of both administrative reports and political debate. In official reports and professional conferences, Florida prison officials aped the latest pseudo-scientific theories of race and social fitness to naturalize the prevalence of death and disability among prisoners in their custody. Prison officials repeatedly claimed---against all available data---that the death rate among prisoners was less than that among "free citizens." Not only were death rates higher than among the Florida population, but the age distribution of the prison population renders the comparison absurd: most prisoners who died were in the prime of their youth. 
 
-The stem-and-leaf plot below presents the age of each prisoner who died between the years of 1905 and 1909. The deaths are broken into five-year age groups; the first line includes all deaths for ages 10--14, the second line includes all deaths for ages 15--19, and so on. The digits to the left of the vertical lines represent the first digit in the ages of the prisoners who died; each digit to the right represents the second digit in their age. So there was one prisoner of age fourteen who died, four of age eighteen, five of age nineteen, three of age twenty, and so on. Most prisoners who died were in their twenties or early thirties; 75% of in-custody deaths were of persons under age 35.
+The stem-and-leaf plot below presents the age of each prisoner who died between the years of 1905 and 1909. The deaths are broken into five-year age groups; the first line includes all deaths for ages 10--14, the second line includes all deaths for ages 15--19, and so on. The digits to the left of the vertical lines represent the first digit in the ages of the prisoners who died; each digit to the right represents the second digit in their age. So 1 \| 4 indicates that one fourteen year-old prisoner died; four of age eighteen (1 \| 8888), and five of age nineteen  (1 \| 99999) died. Most prisoners who died were in their twenties or early thirties; 75% of in-custody deaths were of persons under age 35.
 
 <pre>
 <b>Ages of prisoners at time of in-custody death, 1905-1909 (N=124)</b>
-  1 | 4
+  1 | 4                                                      
   1 | 888899999
   2 | 00011111112222223333444444444
   2 | 555566666666777777777888888899
@@ -50,7 +50,7 @@ The stem-and-leaf plot below presents the age of each prisoner who died between 
   5 | 013
   5 | 6
   6 | 0
-  6 | 5
+  6 | 5                                                    6 | 5 = 65 years old
 </pre>
 
 #### Saving the system
