@@ -4,6 +4,7 @@ title: Convict Leasing
 permalink: /florida/
 ---
 
+ 
 Under the State of Florida’s convict leasing program (1877-1919) over 10,000 Floridians and visitors served sentences of hard labor at the pain of the lash. Prisoners labored in some of Florida’s first phosphate mines and were leased to turpentine and lumber operations throughout the state. This research, which began as my master's thesis at UBC, draws on over four decades of reports on the prison system by its administrators in the Florida Department of Agriculture, geographic sentencing data, data on prisoner characteristics, minutes from the Board of Pardons, and additional materials held in the Convict Lease Subject Files in the Florida State Archives.
 
 This research is centrally concerned with expanding our knowledge of a highly consequential and deeply troubling institution. It engages with a number of questions revolving around the inter-connected themes of violence, labor, and race. This page provides a summary of the research followed by a (pre-print) copy of the work published in *Florida Historical Quarterly*. The pre-print contains some supplementary material (images and an original document) not present in the *FHQ* article, as well as a correction to the text (the second paragraph beginning on p. 27 is missing from the original publication).
@@ -22,7 +23,6 @@ Under the convict leasing system, private individuals and corporations were to p
 </center>
 
 
-
 #### A labor market institution
 
 As the *FHQ* article documents, nothing like due process existed in the Florida courts. Many prisoners were pardoned, but pardons were often granted only after the claimant had become debilitated from hard labor, violence, or disease. Coercive forms of state power---arbitrary sentencing power exercised by the courts, "false-pretense" laws that supported debt peonage, the notorious cruelty of the penal system---contributed to the proliferation of tyrannical labor relations, not least of all in the lumber and turpentine industries.[^lumber]
@@ -37,7 +37,7 @@ The supposed "healthfulness" of the prison population was a recurring, and highl
 
 The stem-and-leaf plot below presents the age of each prisoner who died between the years of 1905 and 1909. The deaths are broken into five-year age groups; the first line includes all deaths for ages 10--14, the second line includes all deaths for ages 15--19, and so on. The digits to the left of the vertical lines represent the first digit in the ages of the prisoners who died; each digit to the right represents the second digit in their age. So 1 \| 4 indicates that one fourteen year-old prisoner died; four of age eighteen (1 \| 8888), and five of age nineteen  (1 \| 99999) died. Most prisoners who died were in their twenties or early thirties; 75% of in-custody deaths were of persons under age 35.
 
-<pre>
+<pre style="background-color:#F5F5F5;">
 <b>Ages of prisoners at time of in-custody death, 1905-1909 (N=124)</b>
   1 | 4                                                      
   1 | 888899999
@@ -77,10 +77,11 @@ The new law said nothing of *county* prisoners who continued to be leased to pri
 
 <p style="color:Gray">Donegan, Connor (2019). The making of Florida's "criminal class:" race, modernity and convict leasing program, 1877-1919. <em>Florida Historical Quarterly</em> 97.4: pp. 408-434. Open access pdf (with images): <a style="color:DarkSlateGray" href="https://doi.org/10.31219/osf.io/2wj7s" download>doi:10.31219/osf.io/2wj7s</a></p>
 
-<object data="../assets/Donegan-convict-leasing-2019-3.pdf" width="900" height="650" type='application/pdf'></object>
+<object data="../assets/Donegan-convict-leasing-2019-3.pdf" width="900" height="800" type='application/pdf'></object>
 
+<br />
 
-#### notes
+#### Notes
 
 [^lumber]: For much more on labor relations in the lumber and turpentine industries, see Aarron Reynolds. “Inside the Jackson Tract: The Battle Over Peonage Labor Camps in Southern Alabama, 1906”. In: Southern Spaces (January 2013). <https://southernspaces.org/2013/inside-jackson-tract-battle-over-peonage-labor-camps-southern-alabama-1906>.
 
