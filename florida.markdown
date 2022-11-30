@@ -59,7 +59,9 @@ Among the formerly Confederate states, all but Virginia were leasing state priso
 
 As opposition to convict leasing mounted, Governor Jennings and prison officials forged a new public image for the penal system and its wards. The system could be both just and profitable, they argued, if only punishment was measured and properly administered. Prison officials in the Jennings administration drew up new regulations and standards for whipping bosses and facilities. 
 
-The reforms proved to be hollow. Prison supervisors sometimes documented but did not prevent barbarous treatment. Prison physicians actively colluded in managing the exploitation of so-called "hospital subjects," leasing disabled prisoners at discounted rates that were set to match the supposed labor abilities of each "hospital subject." Nonetheless, the reforms breathed new political life into the system.
+The reforms proved to be hollow. Prison supervisors sometimes documented but did not prevent barbarous treatment. Prison physicians actively colluded in managing the exploitation of so-called "hospital subjects," leasing disabled prisoners at discounted rates that were set to match the supposed labor abilities of each "hospital subject." 
+
+Nonetheless, the reforms breathed new political life into the system.
 
 #### Demise of the lease
 
