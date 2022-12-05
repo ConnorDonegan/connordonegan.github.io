@@ -73,6 +73,18 @@ Kennedy’s statement contradicted decades of official reports and sparked a new
 
 The new law said nothing of *county* prisoners who continued to be leased to private interests. A national uproar over the murder of Martin Tabert, a young white male from North Dakota, finally moved Florida officials to action. In a familiar sequence of events, Tabert was worked to exhaustion and then beaten mercilessly in front of dozens of fellow prisoners. He was left on a cot to die and ignored by the camp physician who later participated in the cover-up. On May 24, 1923, following an investigation by the Florida Legislature, Governor Cary A. Hardee signed the "Convict Anti-Whipping Bill," ending corporal punishment and, the following day, abolished county convict leasing.
 
+#### Violence, capitalism, and modernity
+
+There is, as Alex Lichtenstein argues in *Twice the Work of Free Labor*, a danger to presenting an account of convict leasing that amounts to "an exposé of the horrors of the convict-lease and chain gang (as if such was needed).'' The reason, he explains, is that
+
+> this approach ultimately serves to distance the subject, to banish it to the realm of the benighted South and set it off as some terrible aberration in an otherwise slow but healthy march toward progress. Such an account of convict labor lends itself to a faulty interpretation...punishment in the postbellum South lay at the heart of the changes sweeping that society, and played a central role in the evolution of the region's race relations, forms of labor exploitation, and burgeoning capitalist development.[^twice]
+
+Georgrapher Bobby Wilson argued, similarly, that convict labor was deeply entwined with the labor-intensive (and labor-repressive) industrial strategy of the coal industry in Birmingham, Alabama.[^wilson] Indeed, in Florida also, not just convict leasing but the entire legal and penal system were instrumental in reproducing a profitable, labor-intensive production system.
+
+This study perhaps dwells longer on certain forms of violence than would seem necessary, but the reason is that specific forms of violence that arose, and the way they came to be represented, constitute important evidence as to what forces were at work.[^river] One finds barbarous acts and their resulting harms were reported in matter-of-fact form in correspondance between business owners and prison officials; the explicit purpose was to settle accounts in a manner both parties to the exchange considered to be fair. Rather than dissipate with the introduction of reforms, the continued exploitation of prisoners who were suffering from severe injury or disease was *formalized* by prison physicians who ensured that the price charged for such "hospital subjects" was fair to the state and lessees. 
+
+The state did not mandate violent punishment; nor did the state require that a gruesome level of work effort be maintained. Rather, by turning prisoners into a defenseless and expendable labor force, the state merely unleashed the full force of the existing industrial system which absorbed convict labor with alacrity. 
+
 #### Pre-print
 
 <p style="color:Gray">Donegan, Connor (2019). The making of Florida's "criminal class:" race, modernity and convict leasing program, 1877-1919. <em>Florida Historical Quarterly</em> 97.4: pp. 408-434. Open access pdf (with images): <a style="color:DarkSlateGray" href="https://doi.org/10.31219/osf.io/2wj7s" download>doi:10.31219/osf.io/2wj7s</a></p>
@@ -90,3 +102,9 @@ The new law said nothing of *county* prisoners who continued to be leased to pri
 [^1]: For more on the factors contributing to the end of convict leasing, see Matthew J. Mancini, *One Dies, Get Another: Convict Leasing in the American South, 1866--1928*. University of South Carolina Press, 1996.
 
 [^banaji]: The language used here to discuss *forms of exploitation*, and the implicit argument that such formal and legalistic variations do not imply a departure from capitalist commodity production, is borrowed from Jairus Banaji, *Theory As History: Essays on Modes of Production and Exploitation*. Brill, 2010.
+
+[^twice]: Alex Lichtenstein, *Twice the Work of Free Labor: The Political Economy of Convict Labor in the New South*. Verso, 1996: xvii.
+
+[^wilson]: Bobby M. Wilson, *America's Johannesburg: Industrialization and Racial Transformation in Birmingham*. Rowman & Littlefield Publishers, Inc.: 114--121.
+
+[^river]: A close look at the role of violence in labor management on slave plantations is also highly revealing. See Walter Johnson, *River of Dark Dreams: Slavery and Empire in the Cotton Kingdom*. Harvard University Press, 2017. 
