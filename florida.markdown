@@ -59,7 +59,9 @@ Among the formerly Confederate states, all but Virginia were leasing state priso
 
 As opposition to convict leasing mounted, Governor Jennings and prison officials forged a new public image for the penal system and its wards. The system could be both just and profitable, they argued, if only punishment was measured and properly administered. Prison officials in the Jennings administration drew up new regulations and standards for whipping bosses and facilities. 
 
-The reforms proved to be hollow. Prison supervisors sometimes documented but did not prevent barbarous treatment. Prison physicians actively colluded in managing the exploitation of so-called "hospital subjects," leasing disabled prisoners at discounted rates that were set to match the supposed labor abilities of each "hospital subject." Nonetheless, the reforms breathed new political life into the system.
+The reforms proved to be hollow. Prison supervisors sometimes documented but did not prevent barbarous treatment. Prison physicians actively colluded in managing the exploitation of so-called "hospital subjects," leasing disabled prisoners at discounted rates that were set to match the supposed labor abilities of each "hospital subject." 
+
+Nonetheless, the reforms breathed new political life into the system.
 
 #### Demise of the lease
 
@@ -81,7 +83,7 @@ There is, as Alex Lichtenstein argues in *Twice the Work of Free Labor*, a dange
 
 Georgrapher Bobby Wilson argued, similarly, that convict labor was deeply entwined with the labor-intensive (and labor-repressive) industrial strategy of the coal industry in Birmingham, Alabama.[^wilson] Indeed, in Florida also, not just convict leasing but the entire legal and penal system were instrumental in reproducing a profitable, labor-intensive production system.
 
-This study perhaps dwells longer on certain forms of violence than would seem necessary, but the reason is that specific forms of violence that arose, and the way they came to be represented, constitute important evidence as to what forces were at work.[^river] One finds barbarous acts and their resulting harms were reported in matter-of-fact form in correspondance between business owners and prison officials; the explicit purpose was to settle accounts in a manner both parties to the exchange considered to be fair. Rather than dissipate with the introduction of reforms, the continued exploitation of prisoners who were suffering from severe injury or disease was *formalized* by prison physicians who ensured that the price charged for such "hospital subjects" was fair to the state and lessees. 
+This study perhaps dwells longer on certain forms of violence than would seem necessary, but the reason is that specific forms of violence that arose, and the way they came to be represented and argued over, constitute important evidence as to what forces were at work.[^river] One finds barbarous acts and their resulting harms were reported in matter-of-fact form in correspondance between business owners and prison officials; the explicit purpose was to settle accounts in a manner both parties to the exchange considered to be fair. Rather than dissipate with the introduction of reforms, the continued exploitation of prisoners who were suffering from severe injury or disease was *formalized* by prison physicians who ensured that the price charged for such "hospital subjects" was fair to the state and lessees. 
 
 The state did not mandate violent punishment; nor did the state require that a gruesome level of work effort be maintained. Rather, by turning prisoners into a defenseless and expendable labor force, the state merely unleashed the full force of the existing industrial system which absorbed convict labor with alacrity. 
 
@@ -108,3 +110,4 @@ The state did not mandate violent punishment; nor did the state require that a g
 [^wilson]: Bobby M. Wilson, *America's Johannesburg: Industrialization and Racial Transformation in Birmingham*. Rowman & Littlefield Publishers, Inc.: 114--121.
 
 [^river]: A close look at the role of violence in labor management on slave plantations is also highly revealing. See Walter Johnson, *River of Dark Dreams: Slavery and Empire in the Cotton Kingdom*. Harvard University Press, 2017. 
+
