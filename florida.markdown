@@ -29,6 +29,13 @@ As the *FHQ* article documents, nothing like due process existed in the Florida 
 
 Many prisoners already belonged to the massive black migrant workforce that powered lumber and turpentine operations in Florida; over half of Florida's prisoners hailed from outside of the state. The prisoners belonged, according one official, to a "criminal class" that "should labor, should be wealth producers in or out of prison." These "wealth producers" were not to be the one's who controlled such wealth. Rather, prisoners were expected "to learn the lesson of obedience, submission and energetic effort or labor." 
 
+<center>
+<figure>
+<img src="/assets/figure3-origins.png" />
+<figcaption> Origins of Florida state prisoners by year of sentencing. </figcaption>
+</figure>
+</center>
+
 After clear-cutting its way through various other states, the lumber industry expanded into Florida's pine forests while deploying a range of exploitative and violent labor arrangements, from simple wage-labor to debt peonage to the quasi-slavery of the prison laborer, all under intensely competitive market conditions.[^banaji] Labor scarcity in remote forested areas was often an issue for operators, but workers themselves were unable to leverage this to their advantage to push for better conditions and pay. Instead, operators kept "woodsriders," armed overseers on horseback, to prevent workers from leaving their employment. The exercise of highly coercive forms of state power buttressed the unbridled authority of employers, and stands among the primary reasons why forced labor proliferated in the forest industries in Florida and other southern states.
 
 #### Race as ideology of social fitness
@@ -85,7 +92,7 @@ Georgrapher Bobby Wilson argued, similarly, that convict labor was deeply entwin
 
 This study perhaps dwells longer on certain forms of violence than would seem necessary, but the reason is that specific forms of violence that arose, and the way they came to be represented and argued over, constitute important evidence as to what forces were at work.[^river] One finds barbarous acts and their resulting harms were reported in matter-of-fact form in correspondance between business owners and prison officials; the explicit purpose was to settle accounts in a manner both parties to the exchange considered to be fair. Rather than dissipate with the introduction of reforms, the continued exploitation of prisoners who were suffering from severe injury or disease was *formalized* by prison physicians who ensured that the price charged for such "hospital subjects" was fair to the state and lessees. 
 
-The state did not mandate violent punishment; nor did the state require that a gruesome level of work effort be maintained. Rather, by turning prisoners into a defenseless and expendable labor force, the state merely unleashed the full force of the existing industrial system which absorbed convict labor with alacrity. 
+The state did not mandate violent punishment; nor did the state require that a gruesome level of work effort be maintained. Rather, by turning prisoners into a defenseless and expendable labor force, the state unleashed the full force of the existing industrial system which absorbed convict labor with alacrity. 
 
 #### Pre-print
 
