@@ -31,7 +31,7 @@ University of Minnesota
 </p>
 
 <p>
-My ongoing dissertation research is structured by an engagement with plausible reasoning, a methodological framework developed by the likes of Harold Jeffreys and George Po&#769;lya. Through a pair of case studies---one in spatial statistics and the other in health geography---the project aims to contribute to the development of methodological principles that are suitable for reasoning about manifold causal notions (beyond the singular notion of the quantifiable "causal effect") with diverse forms of evidence. 
+My dissertation research engages with the methodological framework of plausible reasoning, developed by the likes of Harold Jeffreys and George Po&#769;lya. I am especially interested in the ways that plausible reasoning complements realist philosophies of science and its potential for bridging qualitative-quantitative divisions in the social sciences. The empirical side of the project is focused on colorectal cancer (CRC) in Texas and is concerned with evaluating various explanations of social inequalities in CRC risk within the context of the state's evolving geographies of class and race.
 </p>
 
 
