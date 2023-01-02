@@ -9,8 +9,7 @@ My research at UT Dallas and UT Southwestern Medical Center has been focused on 
 #### The geostan R package
 
 <img src="/assets/geostan-logo.png" align="left" width="100" /> <br />
-<p style="color:Gray">Donegan, Connor (2021). “geostan: Bayesian spatial analysis.” R package distributed via the Comprehensive R Archive Network (CRAN). <a style="color:DarkSlateGray" href="{{ site.baseurl }}/geostan/">https://connordonegan.github.io/geostan/</a> </p>
- [![DOI](https://joss.theoj.org/papers/10.21105/joss.04716/status.svg)](https://doi.org/10.21105/joss.04716)
+<p style="color:Gray">Donegan, Connor (2021). “geostan: Bayesian spatial analysis.” R package distributed via the Comprehensive R Archive Network (CRAN). <a style="color:DarkSlateGray" href="{{ site.baseurl }}/geostan/">https://connordonegan.github.io/geostan/</a> </p>  [![](https://cranlogs.r-pkg.org/badges/geostan)](https://cran.rstudio.com/web/packages/geostan/index.html) [![DOI](https://joss.theoj.org/papers/10.21105/joss.04716/status.svg)](https://doi.org/10.21105/joss.04716)
 
 <p> The geostan R package supports a complete spatial analysis workflow with Bayesian models for areal data, including a suite of functions for visualizing spatial data and model results. Users can model censored outcomes&mdash;a common feature of vital statistics and disease registry data&mdash;and access spatial measurement error models, designed for working with American Community Survey (ACS) estimates.The package offers spatial methods suitable for modeling both count and continuous outcome data types.</p>
 
@@ -26,7 +25,8 @@ My research at UT Dallas and UT Southwestern Medical Center has been focused on 
 
 <img src="/assets/surveil-logo.png" align="left" width="100" /> <br />
 
-<p style="color:Gray">Donegan, Connor (2021). “surveil: Public health surveillance.” R package distributed via the Comprehensive R Archive Network (CRAN). <a style="color:DarkSlateGray" href="{{ site.baseurl }}/surveil/">https://connordonegan.github.io/surveil/</a> </p> 
+<p style="color:Gray">Donegan, Connor (2021). “surveil: Public health surveillance.” R package distributed via the Comprehensive R Archive Network (CRAN). <a style="color:DarkSlateGray" href="{{ site.baseurl }}/surveil/">https://connordonegan.github.io/surveil/</a> </p>
+ [![](https://cranlogs.r-pkg.org/badges/surveil)](https://cran.rstudio.com/web/packages/surveil/index.html)
 
 <p> The surveil R package provides time series models for routine public health surveillance tasks: model time trends in mortality or disease incidence rates to make inferences about levels of risk, cumulative and period percent change, age-standardized rates, and health inequalities. This software provides an accessible alternative to joinpoint regression. Basic usage requires introductory-level R programming skills.</p>
 
