@@ -4,16 +4,14 @@ title: Public Health Software
 permalink: /software/
 ---
 
-My research at UT Dallas and UT Southwestern Medical Center has been focused on spatial statistics, Bayesian modeling, and public health. This page describes the main products of this work, which include papers on quantitative methodology and a pair of software programs that implement the methods. The software and code uses the R language for statistical computing and the Stan modeling language for Markov chain Monte Carlo sampling.
+My research at UT Dallas and UT Southwestern Medical Center has been focused on spatial statistics, Bayesian modeling, and public health. This page describes the main products of this work, which include papers on quantitative methodology and a pair of software programs that implement the methods. The software and code uses the R language for statistical computing and the [Stan](https://mc-stan.org) modeling language for Markov chain Monte Carlo sampling.
 
 #### The geostan R package
 
 <img src="/assets/geostan-logo.png" align="left" width="100" /> <br />
-<p style="color:Gray">Donegan, Connor (2021). “geostan: Bayesian spatial analysis.” R package distributed via the Comprehensive R Archive Network (CRAN). <a style="color:DarkSlateGray" href="{{ site.baseurl }}/geostan/">https://connordonegan.github.io/geostan/</a> </p>  [![](https://cranlogs.r-pkg.org/badges/geostan?color=yellow)](https://cran.rstudio.com/web/packages/geostan/index.html) [![DOI](https://joss.theoj.org/papers/10.21105/joss.04716/status.svg)](https://doi.org/10.21105/joss.04716)
+<p style="color:Gray">Donegan, Connor (2022). geostan: An R package for Bayesian spatial analysis. <em>The Journal of Open Source Software</em> 7, no. 79: 4716 DOI:<a style="color:DarkSlateGray" href="https://doi.org/10.21105/joss.04716">10.21105/joss.04716</a></p>  [![](https://cranlogs.r-pkg.org/badges/geostan?color=yellow)](https://cran.rstudio.com/web/packages/geostan/index.html) [![DOI](https://joss.theoj.org/papers/10.21105/joss.04716/status.svg)](https://doi.org/10.21105/joss.04716)
 
 <p> The geostan R package supports a complete spatial analysis workflow with Bayesian models for areal data, including a suite of functions for visualizing spatial data and model results. Users can model censored outcomes&mdash;a common feature of vital statistics and disease registry data&mdash;and access spatial measurement error models, designed for working with American Community Survey (ACS) estimates.The package offers spatial methods suitable for modeling both count and continuous outcome data types.</p>
-
-<p style="color:Gray">Donegan, Connor (2022). geostan: An R package for Bayesian spatial analysis. <em>The Journal of Open Source Software</em> 7, no. 79: 4716 DOI:<a style="color:DarkSlateGray" href="https://doi.org/10.21105/joss.04716">10.21105/joss.04716</a></p>
 
 <p style="color:Gray">Donegan, Connor (2021). Building spatial conditional autoregressive (CAR) models in the Stan programming language. <em>OSF Preprints</em>. DOI:<a style="color:DarkSlateGray" href="https://osf.io/3ey65/">10.31219/osf.io/3ey65</a></p>
 
@@ -23,14 +21,11 @@ My research at UT Dallas and UT Southwestern Medical Center has been focused on 
 
 #### The surveil R package
 
-<img src="/assets/surveil-logo.png" align="left" width="100" /> <br />
-
-<p style="color:Gray">Donegan, Connor (2021). “surveil: Public health surveillance.” R package distributed via the Comprehensive R Archive Network (CRAN). <a style="color:DarkSlateGray" href="{{ site.baseurl }}/surveil/">https://connordonegan.github.io/surveil/</a> </p>
+<img src="/assets/surveil-logo.png" align="left" width="100" /> 
+<p style="color:Gray"> Donegan, Connor, Amy E Hughes and Simon J Craddock Lee (2022). Colorectal Cancer Incidence, Inequalities, and Prevention Priorities in Urban Texas: Surveillance Study with the "surveil" software package. <em>JMIR Public Health & Surveillance</em> 8, no. 8: e34589 DOI:<a style="color:DarkSlateGray" href="https://doi.org/10.2196/34589">10.2196/34589</a> PMID:<a style="color:DarkSlateGray" href="https://pubmed.ncbi.nlm.nih.gov/35972778/a">35972778</a> </p>
  [![](https://cranlogs.r-pkg.org/badges/surveil?color=yellow)](https://cran.rstudio.com/web/packages/surveil/index.html)
 
 <p> The surveil R package provides time series models for routine public health surveillance tasks: model time trends in mortality or disease incidence rates to make inferences about levels of risk, cumulative and period percent change, age-standardized rates, and health inequalities. This software provides an accessible alternative to joinpoint regression. Basic usage requires introductory-level R programming skills.</p>
-
-<p style="color:Gray">Donegan, Connor, Amy E Hughes and Simon J Craddock Lee (2022). Colorectal Cancer Incidence, Inequalities, and Prevention Priorities in Urban Texas: Surveillance Study with the "surveil" software package. <em>JMIR Public Health & Surveillance</em> 8, no. 8: e34589 DOI:<a style="color:DarkSlateGray" href="https://doi.org/10.2196/34589">10.2196/34589</a> PMID:<a style="color:DarkSlateGray" href="https://pubmed.ncbi.nlm.nih.gov/35972778/a">35972778</a> </p>
 
 <p style="color:Gray">Donegan, Connor, Amy E Hughes and Simon J Craddock Lee (2022). Time Series Models for Public Health Surveillance: Colorectal Cancer Incidence, Inequalities, and Prevention Priorities in Urban Texas. Poster presentation to the Interdisciplinary Association of Population Health Science (IAPHS), Minneapolis, MN. <a style="color:DarkSlateGray" href="{{ site.baseurl }}/surveil-poster/">Poster PDF.</a> </p>
 
