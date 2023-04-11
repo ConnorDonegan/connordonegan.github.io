@@ -11,10 +11,6 @@ layout: page
 Geospatial Information Sciences<br/>
 The University of Texas at Dallas<br/></p>
 
-<p>Research Assistant<br/>
-Peter O’Donnell Jr. School of Public Health<br/>
-UT Southwestern Medical Center<br/></p>
-
 <p>M.A. Geography (2013)<br/>
 University of British Columbia<br/></p>
 
@@ -31,7 +27,7 @@ University of Minnesota
 </p>
 
 <p>
-My dissertation research engages with the methodological framework of plausible reasoning, developed by the likes of Harold Jeffreys and George Po&#769;lya. I am especially interested in the ways that plausible reasoning complements realist philosophies of science and its potential for bridging qualitative-quantitative divisions in the social sciences. The empirical side of the project is focused on colorectal cancer (CRC) in Texas and is concerned with evaluating various explanations of social inequalities in CRC risk within the context of the state's evolving geographies of class and race.
+My dissertation, titled "Plausible reasoning and heuristic methodology in human geography: An invesitagtion of colorectal cancer incidence and inequalities in Texas, 1999--2019", engages with the methodological framework of plausible reasoning, particularly as developed by George Po&#769;lya. I view plausible reasoning as complementary to realist philosophies of science, and I am interested in its potential to bridge qualitative-quantitative divisions in the social and health sciences. The empirical side of the project is focused on colorectal cancer (CRC) incidence in Texas and is concerned with evaluating various explanations of social inequalities in the CRC burden within the context of the state's evolving geographies of class and race. 
 </p>
 
 
