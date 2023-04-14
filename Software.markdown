@@ -13,6 +13,8 @@ My research at UT Dallas and UT Southwestern Medical Center has been focused on 
 
 <p> The geostan R package supports a complete spatial analysis workflow with Bayesian models for areal data, including a suite of functions for visualizing spatial data and model results. Users can model censored outcomes&mdash;a common feature of vital statistics and disease registry data&mdash;and access spatial measurement error models, designed for working with American Community Survey (ACS) estimates.The package offers spatial methods suitable for modeling both count and continuous outcome data types.</p>
 
+Online documentation: [connordonegan.github.io/geostan](https://connordonegan.github.io/geostan)
+
 <p style="color:Gray">Donegan, Connor (2021). Building spatial conditional autoregressive (CAR) models in the Stan programming language. <em>OSF Preprints</em>. DOI:<a style="color:DarkSlateGray" href="https://osf.io/3ey65/">10.31219/osf.io/3ey65</a></p>
 
 <p style="color:Gray">Donegan, Connor, Yongwan Chun and Daniel A. Griffith (2021). Modeling community health with areal data: Bayesian inference with survey standard errors and spatial structure <em>International Journal of Environmental Research and Public Health</em> 18, no. 13: 6856. DOI:<a style="color:DarkSlateGray" href="https://doi.org/10.3390/ijerph18136856">10.3390/ijerph18136856</a> Supplementary material: <a style="color:DarkSlateGray" href="https://github.com/ConnorDonegan/survey-HBM">https://github.com/ConnorDonegan/survey-HBM</a>.</p>
@@ -26,6 +28,8 @@ My research at UT Dallas and UT Southwestern Medical Center has been focused on 
  [![](https://cranlogs.r-pkg.org/badges/surveil?color=yellow)](https://cran.rstudio.com/web/packages/surveil/index.html)
 
 <p> The surveil R package provides time series models for routine public health surveillance tasks: model time trends in mortality or disease incidence rates to make inferences about levels of risk, cumulative and period percent change, age-standardized rates, and health inequalities. This software provides an accessible alternative to joinpoint regression. Basic usage requires introductory-level R programming skills.</p>
+
+Online documentation: [connordonegan.github.io/surveil](https://connordonegan.github.io/surveil)
 
 <p style="color:Gray">Donegan, Connor, Amy E Hughes and Simon J Craddock Lee (2022). Time Series Models for Public Health Surveillance: Colorectal Cancer Incidence, Inequalities, and Prevention Priorities in Urban Texas. Poster presentation to the Interdisciplinary Association of Population Health Science (IAPHS), Minneapolis, MN. <a style="color:DarkSlateGray" href="{{ site.baseurl }}/surveil-poster/">Poster PDF.</a> </p>
 
