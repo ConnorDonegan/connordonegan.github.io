@@ -28,6 +28,7 @@ url: "https://connordonegan.github.io" # the base hostname & protocol for your s
 twitter_username: 
 github_username: ConnorDonegan
 google_analytics: UA-116873024-1
+ga_analytics: G-KZ3W90J8SJ
 show_downloads: true
 
 # Build settings
