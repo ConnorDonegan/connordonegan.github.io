@@ -7,7 +7,7 @@ layout: page
 
   <div id="left" style="float:left; width:45%; color:Gray;">
 
-<p>PhD (2013)<br/>
+<p>PhD (2023)<br/>
  Geospatial Information Sciences <br/>	
 The University of Texas at Dallas<br/></p>
 
