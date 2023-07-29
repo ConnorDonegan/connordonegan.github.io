@@ -7,7 +7,7 @@ permalink: /florida/
  
 Under the State of Florida’s convict leasing program (1877-1919) approximately 14,000 Floridians and visitors served sentences of hard labor at the pain of the lash. Prisoners labored in some of Florida’s first phosphate mines and were leased to turpentine and lumber operations throughout the state. This research, which began as my master's thesis at UBC, draws on over four decades of reports on the prison system by its administrators in the Florida Department of Agriculture, geographic sentencing data, data on prisoner characteristics, minutes from the Board of Pardons, and additional materials held in the Convict Lease Subject Files in the Florida State Archives.
 
-This research is centrally concerned with expanding our knowledge of a highly consequential and deeply troubling institution. It engages with a number of questions revolving around the inter-connected themes of violence, labor, and race. This page provides a summary of the research followed by a (pre-print) copy of the work published in *Florida Historical Quarterly*. The pre-print contains some supplementary material (images and an original document) not present in the *FHQ* article, as well as a correction to the text (the second paragraph beginning on p. 27 is missing from the original publication).
+This study engages with a number of questions revolving around the inter-connected themes of violence, labor, and race. This page provides a summary of the research followed by a (pre-print) copy of the work published in *Florida Historical Quarterly*. The pre-print contains some supplementary material (images and an original document) not present in the *FHQ* article, as well as a minor correction to the text (the second paragraph beginning on p. 27 is missing from the original publication).
 
 #### Origins of the lease
 
@@ -27,7 +27,7 @@ Under the convict leasing system, private individuals and corporations were to p
 
 As the *FHQ* article documents, nothing like due process existed in the Florida courts. Many prisoners were pardoned, but pardons were often granted only after the claimant had become debilitated from hard labor, violence, or disease. Coercive forms of state power---arbitrary sentencing power exercised by the courts, "false-pretense" laws that supported debt peonage, the notorious cruelty of the penal system---contributed to the proliferation of tyrannical labor relations, not least of all in the lumber and turpentine industries.[^lumber]
 
-Many prisoners already belonged to the massive black migrant workforce that powered lumber and turpentine operations in Florida; over half of Florida's prisoners hailed from outside of the state. The prisoners belonged, according one official, to a "criminal class" that "should labor, should be wealth producers in or out of prison." These "wealth producers" were not to be the one's who controlled such wealth. Rather, prisoners were expected "to learn the lesson of obedience, submission and energetic effort or labor." 
+Many prisoners already belonged to the massive black migrant workforce that powered lumber and turpentine operations in Florida; over half of Florida's prisoners hailed from outside of the state. The prisoners belonged, according one official, to a "criminal class" that "should labor, should be wealth producers in or out of prison." These "wealth producers" were not to be the one's who enjoyed such wealth. Rather, prisoners were expected "to learn the lesson of obedience, submission and energetic effort or labor." 
 
 <center>
 <figure>
@@ -40,7 +40,7 @@ After clear-cutting its way through various other states, the lumber industry ex
 
 #### Race as ideology of social fitness
 
-The supposed "healthfulness" of the prison population was a recurring, and highly contentious, theme of both administrative reports and political debate. In official reports and professional conferences, Florida prison officials aped the latest pseudo-scientific theories of race and social fitness to naturalize the prevalence of death and disability among prisoners in their custody. Prison officials repeatedly claimed---against all available data---that the death rate among prisoners was less than that among "free citizens." Not only were death rates higher than among the Florida population, but the age distribution of the prison population renders the comparison absurd: most prisoners who died were in the early years of adulthood.
+The supposed "healthfulness" of the prison population was a recurring, and highly contentious, theme of both administrative reports and political debate. In official reports and professional conferences, Florida prison officials aped the latest pseudo-scientific theories of race and social fitness to naturalize the prevalence of death and disability among prisoners in their custody. Prison officials repeatedly claimed---against the available data---that the death rate among prisoners was less than that among "free citizens." Not only were death rates higher than among the Florida population, but the age distribution of the prison population renders the comparison absurd: most prisoners who died were in the early years of adulthood.
 
 The stem-and-leaf plot below presents the age of each prisoner who died between the years of 1905 and 1909. The deaths are broken into five-year age groups; the first line includes all deaths for ages 10--14, the second line includes all deaths for ages 15--19, and so on. The digits to the left of the vertical lines represent the first digit in the ages of the prisoners who died; each digit to the right represents the second digit in their age. So 1 \| 4 indicates that one fourteen year-old prisoner died; so too did four of age eighteen (1 \| 8888) and five of age nineteen  (1 \| 99999). Most prisoners who died were in their twenties or early thirties; 75% of in-custody deaths were of persons under age 35.
 
@@ -64,7 +64,7 @@ The stem-and-leaf plot below presents the age of each prisoner who died between 
 
 Among the formerly Confederate states, all but Virginia were leasing state prisoners by 1880. By 1900 the political tide seemed already to have turned against convict leasing and towards public road work and state-run farms. Mississippi, South Carolina, and Louisiana had all abolished the lease. Georgia soon followed suit, ending convict leasing in 1908. Riding a growing wave of public sentiment against monopoly power and corruption was Florida Democratic gubernatorial candidate William Sherman Jennings. Jennings promised to fill the public coffers by breaking the cartel of lessees (who he claimed were colluding in the bidding process) and to improve the treatment of prisoners at the same time. Jennings won the election, and served as Governor from January 1901 to January 1905. 
 
-As opposition to convict leasing mounted, Governor Jennings and prison officials forged a new public image for the penal system and its wards. The system could be both just and profitable, they argued, if only punishment was measured and properly administered. Prison officials in the Jennings administration drew up new regulations and standards for whipping bosses and facilities. 
+As opposition to convict leasing mounted, Governor Jennings and prison officials worked to forge a new public image for the penal system and its wards. The system could be both just and profitable, they argued, if only punishment was measured and properly administered. Prison officials in the Jennings administration drew up new regulations and standards for whipping bosses and facilities. 
 
 The reforms proved to be hollow. Prison supervisors sometimes documented but did not prevent barbarous treatment. Prison physicians actively colluded in managing the exploitation of so-called "hospital subjects," leasing disabled prisoners at discounted rates that were set to match the supposed labor abilities of each "hospital subject." 
 
@@ -72,7 +72,7 @@ Nonetheless, the reforms breathed new political life into the system.
 
 #### Demise of the lease
 
-By all appearances, those who leased prisoners often treated white male prisoners no differently than they treated black male prisoners. White prisoners could also be brutalized and worked to the brink of death. Though most prisoners were black males, white male prisoners were always present, and they introduced a political problem for defenders of the lease.[^1] The prison system became segregated only within the last two to three years of the convict leasing program.
+By all appearances, those who leased prisoners tended to treat white male prisoners similarly as they treated black male prisoners. White prisoners could also be brutalized and worked to the brink of death. Though most prisoners were black males, white male prisoners were always present, and they introduced a political problem for defenders of the lease.[^1] The prison system became segregated only within the last two to three years of the convict leasing program.
 
 A key political turning point followed the following public admission by prison physician Dr. Robert Kennedy:[^2]
  
@@ -82,17 +82,6 @@ Kennedy’s statement contradicted decades of official reports and sparked a new
 
 The new law said nothing of *county* prisoners who continued to be leased to private interests. A national uproar over the murder of Martin Tabert, a young white male from North Dakota, finally moved Florida officials to action. In a familiar sequence of events, Tabert was worked to exhaustion and then beaten mercilessly in front of dozens of fellow prisoners. He was left on a cot to die and ignored by the camp physician who later participated in the cover-up. On May 24, 1923, following an investigation by the Florida Legislature, Governor Cary A. Hardee signed the "Convict Anti-Whipping Bill," ending corporal punishment and, the following day, abolished county convict leasing.
 
-#### Violence, capitalism, and modernity
-
-There is, as Alex Lichtenstein argues in *Twice the Work of Free Labor*, a danger to presenting an account of convict leasing that amounts to "an exposé of the horrors of the convict-lease and chain gang (as if such was needed).'' The reason, he explains, is that
-
-> this approach ultimately serves to distance the subject, to banish it to the realm of the benighted South and set it off as some terrible aberration in an otherwise slow but healthy march toward progress. Such an account of convict labor lends itself to a faulty interpretation...punishment in the postbellum South lay at the heart of the changes sweeping that society, and played a central role in the evolution of the region's race relations, forms of labor exploitation, and burgeoning capitalist development.[^twice]
-
-Georgrapher Bobby Wilson argued, similarly, that convict labor was deeply entwined with the labor-intensive (and labor-repressive) industrial strategy of the coal industry in Birmingham, Alabama.[^wilson] Indeed, in Florida also, not just convict leasing but the entire legal and penal system were instrumental in reproducing a profitable, labor-intensive production system.
-
-This study perhaps dwells longer on certain forms of violence than would seem necessary, but the reason is that the specific forms of violence that arose, and the way they came to be represented and argued over, constitute important evidence as to what forces were at work.[^river] One finds barbarous acts and their resulting harms were reported in matter-of-fact form in correspondance between business owners and prison officials; the explicit purpose was to settle accounts in a manner both parties to the exchange considered to be fair. Rather than dissipate with the introduction of reforms, the continued exploitation of prisoners who were suffering from severe injury or disease was *formalized* by prison physicians who ensured that the price charged for such "hospital subjects" was fair to the state and lessees. 
-
-The state did not mandate violent punishment; nor did the state require that a gruesome level of work effort be maintained. Rather, by turning prisoners into a defenseless and expendable labor force, the state unleashed the full force of the existing industrial system which absorbed convict labor with alacrity. 
 
 #### Pre-print
 
@@ -104,7 +93,8 @@ The state did not mandate violent punishment; nor did the state require that a g
 
 #### Notes
 
-[^lumber]: For much more on labor relations in the lumber and turpentine industries, see Aarron Reynolds. “Inside the Jackson Tract: The Battle Over Peonage Labor Camps in Southern Alabama, 1906”. In: Southern Spaces (January 2013). <https://southernspaces.org/2013/inside-jackson-tract-battle-over-peonage-labor-camps-southern-alabama-1906>.
+[^lumber]: For much more on labor relations in the lumber and turpentine industries, see Aarron Reynolds. “Inside the Jackson Tract: The Battle Over Peonage Labor Camps in Southern Alabama, 1906”. In: Southern Spaces (January 2013). <https://southernspaces.org/2013/inside-jackson-tract-battle-over-peonage-labor-camps-southern-alabama-1906>. Other studies that link convict leasing and the generally repressive legal system to labor-repressive regimes include: Alex Lichtenstein, *Twice the Work of Free Labor: The Political Economy of Convict Labor in the New South*. Verso, 1996; Bobby M. Wilson, *America's Johannesburg: Industrialization and Racial Transformation in Birmingham*. Rowman & Littlefield Publishers, Inc.: 114--121. These issues as well as gender are covered by: Sarah Haley. *No mercy here: Gender, punishment, and the making of Jim Crow modernity.* UNC Press Books, 2016; Talitha L. LeFlouria. *Chained in Silence: Black Women and Convict Labor in the New South.* UNC Press Books, 2015.
+
 
 [^2]: This quotation and the political events surrounding it, as well as Martin Tabert's death, are mainly gathered from: Noel Gordon Carper. "The covict-lease system in Florida, 1866-1923." PhD thesis. Florida State University, 1966: 141--153, 297--299.
 
