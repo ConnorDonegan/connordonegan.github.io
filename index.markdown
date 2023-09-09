@@ -5,36 +5,27 @@
 layout: page
 ---
 
-<div id="left" style="float:left; width:45%; color:Gray;">
+
+<div id="left" style="float:left; width:35%; color:Black; font-size:14px">
   
-<p> Postdoctoral Scholar (2023-present) <br/>
+<p> Postdoctoral Researcher (2023-present) <br/>
 O'Donnell School of Public Health <br/>
 UT Southwestern Medical Center <br/>
-<span style="color:DarkSlateGray">Connor.Donegan@UTSouthwestern.edu</span><br/></p>
-
-<p>PhD (2023)<br/>
- Geospatial Information Sciences <br/>	
-The University of Texas at Dallas<br/></p>
-
-<p>MA (2013)<br/>
-Geography <br/>
-University of British Columbia<br/></p>
-
-BA (2010)<br/>
-Geography <br/>
-University of Minnesota
+Connor.Donegan@UTSouthwestern.edu <br/></p>
               
 </div>
 
-<div id="right" style="float:right; width:55%;">
-  
-<p>I am a geographer with research interests in political economy and health, social-science methodology, and spatial statistics/geographic information science (GIS). If you find something of interest on this site, feel free to get in touch with me via e-mail.</p>
+<div id="right" style="float:right; width:62.5%;">
 
-<p>
-My dissertation, titled <i>Plausible reasoning and heuristic methodology in human geography: An invesitagtion of colorectal cancer incidence and inequalities in Texas, 1999--2019</i>, engages with the methodological framework of plausible reasoning as developed by the likes of George Po&#769;lya and Harold Jeffreys. I argue that plausible reasoning provides an epistemological complement to critical realist philosophies of science. I am most interested in how these can be combined to support the development of investigative strategies that are appropriate for causal and explanatory research in the social and health sciences, especially where explanations pertain to dynamic social structures. The dissertation develops these ideas through an investigation of colorectal cancer (CRC) incidence in the the Dallas-Fort Worth and Houston urban regions.
+<p> I am a human geographer and a postdoc at the O'Donnell School of Public Health, University of Texas Southwestern Medical Center in Dallas, Texas. In spring of 2023, I completed my PhD in Geospatial Information Sciences at UT Dallas. Concurrent with my degree, I undertook a research assistantship and advisee role in cancer prevention research at UTSW. I previously studied political economy and urban geography at University of British Columbia (MA, 2013) and University of Minnesota (BA, 2010). </p>
+
+<p> My research falls into three overlapping areas of work: </p>
+
+<p> <b> Political economy and public health </b> <br/> At UBC, my research was focused on the political economy of forced labor in the US South, leading to archival research on Florida's convict leasing program. My current focus is on contemporary political economy of health. The main case study of my dissertation analyzes the social and spatial evolution of the colorectal cancer burden in the Dallas-Fort Worth and Houston metropolitan areas over the past two decades of polarizing economic growth and improved prevention technology.
 </p>
 
-<p> A previous research focus of mine was the historical political-economy of labor and race in the US South. My paper "The making of Florida's 'criminal class': race, modernity and the convict leasing program, 1877-1919" (<i>Florida Historical Quarterly</i>) examines Florida's convict leasing program, under which the state prison population was leased to private industry as a bound labor force. The paper examines the rapid expansion of the mostly black and male prison population in tandem with the growth of the lumber industry, its connection to the proliferation of debt peonage and similarly coercive labor arrangements, the role of a top-down Progressive-era reform effort in defending the deadly system, and its eventual demise. 
+<p> <b> Spatial statistics </b> <br/> While at UT Dallas, I developed an interest in spatial statistics and developed a pair of open-source software packages for public health surveillance research. 
 </p>
 
-</div>
+<p> <b> Methodology and philosophy of science </b> <br/> My dissertation, titled <i>Plausible reasoning and heuristic methodology in human geography: An invesitagtion of colorectal cancer incidence and inequalities in urban Texas, 1999--2019</i>, engages with the methodological framework of plausible reasoning as developed by the likes of George Po&#769;lya and Harold Jeffreys. As I argue, their writings on plausible inference can contribute to the formulation of creative and impactful study designs, including for research pertaining to social structures. I also argue that Jeffreys' writings on probability anticipated a number of core elements of today's critical realist philosophy (such as critique of the true/false binary, and defense of judgmental rationality).
+</p>
