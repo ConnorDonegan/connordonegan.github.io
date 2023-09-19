@@ -48,3 +48,5 @@ gem "nokogiri", ">= 1.11.4"
 
 # Upgrade kramdown to version 2.3.0 or later: conflicts with github-pages. For example:
 #gem "kramdown", ">= 2.3.0"
+
+gem "webrick", "~> 1.8"
