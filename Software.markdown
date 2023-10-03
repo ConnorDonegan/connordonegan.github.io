@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Public Health Software
+title: Software
 permalink: /software/
 ---
 
-A large portion of my research at UT Dallas and UT Southwestern Medical Center has been focused on spatial statistics, Bayesian modeling, and public health. This page describes the main products of this work, which include papers on quantitative methodology and a pair of software programs. The software and code uses the R language for statistical computing and the [Stan](https://mc-stan.org) modeling language for Markov chain Monte Carlo sampling.
+A large portion of my research at UT Dallas and UT Southwestern Medical Center has been focused on spatial statistics, Bayesian modeling, and public health. This page describes the main products of this work, which include papers on quantitative methodology and a pair of software programs that were built primarily for public health surveillance research. The software and code uses the R language for statistical computing and the [Stan](https://mc-stan.org) modeling language for Markov chain Monte Carlo sampling.
 
 #### The geostan R package
 
