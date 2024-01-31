@@ -33,7 +33,7 @@ The main case study of my dissertation examines the evolution of the colorectal 
 At UT Dallas, I became interested in spatial statistics and Bayesian modeling. My research in this area led to a pair of open-source software packages. One of them (surviel) is for modeling time trends in disease incidence or mortality rates, the other (geostan) provides a variety of methods and models for spatial data analysis.
 </p>
 
-<p> <b> Methodology and philosophy of science </b> <br/>
+<p> <b> Social science methodology </b> <br/>
 My dissertation, titled <i>Plausible reasoning and heuristic methodology in human geography: An invesitagtion of colorectal cancer incidence and inequalities in urban Texas, 1999--2019</i>, engages with the methodological framework of plausible reasoning (PR) as developed by the likes of George Po&#769;lya and Harold Jeffreys. I am interested in how their writings on PR can contribute to methodology and study design in the social sciences, particularly for research pertaining to social structures and health. 
 </p>
 
