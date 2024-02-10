@@ -30,7 +30,7 @@ The main case study of my dissertation examines the evolution of the colorectal 
 </p>
 
 <p> <b> Spatial statistics </b> <br/>
-At UT Dallas, I became interested in spatial statistics and Bayesian modeling. My research in this area led to a pair of open-source software packages. One of them (surviel) is for modeling time trends in disease incidence or mortality rates, the other (geostan) provides a variety of methods and models for spatial data analysis.
+At UT Dallas, I became interested in spatial statistics and Bayesian modeling. My research in this area led to a pair of open-source software packages. One of them (surviel) is for modeling time trends in disease incidence or mortality rates, the other (geostan) provides a variety of methods and models for spatial data analysis and disease mapping.
 </p>
 
 <p> <b> Social science methodology </b> <br/>
