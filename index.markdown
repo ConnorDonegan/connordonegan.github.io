@@ -21,7 +21,7 @@ Connor.Donegan@UTSouthwestern.edu <br/></p>
 
 <div id="right" style="float:right; width:62.5%;">
 
-<p> I am a human geographer and a postdoc at the O'Donnell School of Public Health, University of Texas Southwestern Medical Center in Dallas, Texas. In spring of 2023, I completed my PhD in Geospatial Information Sciences (GIS) at UT Dallas. Concurrent with my degree, I undertook a research assistantship and advisee role in cancer prevention research at UTSW. Previously I studied political economy and urban geography at University of British Columbia (MA, 2013) and University of Minnesota (BA, 2010). </p>
+<p> I am a human geographer and a postdoctoral researcher at the O'Donnell School of Public Health, University of Texas Southwestern Medical Center in Dallas, Texas. I completed my PhD in Geospatial Information Sciences (GIS) at UT Dallas in spring of 2023, and I studied urban geography and political economy at University of British Columbia (MA, 2013) and University of Minnesota (BA, 2010). </p>
 
 <p> My research falls into three overlapping areas of work: </p>
 
