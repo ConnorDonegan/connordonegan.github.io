@@ -23,14 +23,14 @@ Connor.Donegan@UTSouthwestern.edu <br/></p>
 
 <p> I am a human geographer and a postdoctoral researcher at the O'Donnell School of Public Health, University of Texas Southwestern Medical Center in Dallas, Texas. I completed my PhD in Geospatial Information Sciences (GIS) at UT Dallas in spring of 2023, and I studied urban geography and political economy at University of British Columbia (MA, 2013) and University of Minnesota (BA, 2010). </p>
 
-<p> My research falls into three overlapping areas of work: </p>
+<p> I study health inequalities and research methodology. My current research falls into three overlapping areas of work: </p>
 
 <p> <b> Political economy of health </b> <br/>
-The main case study of my dissertation examines the evolution of the colorectal cancer (CRC) burden over the past two decades in the Dallas-Fort Worth and Houston metropolitan regions. This period saw the diffusion of improved prevention technology, namely screening colonoscopy, in the midst of polarizing economic growth, demographic change, and expansive urbanization processes. This research is concerned with the ways that cancer inequalities have evolved in tandem with these social transformations. 
+The main case study of my dissertation examines the evolution of the colorectal cancer (CRC) burden over the past two decades in the Dallas-Fort Worth and Houston metropolitan regions. This period saw the diffusion of improved prevention technology, namely screening colonoscopy, in the midst of polarizing economic growth, demographic change, and expansive urbanization processes. This research is concerned with the ways that cancer inequalities have evolved in tandem with these social transformations. My research on <a href="{{ site.baseurl }}/florida/">convict leasing in Florida</a> also covers themes of health and inequality.
 </p>
 
 <p> <b> Spatial statistics </b> <br/>
-I study spatial statistics and Bayesian modeling. My research in this area has led to a pair of open-source statistical software packages. One of them (surviel) is for modeling time trends in disease incidence or mortality rates, the other (geostan) provides a variety of methods and models for spatial data analysis and disease mapping. The latter incorporates computational methods I developed to speed up spatial autoregressive models in the Stan modeling language, plus other methods presented in my publications.
+I study spatial statistics and Bayesian modeling for health research. My research in this area has led to a pair of open-source statistical software packages. One of them (surveil) is for modeling time trends in disease incidence or mortality rates, the other (geostan) provides a variety of methods and models for spatial data analysis and disease mapping. The latter incorporates computational methods I developed to speed up spatial autoregressive models in the Stan modeling language, plus other methods presented in my publications. I have also written on <a href="https://onlinelibrary.wiley.com/doi/10.1111/gean.12408">spatial-statistical theory</a>.
 </p>
 
 <p> <b> Social science methodology </b> <br/>
