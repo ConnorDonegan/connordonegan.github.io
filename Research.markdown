@@ -7,11 +7,10 @@ permalink: /writing/
 For a complete list of academic publications, see my <a style="color:DarkSlateGray" href="{{ site.baseurl }}/CV/">CV</a>.
 
 
-<a style="color:DarkSlateGray" href="{{ site.baseurl }}/dissertation/"> Plausible Reasoning and Heuristic Methodology in Human Geography: An Investigation of Colorectal Cancer Incidence and Inequalities in Urban Texas, 1999-2019</a>
-<br/> <small><i> The University of Texas at Dallas </i> (2023) 
+<a style="color:DarkSlateGray" href="{{ site.baseurl }}/spatial-stats-theory/">Plausible Reasoning and Spatial-Statistical Theory</a>
+<br/> <small><i> Geographical Analysis </i> (2024)
 <br/>
-This dissertation builds upon George Pólya’s heuristic method of inductive and analogical reasoning to contribute to research methodology in human geography. Plausible reasoning is presented here as a practical methodology that aims to specify the logical relations behind judgments of credibility and to leverage them in heuristic and dialectic fashion to aid in the processes of formulating questions and conjectures, debating the weight of evidence, and clarifying analogies. After Harold Jeffreys, I view plausible reasoning as an epistemological complement to critical realist philosophies of science.</small>
-
+This paper provides a review of some important historical developments in spatial-statistical theory, synthesizes and tests some key concepts, and puts the ideas into a critical conversation with recent some writings on the topic. This is the first of two case studies from my dissertation on plausible reasoning. </small>
 
 <a style="color:DarkSlateGray" href="{{ site.baseurl }}/florida/">The Making of Florida's 'Criminal Class': Race, Modernity, and the Convict Leasing Program, 1877-1919</a>
 <br/> <small><i> Florida Historical Quarterly </i> (2019)
