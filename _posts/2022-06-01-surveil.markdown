@@ -50,8 +50,5 @@ plot(fit, scale = 100e3)
 
 As one might expect, there has been a steep decline in CRC incidence among those of screening-age (50-75+) and, unfortunately, what may be a slow increase at younger ages. Notably, almost all of the decline is happening at ages over 60 and especially 64. Even ages 80-84 show a very steep decline, which we might reasonably speculate is a result of (a) people choosing to continue CRC screening past the age of 75 and/or (b) that the preventive benefits of colonoscopy last about a decade (per official screening guidelines). (This <a style="color:DarkSlateGray" href="https://connordonegan.github.io/surveil/articles/age-standardization.html">software vignette</a> shows how to convert results like this into age-standardized rates.)
 
-
-
-
 A major difference from join-point models is the analysis of derivative quantities of interest such as average annual percent change (AAPC). For now, it requires just a little bit of coding skills but one can use the model results to calculate all sorts of quantities like this. More background and examples can be found in this <a style="color:DarkSlateGray" href="https://connordonegan.github.io/surveil/articles/surveil-mcmc.html">vignette on MCMC analysis with surveil.</a> 
 
