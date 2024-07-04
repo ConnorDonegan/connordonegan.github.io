@@ -1,0 +1,57 @@
+---
+layout: page
+title: Modeling time trends for disease surveillance studies
+permalink: /surveil-paper/
+---
+
+
+<p style="color:Gray"> Donegan, Connor, Amy E Hughes and Simon J Craddock Lee (2022). Colorectal Cancer Incidence, Inequalities, and Prevention Priorities in Urban Texas: Surveillance Study with the "surveil" software package. <em>JMIR Public Health & Surveillance</em> 8, no. 8: e34589 DOI:<a style="color:DarkSlateGray" href="https://doi.org/10.2196/34589">10.2196/34589</a> PMID:<a style="color:DarkSlateGray" href="https://pubmed.ncbi.nlm.nih.gov/35972778/a">35972778</a></p>
+
+<p style="color:Gray">Software documentation: <a style="color:DarkSlateGray" href="https://connordonegan.github.io/surveil">connordonegan.github.io/surveil</a></p>
+
+<p style="color:Gray">Software vignettes: <a style="color:DarkSlateGray" href="https://connordonegan.github.io/surveil/articles/index.html">https://connordonegan.github.io/surveil/articles/index.html</a></p>
+
+<p> This paper introduces the 'surveil' R package for disease surveillance research and illustrates some advantages for health inequality research. The software provides time series models for routine public health surveillance tasks; namely, modeling time trends in mortality or disease incidence rates to make inferences about levels of risk, cumulative and period percent change, age-standardized rates, and health inequalities. This software was motivated by the need for an accessible alternative to join-point regression, which is ubiquitous in the cancer literature but not particularly common in other research areas.</p>
+
+<p> For some researchers, the fact that 'surveil' requires some familiarity with a programming language (R) is a barrier. That said, having designed the software to undertake one very specific task, use of the software involves only a few routines. One can get start using 'surveil' with minimal programming skills. For example, disease or mortality data acquired from the CDC Wonder database are already in the correct format to start modeling.</p>
+
+<p>The models implemented in 'surveil' have two components or levels: first is a Poisson or binomial model or likelihood for the number of cases (deaths or disease incidence), accounting for chance variation around the trend-level of risk; the second component is a model for the trend in the level of risk. The trend models are known variably as the random-walk, first difference, or intrinsic autoregressive model. All of the model parameters also have prior distributions, which are designed to be uninformative for most use cases.</p>
+
+To illustrate, consider some data on colorectal cancer incidence downloaded from CRC Wonder for various age groups in Texas. The top of the file looks like this:
+
+
+| Year | Age.Groups   | Count    | Population |
+| ----- | -------- | ----------- | ---------- |
+| 1999 | 45-49     | 418         |     1374078 |
+| 1999 | 50-54     | 598         | 1146781 |
+| 1999 | 55-59     | 728        | 863292 |
+
+
+If this file were loaded into an R session as a data.frame named `dat`, the following code would produce a fitted model with time trends for each age group:
+
+```
+fit = stan_rw(dat, time = Year, group = Age.Groups)
+```
+
+The function expects the case counts to be stored in the column named "Count" and the population count to be found in a column named "Population" (matching the CDC Wonder data export format). The `time = Year` argument tells it to find the time variable in the column named 'Year'. The `group = Age.Groups'` tell the software to produce separate models for each age group. (If there were just a single age group in the data, then we would simply omit the `group` argument.)
+
+With one more line of code we have a publication-quality figure showing trends in CRC incidence per 100,000 at risk by age group:
+
+```
+plot(fit, scale = 100e3)
+```
+
+<center>
+<figure>
+<img src="/assets/crc-trends.png" alt="CRC time trends" style="width:50%">
+<figcaption> Age-specific CRC incidence per 100,000 in Texas, 1999-2020. </figcaption>
+</figure>
+</center>
+
+As one might expect, there has been a steep decline in CRC incidence among those of screening-age (50-75+) and, unfortunately, what may be a slow increase at younger ages. Notably, almost all of the decline is happening at ages over 60 and especially 64. Even ages 80-84 show a very steep decline, which we might reasonably speculate is a result of (a) people choosing to continue CRC screening past the age of 75 and/or (b) that the preventive benefits of colonoscopy last about a decade (per official screening guidelines). (This <a style="color:DarkSlateGray" href="https://connordonegan.github.io/surveil/articles/age-standardization.html">software vignette</a> shows how to convert results like this into age-standardized rates.)
+
+
+
+
+A major difference from join-point models is the analysis of derivative quantities of interest such as average annual percent change (AAPC). For now, it requires just a little bit of coding skills but one can use the model results to calculate all sorts of quantities like this. More background and examples can be found in this <a style="color:DarkSlateGray" href="https://connordonegan.github.io/surveil/articles/surveil-mcmc.html">vignette on MCMC analysis with surveil.</a> 
+
