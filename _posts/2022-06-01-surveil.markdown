@@ -19,13 +19,13 @@ permalink: /surveil-paper/
 
 To illustrate, consider some data on colorectal cancer incidence downloaded from CRC Wonder for various age groups in Texas. The top of the file looks like this:
 
+**Table 1:** Glimpse of CDC Wonder data on colorectal cancer incidence, 1999-2020.
 
 | Year | Age.Groups   | Count    | Population |
 | ----- | -------- | ----------- | ---------- |
 | 1999 | 45-49     | 418         |     1374078 |
 | 1999 | 50-54     | 598         | 1146781 |
 | 1999 | 55-59     | 728        | 863292 |
-
 
 If this file were loaded into an R session as a data.frame named `dat`, the following code would produce a fitted model with time trends for each age group:
 
@@ -39,16 +39,51 @@ With one more line of code we have a publication-quality figure showing trends i
 
 ```
 plot(fit, scale = 100e3)
+``` 
+
+<center>
+<figure>
+<img src="/assets/crc-trends.png" alt="CRC time trends" style="width:75%">
+<figcaption> Figure 1: Age-specific CRC incidence per 100,000 in Texas, 1999-2020. </figcaption>
+</figure>
+</center>
+
+As one might expect, there has been a steep decline in CRC incidence among those of screening-age (50-75+) and, unfortunately, what may be a slow increase at younger ages (an increase which is now quite widely documented). Notably, almost all of the decline is happening at ages over 60 and especially 64. Even ages 80-84 show a very steep decline, which we might reasonably speculate is a result of (a) people choosing to continue CRC screening past the age of 75 and/or (b) that the preventive benefits of colonoscopy last about a decade (per official screening guidelines). (This <a style="color:DarkSlateGray" href="https://connordonegan.github.io/surveil/articles/age-standardization.html">software vignette</a> shows how to convert results like this into age-standardized rates.)
+
+These age-specific trends can be summarized by percent change annually and cumulatively. The latter (cumulative percent change) is usually a more effective summary statistic because an inference about annual percent change is typically subject to a high level of uncertainty. The following  two lines of code will use the fitted models to produce cumulative percent change plots for each age group:
+
+```
+fit_pc <- apc(fit)
+plot(fit_pc, cumulative = TRUE)
 ```
 
 <center>
 <figure>
-<img src="/assets/crc-trends.png" alt="CRC time trends" style="width:50%">
-<figcaption> Age-specific CRC incidence per 100,000 in Texas, 1999-2020. </figcaption>
+<img src="/assets/crc-trends-cpc.png" alt="Plots of cumulative percent change in CRC incidence rates" style="width:90%">
+<figcaption> Figure 2: Cumulative percent change in age-specific CRC incidence. </figcaption>
 </figure>
 </center>
 
-As one might expect, there has been a steep decline in CRC incidence among those of screening-age (50-75+) and, unfortunately, what may be a slow increase at younger ages. Notably, almost all of the decline is happening at ages over 60 and especially 64. Even ages 80-84 show a very steep decline, which we might reasonably speculate is a result of (a) people choosing to continue CRC screening past the age of 75 and/or (b) that the preventive benefits of colonoscopy last about a decade (per official screening guidelines). (This <a style="color:DarkSlateGray" href="https://connordonegan.github.io/surveil/articles/age-standardization.html">software vignette</a> shows how to convert results like this into age-standardized rates.)
+Because the pandemic interrupted a lot of cancer screening activity in 2020 (which may have resulted in cancer diagnoses being delayed to subsequent years), the estimates for 2019 are more relevant for an assessment for longer-term trends. Ages 45 to 54 saw increased of 13.6 and 17.8 percent since 2019, almost all of which occurred since about 2012. The greatest declines occurred for the highest age groups: about 46% for ages 75-79 and 42% for ages 80-84, which is equivalent to an average of just over 2% per year since 1999.
 
-A major difference from join-point models is the analysis of derivative quantities of interest such as average annual percent change (AAPC). For now, it requires just a little bit of coding skills but one can use the model results to calculate all sorts of quantities like this. More background and examples can be found in this <a style="color:DarkSlateGray" href="https://connordonegan.github.io/surveil/articles/surveil-mcmc.html">vignette on MCMC analysis with surveil.</a> 
+**Table 2:** Cumulative % change in CRC incidence, 1999 to 2019.
+
+ Age Group   | Cum. % change | 95% cred. interval |
+--------   | ----------- |
+ 45-49     | 13.6     | 4.8, 23.3   |
+ 50-54     | 17.8     | 8.9, 29.0   |
+ 55-59     | -10.6    | -17, -3.4   |
+ 60-64     | -14.5    | -21.2, -7.2 |  
+ 65-69     | -31.9    | -36.1, -27.2 |
+70-74      | -40.5    | -44.4, -36.3 |
+75-79      | -46      | -49.8, -42.0 |
+80-84      | -42      | -46.7, -37.0 |
+
+Returning to the R code, the data in Table 2 can be found by printing the `cpc` slot in the `fit_pc` object (this will show a summary of CPC estimates for all years and age groups):
+
+```
+print( fit_pc$cpc )
+```
+
+An advantage of 'surveil' is that users can calculate any kind of summary statistic they like and obtain appropriate credible intervals for them (such as percent change between any two years or a rate ratio for two groups). More background and examples can be found in this <a style="color:DarkSlateGray" href="https://connordonegan.github.io/surveil/articles/surveil-mcmc.html">vignette on MCMC analysis with surveil.</a> 
 
