@@ -87,3 +87,35 @@ print( fit_pc$cpc )
 
 An advantage of 'surveil' is that users can calculate any kind of summary statistic they like and obtain appropriate credible intervals for them (such as percent change between any two years or a rate ratio for two groups). More background and examples can be found in this <a style="color:DarkSlateGray" href="https://connordonegan.github.io/surveil/articles/surveil-mcmc.html">vignette on MCMC analysis with surveil.</a> 
 
+*If you want to follow this example on your computer, you can use the following R code:*
+```
+# install surveil (if necessary)
+if (!require("surveil")) install.packages("surveil")
+
+# load the package
+library(surveil)
+
+# data source
+crc_url <- "https://raw.githubusercontent.com/ConnorDonegan/connordonegan.github.io/main/assets/00-CDCWonder-crc-45-84.txt"
+
+# read the data into R
+dat <- read.table(crc_url, header = TRUE, sep = "\t")
+
+# fit Poisson random walk models by age group
+fit = stan_rw(dat, time = Year, group = Age.Groups)
+
+# same as obove but with parallel processing (faster)
+fit = stan_rw(dat, time = Year, group = Age.Groups, cores = 4)
+
+# plot time trends (per 100,000)
+plot(fit, scale = 100e3)
+
+# calculate percent change 
+fit_pc <- apc(fit)
+
+# plot cumulative percent change
+plot(fit_pc, cumulative = TRUE)
+
+# print cumulative percent change
+print(fit_pc$cpc)
+```
