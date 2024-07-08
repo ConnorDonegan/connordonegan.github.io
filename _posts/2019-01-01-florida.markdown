@@ -8,11 +8,22 @@ Under the State of Florida’s convict leasing program (1877-1919) approximately
 
 This study engages with a number of questions revolving around the inter-connected themes of violence, labor, and race. This page provides a summary of the research followed by a (pre-print) copy of the work published in *Florida Historical Quarterly*. The pre-print contains some supplementary material (images and an original document) not present in the *FHQ* article, as well as a minor correction to the text (the second paragraph beginning on p. 27 is missing from the original publication). The publication can be found at <https://stars.library.ucf.edu/fhq/vol97/iss4/>.
 
+
+<center>
+<img src="/assets/FHQ-cover-photo.jpg" alt="Florida Historical Quarterly cover" style="width:33%">
+<figcaption> <small> <em>FHQ</em> 97(4), Spring 2019. </small> </figcaption>
+</center>
+<br/>
+
 #### Origins of the lease
 
 The convict leasing program began with the fall of Florida's (Republican) Reconstruction government in 1877 to the (Democratic) "Redeemers" who aimed to restore white supremacy and, with it, the unbridled power of the owners of capital. On March 2, 1877 the Florida Legislature authorized funding to convert the Florida penitentiary into an insane asylum, and the next day they approved an act granting the governor the power to lease the prison population to private interests.
 
 Under the convict leasing system, private individuals and corporations were to pay the state and, in return, take full possession of the entire prison population. They would exploit the labor of prisoners, at the pain of the lash, in their private industrial or agricultural enterprises. By the end of the convict leasing system in 1919, approximately 14,000 Floridians and visitors had served sentences in a sprawling network of private labor camps located throughout the state. After 1900, most prisoners were leased to the rapidly expanding lumber and turpentine industries which, as of 1910, comprised over 37,000 wage earners and made up 65% of manufacturing employment in Florida.
+
+#### A labor market institution
+
+As the *FHQ* article documents, nothing like due process existed in the Florida courts. Many prisoners were pardoned, but pardons were often granted only after the claimant had become debilitated from hard labor, violence, or disease. Coercive forms of state power---arbitrary sentencing power exercised by the courts, "false-pretense" laws that supported debt peonage, the notorious cruelty of the penal system---contributed to the proliferation of tyrannical labor relations, not least of all in the lumber and turpentine industries.[^lumber]
 
 <center>
 <figure>
@@ -20,11 +31,6 @@ Under the convict leasing system, private individuals and corporations were to p
 <figcaption> Florida state prison sentences by race and gender. </figcaption>
 </figure>
 </center>
-
-
-#### A labor market institution
-
-As the *FHQ* article documents, nothing like due process existed in the Florida courts. Many prisoners were pardoned, but pardons were often granted only after the claimant had become debilitated from hard labor, violence, or disease. Coercive forms of state power---arbitrary sentencing power exercised by the courts, "false-pretense" laws that supported debt peonage, the notorious cruelty of the penal system---contributed to the proliferation of tyrannical labor relations, not least of all in the lumber and turpentine industries.[^lumber]
 
 Many prisoners already belonged to the massive black migrant workforce that powered lumber and turpentine operations in Florida; over half of Florida's prisoners hailed from outside of the state. The prisoners belonged, according one official, to a "criminal class" that "should labor, should be wealth producers in or out of prison." These "wealth producers" were not to be the one's who enjoyed such wealth. Rather, prisoners were expected "to learn the lesson of obedience, submission and energetic effort or labor." 
 
@@ -35,7 +41,14 @@ Many prisoners already belonged to the massive black migrant workforce that powe
 </figure>
 </center>
 
-After clear-cutting its way through various other states, the lumber industry expanded into Florida's pine forests while deploying a range of exploitative and violent labor arrangements, from simple wage-labor to debt peonage to the quasi-slavery of the prison laborer, all under intensely competitive market conditions.[^banaji] Labor scarcity in remote forested areas was often an issue for operators, but workers themselves were unable to leverage this to their advantage to push for better conditions and pay. Instead, operators kept "woodsriders," armed overseers on horseback, to prevent workers from leaving their employment. The exercise of coercive forms of state power buttressed the unbridled authority of employers, and stands among the primary reasons why forced labor proliferated in the forest industries in Florida and other southern states.
+After clear-cutting its way through various other states, the lumber industry expanded into Florida's pine forests while deploying a range of exploitative and violent labor arrangements, from simple wage-labor to debt peonage to the quasi-slavery of the prison laborer, all under intensely competitive market conditions.[^banaji] Labor scarcity in remote forested areas was often an issue for operators, but workers themselves were unable to leverage this to their advantage to push for better conditions and pay. Instead, operators kept "woodsriders," armed overseers on horseback, to prevent workers from leaving their employment. The exercise of coercive forms of state power buttressed the unbridled authority of employers and stands among the primary reasons why forced labor proliferated in the forest industries in Florida and other southern states.
+
+<center>
+<figure>
+<img src="/assets/A-chain-gang-for-collecting-scrape-191--RC06198.jpg" style="width:77%" />
+<figcaption> Cottrell-Ashley (Studio). A chain gang for collecting scrape. C. 1910. State Archives of Florida, Florida Memory. https://www.floridamemory.com/items/show/29497, accessed 24 July 2022. </figcaption>
+</figure>
+</center>
 
 #### Race as ideology of social fitness
 
