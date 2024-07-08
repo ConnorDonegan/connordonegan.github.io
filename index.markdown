@@ -21,19 +21,18 @@ Connor.Donegan@UTSouthwestern.edu <br/></p>
 
 <div id="right" style="float:right; width:62.5%;">
 
-<p> I am a human geographer studying social and health inequalities and research methodology. My current work is focused on three areas of concern:
+<p> I am a human geographer studying social and health inequalities and research methodology. My work is currently focused on three areas:
 
 <ul>
-  <li> Techniques and software for analyzing spatial data, especially health data </li>
-  <li> Methodology and study design techniques for connecting spatial analyses to theoretical models, especially of social and health inequalities </li>
-  <li> Case studies on social inequalities and health. </li>
+  <li> Techniques and software for analyzing spatial data </li>
+  <li> Methodology and study design techniques for connecting spatial analyses to theoretical models </li>
+  <li> Case studies on social inequalities and health geography. </li>
 </ul>
 
-This research agenda aims to close the distance between quantitative research that documents the (often extreme) social and health inequalities of our world and more theoretically-guided studies that offer explanatory models.</p>
+My current research agenda aims to close the distance between quantitative research that documents inequalities and theoretically-guided studies that offer explanatory models.</p>
 
-<p>This site contains selections from my past and current work including archival research on <a href="{{ site.baseurl }}/florida/">convict leasing</a> in Florida (1877-1919), writing on  <a href="{{ site.baseurl }}/spatial-stats-theory/">spatial-statistical theory</a>, and the  <a href="{{ site.baseurl }}/software/">software</a> packages I developed for analyzing health data.</p>
+<p> After completing my PhD in Geospatial Information Sciences (GIS) at UT Dallas in 2023, I joined the O'Donnell School of Public Health at UT Southwestern Medical Center as a postdoctoral researcher. I studied urban geography and political economy in the geography programs at University of British Columbia (MA, 2013) and University of Minnesota (BA, 2010). </p>
 
-<p> I am currently a postdoctoral researcher at the O'Donnell School of Public Health, University of Texas Southwestern Medical Center in Dallas, Texas. I completed my PhD in Geospatial Information Sciences (GIS) at UT Dallas in spring of 2023. I studied urban geography and political economy in the geography programs at University of British Columbia (MA, 2013) and University of Minnesota (BA, 2010). </p>
+<p>This site hosts a selection of my writings including archival research on <a href="{{ site.baseurl }}/florida/">convict leasing</a> in Florida (1877-1919), a study of  <a href="{{ site.baseurl }}/spatial-stats-theory/">spatial-statistical theory</a>, and the statistical <a href="{{ site.baseurl }}/software/">software</a> packages I have developed.</p>
 
-<p>More of my dissertation research will be added as it reaches publication stage. My dissertation is titled <i>Plausible reasoning and heuristic methodology in human geography: An invesitagtion of colorectal cancer incidence and inequalities in urban Texas, 1999--2019</i>, engages with the methodological framework of plausible reasoning (PR) as developed by the likes of George Po&#769;lya and Sir Harold Jeffreys. I am interested in how their writings on PR can contribute to methodology and study design in the social sciences, including for research pertaining to social structures and health.</p>
-
+<p>My dissertation is titled <i>Plausible reasoning and heuristic methodology in human geography: An invesitagtion of colorectal cancer incidence and inequalities in urban Texas, 1999--2019</i>, engages with the epistemological framework of plausible reasoning (PR) as developed by the likes of George Po&#769;lya and Sir Harold Jeffreys. I am interested in how their writings on PR can contribute to methodology and study design in the social sciences, including for research pertaining to social structures and health. More of my dissertation research will be added to the site as it reaches publication stage. </p>
