@@ -10,7 +10,7 @@ For a complete list of academic publications, see my <a style="color:DarkSlateGr
 <a style="color:DarkSlateGray" href="{{ site.baseurl }}/spatial-stats-theory/">Plausible Reasoning and Spatial-Statistical Theory</a>
 <br/> <small><i> Geographical Analysis </i> (2024)
 <br/>
-This paper provides a review of some important historical developments in spatial-statistical theory, synthesizes and tests some key concepts, and puts the ideas into a critical conversation with recent some writings on the topic. This is the first of two case studies from my dissertation on plausible reasoning. </small>
+This paper provides a review of some important historical topics in spatial-statistical theory, synthesizes and tests some key concepts, and puts the ideas into conversation with recent some writings on the topic. This is the first of two case studies from my dissertation on plausible reasoning. </small>
 
 
 <a style="color:DarkSlateGray" href="{{ site.baseurl }}/surveil-paper/">Modeling time trends for disease surveillance studies</a>

@@ -21,11 +21,11 @@ Connor.Donegan@UTSouthwestern.edu <br/></p>
 
 <div id="right" style="float:right; width:62.5%;">
 
-<p> I am a human geographer studying social inequalities in health and research methodology. My current work is focused on three areas of concern:
+<p> I am a human geographer studying social and health inequalities and research methodology. My current work is focused on three areas of concern:
 
 <ul>
-  <li> Techniques and software for analyzing spatial health data </li>
-  <li> Methodology and study design techniques for connecting spatial health analyses to theories of social inequality and health </li>
+  <li> Techniques and software for analyzing spatial data, especially health data </li>
+  <li> Methodology and study design techniques for connecting spatial analyses to theories of social inequality and health </li>
   <li> Case studies on social inequalities and health. </li>
 </ul>
 
@@ -35,5 +35,5 @@ This research agenda aims to close the distance between quantitative research th
 
 <p>This site contains selections from my past and current work. This includes my historical research on <a href="{{ site.baseurl }}/florida/">convict leasing</a> in Florida, work on  <a href="{{ site.baseurl }}/spatial-stats-theory/">spatial-statistical theory</a>, and the  <a href="{{ site.baseurl }}/software/">software</a> packages I developed for analyzing health data.</p>
 
-<p>More of my dissertation research will be added as it reaches publication stage. My dissertation is titled <i>Plausible reasoning and heuristic methodology in human geography: An invesitagtion of colorectal cancer incidence and inequalities in urban Texas, 1999--2019</i>, engages with the methodological framework of plausible reasoning (PR) as developed by the likes of George Po&#769;lya and Harold Jeffreys. I am interested in how their writings on PR can contribute to methodology and study design in the social sciences, particularly for research pertaining to social structures and health.</p>
+<p>More of my dissertation research will be added as it reaches publication stage. My dissertation is titled <i>Plausible reasoning and heuristic methodology in human geography: An invesitagtion of colorectal cancer incidence and inequalities in urban Texas, 1999--2019</i>, engages with the methodological framework of plausible reasoning (PR) as developed by the likes of George Po&#769;lya and Harold Jeffreys. I am interested in how their writings on PR can contribute to methodology and study design in the social sciences, including for research pertaining to social structures and health.</p>
 
