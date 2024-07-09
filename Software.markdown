@@ -4,7 +4,7 @@ title: Software
 permalink: /software/
 ---
 
- This page describes statistical software I have developed and lists associated papers on quantitative methodology. The software uses the R language for statistical computing and the [Stan](https://mc-stan.org) modeling language for Markov chain Monte Carlo sampling. 
+ This page describes statistical software I have developed and lists associated papers on quantitative methodology. The software uses the [R](https://www.r-project.org/) language for statistical computing and the [Stan](https://mc-stan.org) modeling language for Markov chain Monte Carlo sampling. 
 
 #### The geostan R package
 
