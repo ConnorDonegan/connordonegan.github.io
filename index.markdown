@@ -26,7 +26,7 @@ Connor.Donegan@UTSouthwestern.edu <br/></p>
 <ul>
   <li> Techniques and software for analyzing spatial data </li>
   <li> Methodology and study design techniques for connecting spatial analyses to theoretical models </li>
-  <li> Case studies on social inequalities and health geography. </li>
+  <li> Case studies on cities, health, and inequalities. </li>
 </ul>
 
 <p> After completing my PhD in Geospatial Information Sciences (GIS) at UT Dallas in 2023, I joined the O'Donnell School of Public Health at UT Southwestern Medical Center as a postdoctoral researcher. I studied urban geography and political economy in the geography programs at University of British Columbia (MA, 2013) and University of Minnesota (BA, 2010). </p>
