@@ -29,8 +29,6 @@ Connor.Donegan@UTSouthwestern.edu <br/></p>
   <li> Case studies on social inequalities and health geography. </li>
 </ul>
 
-My current research agenda aims to close the distance between quantitative research that documents inequalities and theoretically-guided studies that offer explanatory models.</p>
-
 <p> After completing my PhD in Geospatial Information Sciences (GIS) at UT Dallas in 2023, I joined the O'Donnell School of Public Health at UT Southwestern Medical Center as a postdoctoral researcher. I studied urban geography and political economy in the geography programs at University of British Columbia (MA, 2013) and University of Minnesota (BA, 2010). </p>
 
 <p>This site hosts a selection of my writings including archival research on <a href="{{ site.baseurl }}/florida/">convict leasing</a> in Florida (1877-1919), a study of  <a href="{{ site.baseurl }}/spatial-stats-theory/">spatial-statistical theory</a>, and the statistical <a href="{{ site.baseurl }}/software/">software</a> packages I have developed.</p>
