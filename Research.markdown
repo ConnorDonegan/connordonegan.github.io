@@ -20,7 +20,7 @@ This paper provides a review of some important historical topics in spatial-stat
 <a style="color:DarkSlateGray" href="{{ site.baseurl }}/surveil-paper/">Modeling time trends for disease surveillance studies</a>
 <br/> <small><i> JMIR Public Health &amp; Surveillance </i> (2022); Comprehensive R Archive Network (CRAN) </small>
 <br/>
-Modeling time trends in disease incidence and mortality rates is a routine task for public health research. One method for doing so has become ubiquitous, especially in cancer journals: join-point regression. Join-point has some known drawbacks and, partly for that reason, is not commonly found in general texts on time series modeling. This paper illustrates some of the advantages from applying a more standard time-trend model to disease surveillance research. The models are made available through the 'surveil' software package.
+Modeling time trends in disease incidence and mortality rates is a crucial and routine task for public health research. This paper introduces my 'surveil' R package for public health research, explains some of the advantages it has over the commonly-used join-point software, and applies it to a short study of colorectal cancer incidence and inequalities in urban Texas.
 <center>
 <img src="/assets/surveil-logo.png" alt="logo for the 'surveil' R package" style="width:17%">
 </center> 
