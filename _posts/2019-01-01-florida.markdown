@@ -28,16 +28,23 @@ As the *FHQ* article documents, nothing like due process existed in the Florida 
 <center>
 <figure>
 <img src="/assets/figure1-sentences-by-race-gender.png" />
-<figcaption> Florida state prison sentences by race and gender. </figcaption>
+<figcaption> Figure 1. Florida state prison sentences by race and gender. </figcaption>
 </figure>
 </center>
 
-Many prisoners already belonged to the massive black migrant workforce that powered lumber and turpentine operations in Florida; over half of Florida's prisoners hailed from outside of the state. The prisoners belonged, according one official, to a "criminal class" that "should labor, should be wealth producers in or out of prison." These "wealth producers" were not to be the one's who enjoyed such wealth. Rather, prisoners were expected "to learn the lesson of obedience, submission and energetic effort or labor." 
+In an important account of convict leasing in Georgia, Alex Lichtenstein suggests that the threat of prison labor would serve as "a powerful sanction against rural blacks who challenged the racial order upon which agricultural labor control relied."[^lichtenstein] This forms part of Lichtenstein's argument against the common presumption that there was a conflict of interests between industrial capital and the labor-repressive plantation regime. In Florida, it seems that many prisoners already belonged to the massive black migrant workforce that powered lumber and turpentine operations in Florida; over half of Florida's prisoners hailed from outside of the state (Fig. 2). Not only were most prisoners from out of state, most were also sentenced in counties that are outside of the state's plantation belt, where agricultural production was concentrated (Fig. 3). The prisoners belonged, according one prison official, to a "criminal class" that "should labor, should be wealth producers in or out of prison." These "wealth producers" were not to be the one's who enjoyed such wealth. Rather, prisoners were expected "to learn the lesson of obedience, submission and energetic effort or labor." On that reasoning, the system served as a disciplinary institution with respect to (black) labor. The evidence indicates that this disciplinary force was at least as important outside the plantation economy as within it.
 
 <center>
 <figure>
-<img src="/assets/figure3-origins.png" />
-<figcaption> Origins of Florida state prisoners by year of sentencing. </figcaption>
+<img src="/assets/figure3-origins.png"/>
+<figcaption> Figure 2. Origins of Florida state prisoners by year of sentencing. </figcaption>
+</figure>
+</center>
+
+<center>
+<figure>
+<img src="/assets/FL-maps.png" />
+<figcaption> Figure 3. Florida agricultural production (a) and relative sentencing intensity (b). A sentencing ratio of 2 indicates that the number of prison sentences was double what one would expected given demographic makeup of the county. Maps reflect Florida county boundaries as of 1900.</figcaption>
 </figure>
 </center>
 
@@ -111,6 +118,8 @@ The new law said nothing of *county* prisoners who continued to be leased to pri
 [^2]: This quotation and the political events surrounding it, as well as Martin Tabert's death, are mainly gathered from: Noel Gordon Carper. "The covict-lease system in Florida, 1866-1923." PhD thesis. Florida State University, 1966: 141--153, 297--299.
 
 [^1]: For more on the factors contributing to the end of convict leasing, see Matthew J. Mancini, *One Dies, Get Another: Convict Leasing in the American South, 1866--1928*. University of South Carolina Press, 1996.
+
+[^lichtenstein]: Alex Lichtenstein, *Twice the Work of Free Labor: The Political Economy of Convict Labor in the New South* (London and New York: Verso, 1996), 13.
 
 [^banaji]: The language used here to discuss *forms of exploitation*, and the implicit argument that such formal and legalistic variations do not imply a departure from capitalist commodity production, is borrowed from Jairus Banaji, *Theory As History: Essays on Modes of Production and Exploitation*. Brill, 2010.
 
