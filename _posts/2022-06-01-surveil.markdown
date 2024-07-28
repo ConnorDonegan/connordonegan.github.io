@@ -5,11 +5,11 @@ permalink: /surveil-paper/
 ---
 
 
-<p style="color:Gray"> Donegan, Connor, Amy E Hughes and Simon J Craddock Lee (2022). Colorectal Cancer Incidence, Inequalities, and Prevention Priorities in Urban Texas: Surveillance Study with the "surveil" software package. <em>JMIR Public Health & Surveillance</em> 8, no. 8: e34589 DOI:<a style="color:DarkSlateGray" href="https://doi.org/10.2196/34589">10.2196/34589</a> PMID:<a style="color:DarkSlateGray" href="https://pubmed.ncbi.nlm.nih.gov/35972778/a">35972778</a></p>
+<p style="color:Gray"> Donegan, Connor, Amy E Hughes and Simon J Craddock Lee (2022). Colorectal Cancer Incidence, Inequalities, and Prevention Priorities in Urban Texas: Surveillance Study with the "surveil" software package. <em>JMIR Public Health & Surveillance</em> 8, no. 8: e34589 DOI:<a href="https://doi.org/10.2196/34589">10.2196/34589</a></p>
 
-<p style="color:Gray">Software documentation: <a style="color:DarkSlateGray" href="https://connordonegan.github.io/surveil">connordonegan.github.io/surveil</a></p>
+<p style="color:Gray">Software documentation: <a href="https://connordonegan.github.io/surveil">connordonegan.github.io/surveil</a></p>
 
-<p style="color:Gray">Software vignettes: <a style="color:DarkSlateGray" href="https://connordonegan.github.io/surveil/articles/index.html">https://connordonegan.github.io/surveil/articles/index.html</a></p>
+<p style="color:Gray">Software vignettes: <a href="https://connordonegan.github.io/surveil/articles/index.html">https://connordonegan.github.io/surveil/articles/index.html</a></p>
 
 <p> This paper introduces my 'surveil' R package for disease surveillance research and illustrates some advantages for health inequality research. The software provides time series models for routine public health surveillance tasks; namely, modeling time trends in mortality or disease incidence rates to make inferences about levels of risk, cumulative and period percent change, age-standardized rates, and health inequalities. Among my motivations for developing the software was to provide an accessible alternative to join-point regression, which is a standard method in cancer prevention research. The advantages over join-point include the use direct (rather than indirect) age-standardization, absence of the strict linear-trend assumption, more appropriate measures of uncertainty, and the ability to make inferences about all sorts of derivative quantities of interest including change over time as well as measures of health difference and inequality.</p>
 
