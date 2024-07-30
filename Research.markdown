@@ -4,7 +4,7 @@ title: Writing
 permalink: /writing/
 ---
 
-For a complete list of academic publications, see my <a style="color:DarkSlateGray" href="{{ site.baseurl }}/CV/">CV</a>.
+For a complete list of academic publications, see my <a href="{{ site.baseurl }}/CV/">CV</a>.
 
 
 <a href="{{ site.baseurl }}/spatial-stats-theory/">Plausible Reasoning and Spatial-Statistical Theory: A Critique of Recent Writings on 'Spatial Confounding'</a>
