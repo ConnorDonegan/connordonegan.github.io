@@ -4,15 +4,15 @@ title: Writing
 permalink: /writing/
 ---
 
-For a complete list of academic publications, see my <a href="{{ site.baseurl }}/CV/">CV</a>.
+<em>For a complete list of academic publications, see my <a href="{{ site.baseurl }}/CV/">CV</a>.</em>
 
+<a href="https://doi.org/10.1111/gean.12408">Plausible Reasoning and Spatial-Statistical Theory: A Critique of Recent Writings on 'Spatial Confounding'</a>. 
+<br/> <small><i> Geographical Analysis </i> (2024); https://doi.org/10.1111/gean.12408</small>
 
-<a href="{{ site.baseurl }}/spatial-stats-theory/">Plausible Reasoning and Spatial-Statistical Theory: A Critique of Recent Writings on 'Spatial Confounding'</a>
-<br/> <small><i> Geographical Analysis </i> (2024)  </small>
+Statistical research on correlation with spatial data dates at least to Student's (W. S. Gosset's) 1914 paper on “the elimination of spurious correlation due to position in time and space.” Since 1968, much of this work has been organized around the concept of spatial autocorrelation (SA). A growing statistical literature is now organized around the concept of “spatial confounding” (SC) but is estranged from, and often at odds with, the SA literature and its history. The SC literature is producing new, sometimes flawed, statistical techniques such as Restricted Spatial Regression (RSR). This article brings the SC literature into conversation with the SA literature and provides a theoretically grounded review of the history of research on correlation with spatial data, explaining some of its implications for the the SC literature. The article builds upon principles of plausible inference to synthesize a guiding theoretical thread that runs throughout the SA literature. This leads to a concise theoretical critique of RSR and a clarification of the logic behind standard spatial-statistical models.
 <br/>
-This paper provides a review of some important historical topics in spatial-statistical theory, synthesizes and tests key concepts, and places the ideas into conversation with recent some writings on the topic. <br/>
 <center>
-<img src="/assets/SA-sim-study-results.jpg" style="width:80%">
+<img src="/assets/SA-sim-study-results.jpg" style="width:60%">
 </center> 
 <br/>
 <br/>
