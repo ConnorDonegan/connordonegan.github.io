@@ -6,6 +6,18 @@ permalink: /writing/
 
 <em>For a complete list of academic publications, see my <a href="{{ site.baseurl }}/CV/">CV</a>.</em>
 
+<b style="color:Charcoal;">Spatial analysis with geostan</b> <br/>
+<small> <em> r-spatial.org </em> (2024) and <em> Comprehensive R Archive Network </em> (CRAN). <a href="https://doi.org/10.32614/CRAN.package.geostan"> https://doi.org/10.32614/CRAN.package.geostan </a> 
+<br/>
+This post introduces the geostan R package by walking through an example analysis of international data on life expectancy and per capita GDP. The software package implements a variety of spatial-statistical models and provides a suite of tools for handling spatial data. The post illustrates how to specify and visualize spatial connectivity, fit common spatial regression models, and interpret the output of the Bayesian models. You can read the post at <a href="https://r-spatial.org/r/2024/08/02/geostan-introduction.html"> r-spatial.org</a>.
+<br/>
+<center>
+<img src="/assets/geostan-intro-LE-income-maps.png" style="width:60%">
+</center> 
+<br/>
+<br/>
+
+
 <b style="color:Charcoal;">Plausible Reasoning and Spatial-Statistical Theory: A Critique of Recent Writings on 'Spatial Confounding'.</b>
 <small><i> Geographical Analysis </i> (2024) <a href="https://doi.org/10.1111/gean.12408"> https://doi.org/10.1111/gean.12408 </a>
 
@@ -18,7 +30,7 @@ Statistical research on correlation with spatial data dates at least to Student'
 <br/>
 
 <b style="color:Charcoal;">Modeling time trends for disease surveillance studies</b>
-<br/> <small><i> JMIR Public Health &amp; Surveillance </i> (2022) and Comprehensive R Archive Network (CRAN) </small>
+<br/> <small><i> JMIR Public Health &amp; Surveillance </i> (2022) and <em> Comprehensive R Archive Network </em> (CRAN) </small>
 <br/>
 
 Modeling time trends in disease incidence and mortality rates is a crucial and routine task for public health research. This paper introduces my 'surveil' R package for public health research, explains some of the advantages it has over the commonly-used join-point software, and applies it to a short study of colorectal cancer incidence and inequalities in urban Texas. <a href="{{ site.baseurl }}/surveil-paper/">Read more</a>
