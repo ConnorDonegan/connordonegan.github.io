@@ -7,6 +7,18 @@ permalink: /writing/
 <em>For a complete list of academic publications, see my <a href="{{ site.baseurl }}/CV/">CV</a>.</em>
 <br/>
 
+<b style="color:Charcoal;">Investigating Cancer Inequalities in Urbanizing Texas with Plausible Reasoning</b> <br/>
+<small> <em> The Annals of the American Association of Geographers </em> (forthcoming)
+<br/>
+
+Colorectal cancer (CRC) is highly lethal yet often preventable. Between 2000 and 2010, incidence rates in Texas fell by 23% among screening-age adults (50-79). This is largely attributable to the relatively rapid adoption of screening colonoscopy as standard preventive care. Focused on the Dallas and Houston metro regions, this article documents stark transformations in the social geography of the CRC burden, including the emergence in this time period of substantial social class-related inequality in CRC risk. This is a case study in how health inequalities can be produced by the uneven (and mostly unorganized) diffusion of medical advancements in contexts where heightened economic inequality structures people's capacities to adopt new forms of care.
+
+<b style="color:Charcoal;">Spatial Uncertainty and Probability</b> <br/>
+<small>with co-author Yongwan Chun. <em> Oxford Handbook for the Spatial Humanities </em> (forthcoming)
+<br/>
+
+In this chapter we review assessments of uncertainty in spatial research through the lens of probability theory, introducing basic concepts from the frequency-based theory and the rival, epistemological tradition. To motivate the chapter’s broad methodological concerns, we begin by sketching out some connections between probability theory and ongoing discussions of methodology in the humanities, singling out Franco Moretti’s 'operationalist' method of literary analysis for constructive critique. The chapter provides a theoretically-grounded orientation to spatial data analysis, including exploratory analysis, spatial regression, geographical theories of spatial structuring or relational space, and the need to carefully situate quantitative analyses within broader and substantive explanatory efforts. To illustrate, we re-analyze state prison sentencing data from a previously published study of Florida’s convict leasing program. 
+
 <b style="color:Charcoal;">Spatial analysis with geostan</b> <br/>
 <small> <em> r-spatial.org </em> and <em> Comprehensive R Archive Network </em> (CRAN)
 <br/>
