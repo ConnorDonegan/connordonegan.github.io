@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Modeling time trends for disease surveillance studies
+title: Modeling time trends for disease monitoring studies
 permalink: /surveil-paper/
 ---
 

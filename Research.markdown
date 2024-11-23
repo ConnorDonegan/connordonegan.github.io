@@ -11,13 +11,13 @@ permalink: /writing/
 <small> <em> The Annals of the American Association of Geographers </em> (forthcoming)
 <br/>
 
-Colorectal cancer (CRC) is highly lethal yet often preventable. Between 2000 and 2010, incidence rates in Texas fell by 23% among screening-age adults (50-79). This is largely attributable to the relatively rapid adoption of screening colonoscopy as standard preventive care. Focused on the Dallas and Houston metro regions, this article documents stark transformations in the social geography of the CRC burden, including the emergence in this time period of substantial social class-related inequality in CRC risk. This is a case study in how health inequalities can be produced by the uneven (and mostly unorganized) diffusion of medical advancements in contexts where heightened economic inequality structures people's capacities to adopt new forms of care.
+Colorectal cancer (CRC) is highly lethal but often preventable. Between 2000 and 2010, incidence rates in Texas fell by 23% among screening-age adults (50-79). This is largely attributable to the relatively rapid adoption of screening colonoscopy as standard preventive care. Focused on the Dallas and Houston metro regions, this article documents stark transformations in the social geography of the CRC burden, including the emergence in this time period of substantial social class-related inequality in CRC risk. This is a case study in how health inequalities can be produced by the uneven (and mostly unorganized) diffusion of medical advancements in contexts where heightened economic inequality structures people's capacities to adopt new forms of care.
 
 <b style="color:Charcoal;">Spatial Uncertainty and Probability</b> <br/>
 <small>with co-author Yongwan Chun. <em> Oxford Handbook for the Spatial Humanities </em> (forthcoming)
 <br/>
 
-In this chapter we review assessments of uncertainty in spatial research through the lens of probability theory, introducing basic concepts from the frequency-based theory and the rival, epistemological tradition. To motivate the chapter’s broad methodological concerns, we begin by sketching out some connections between probability theory and ongoing discussions of methodology in the humanities, singling out Franco Moretti’s 'operationalist' method of literary analysis for constructive critique. The chapter provides a theoretically-grounded orientation to spatial data analysis, including exploratory analysis, spatial regression, geographical theories of spatial structuring or relational space, and the need to carefully situate quantitative analyses within broader and substantive explanatory efforts. To illustrate, we re-analyze state prison sentencing data from a previously published study of Florida’s convict leasing program. 
+In this chapter we review assessments of uncertainty in spatial research using probability theory. We introduce basic concepts from the frequency-based theory and from the rival, epistemological tradition. To motivate the chapter’s broad methodological concerns, we begin by sketching out some connections between probability theory and ongoing discussions of methodology in the humanities, singling out Franco Moretti’s 'operationalist' method of literary analysis for constructive critique. The chapter provides a theoretically-grounded orientation to spatial data analysis, including exploratory analysis, spatial regression, and geographical theories of spatial structuring or relational space. We highlight the importance of situating quantitative analyses within substantive explanatory efforts. To illustrate, we re-analyze state prison sentencing data from a previously published study of Florida’s convict leasing program. 
 
 <b style="color:Charcoal;">Spatial analysis with geostan</b> <br/>
 <small> <em> r-spatial.org </em> and <em> Comprehensive R Archive Network </em> (CRAN)
@@ -43,7 +43,7 @@ Statistical research on correlation with spatial data dates at least to Student'
 <br/>
 <br/>
 
-<b style="color:Charcoal;">Modeling time trends for disease surveillance studies</b>
+<b style="color:Charcoal;">Modeling time trends for disease monitoring studies</b>
 <br/> <small><i> JMIR Public Health &amp; Surveillance </i> (2022) and <em> Comprehensive R Archive Network </em> (CRAN) </small>
 <br/>
 
@@ -58,7 +58,7 @@ Modeling time trends in disease incidence and mortality rates is a crucial and r
 <small><i> Florida Historical Quarterly </i> (2019)</small>
 <br/>
 
-Under the State of Florida’s convict leasing program (1877-1919) approximately 14,000 Floridians and visitors served sentences of hard labor at the pain of the lash. This article, which began as a master’s thesis at UBC, draws on over four decades of reports on the prison system by its administrators in the Florida Department of Agriculture, geographic sentencing data, data on prisoner characteristics, minutes from the Board of Pardons, and additional materials held in the Convict Lease Subject Files in the Florida State Archives. The study engages with a number of questions revolving around the inter-connected themes of forced labor, industrial interests, violence, disability, and racial ideology. <a href="{{ site.baseurl }}/florida/">Read more</a>
+Under the State of Florida’s convict leasing program (1877-1919) approximately 14,000 Floridians and visitors served sentences of hard labor at the pain of the lash. This article draws on over four decades of reports on the prison system by its administrators in the Florida Department of Agriculture, geographic sentencing data, data on prisoner characteristics, minutes from the Board of Pardons, and additional materials held in the Convict Lease Subject Files in the Florida State Archives. The study engages with a number of questions revolving around the inter-connected themes of forced labor, industrial interests, violence, disability, and racial ideology. <a href="{{ site.baseurl }}/florida/">Read more</a>
 <center>
 <img src="/assets/FHQ-cover-photo.jpg" alt="Florida Historical Quarterly cover" style="width:33%">
 </center>

@@ -11,7 +11,7 @@ permalink: /software/
 <img src="/assets/geostan-logo.png" align="left" width="100" /> <br />
 <p style="color:Gray">Donegan, Connor (2022). geostan: An R package for Bayesian spatial analysis. <em>The Journal of Open Source Software</em> 7, no. 79: 4716 DOI:<a style="color:DarkSlateGray" href="https://doi.org/10.21105/joss.04716">10.21105/joss.04716</a></p>  [![](https://cranlogs.r-pkg.org/badges/geostan?color=yellow)](https://cran.rstudio.com/web/packages/geostan/index.html) [![DOI](https://joss.theoj.org/papers/10.21105/joss.04716/status.svg)](https://doi.org/10.21105/joss.04716)
 
-<p> The geostan R package supports a complete spatial analysis workflow with Bayesian models for areal data, including a suite of functions for visualizing spatial data and model results. Users can model censored outcomes&mdash;a common feature of vital statistics and disease registry data&mdash;and access spatial measurement error models, designed for working with American Community Survey (ACS) estimates.The package offers spatial methods suitable for modeling both count and continuous outcome data types. The software also incorporates original computational methods developed to speed up spatial autoregressive models in Stan.</p>
+<p> The geostan R package supports a complete spatial analysis workflow with Bayesian models for areal or network data, including a suite of functions for visualizing spatial data and model results. The package implements models for spatial regression and spatial econometrics as well as hierarchical models for count data (i.e., `disease mapping'). Users can model censored outcomes&mdash;a common feature of vital statistics and disease registry data&mdash;and access spatial measurement error models, designed for working with American Community Survey (ACS) estimates. The software also incorporates original computational methods developed to speed up spatial autoregressive models in Stan.</p>
 
 Online documentation: [connordonegan.github.io/geostan](https://connordonegan.github.io/geostan)
 
@@ -29,7 +29,9 @@ Introduction to the package: [Spatial analysis with geostan](https://r-spatial.o
 <p style="color:Gray"> Donegan, Connor, Amy E Hughes and Simon J Craddock Lee (2022). Colorectal Cancer Incidence, Inequalities, and Prevention Priorities in Urban Texas: Surveillance Study with the "surveil" software package. <em>JMIR Public Health & Surveillance</em> 8, no. 8: e34589 DOI:<a style="color:DarkSlateGray" href="https://doi.org/10.2196/34589">10.2196/34589</a> PMID:<a style="color:DarkSlateGray" href="https://pubmed.ncbi.nlm.nih.gov/35972778/a">35972778</a> </p>
  [![](https://cranlogs.r-pkg.org/badges/surveil?color=yellow)](https://cran.rstudio.com/web/packages/surveil/index.html)
 
-<p> The surveil R package provides time series models for routine public health surveillance tasks: model time trends in mortality or disease incidence rates to make inferences about levels of risk, cumulative and period percent change, age-standardized rates, and health inequalities. This software provides an accessible alternative to joinpoint regression. Basic usage requires introductory-level R programming skills.</p>
+<p> The surveil R package provides time series models for routine public health monitoring tasks: model time trends in mortality or disease incidence rates to make inferences about levels of risk, cumulative and period percent change, age-standardized rates, and health inequalities. This software provides an accessible alternative to joinpoint regression. Basic usage requires introductory-level R programming skills.</p>
+
+Demonstration: [Modeling time trends for disease monitoring studies](https://connordonegan.github.io/surveil-paper)
 
 Online documentation: [connordonegan.github.io/surveil](https://connordonegan.github.io/surveil)
 
