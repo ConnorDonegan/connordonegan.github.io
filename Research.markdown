@@ -8,10 +8,10 @@ permalink: /writing/
 <br/>
 
 <b style="color:Charcoal;">Investigating Cancer Inequalities in Urbanizing Texas with Plausible Reasoning</b> <br/>
-<small> <em> The Annals of the American Association of Geographers </em> (forthcoming)
+<small> <em> The Annals of the American Association of Geographers </em>  <a href="https://doi.org/10.1080/24694452.2024.2425807"> doi:10.1080/24694452.2024.2425807 </a>
 <br/>
 
-Colorectal cancer (CRC) is highly lethal but often preventable. Between 2000 and 2010, incidence rates in Texas fell by 23% among screening-age adults (50-79). This is largely attributable to the relatively rapid adoption of screening colonoscopy as standard preventive care. Focused on the Dallas and Houston metro regions, this article documents stark transformations in the social geography of the CRC burden, including the emergence in this time period of substantial social class-related inequality in CRC risk. This is a case study in how health inequalities can be produced by the uneven (and mostly unorganized) diffusion of medical advancements in contexts where heightened economic inequality structures people's capacities to adopt new forms of care.
+Colorectal cancer (CRC) is highly lethal but often preventable. Between 2000 and 2010, incidence rates in Texas fell by 23% among screening-age adults (50-79). This is largely attributable to the relatively rapid adoption of screening colonoscopy as standard preventive care. This article adopts a political economy of health perspective to document and explain stark changes to the social geography of the CRC burden in the Dallas and Houston metro areas, including the spatial `deconcentration' of racial cancer disparities and the emergence of substantial social-class differences in CRC incidence. A pdf of the author's manuscript is freely available <a href="{{ site.baseurl }}/aag-2024-manuscript/">here</a>.
 
 <b style="color:Charcoal;">Spatial Uncertainty and Probability</b> <br/>
 <small>with co-author Yongwan Chun. <em> Oxford Handbook for the Spatial Humanities </em> (forthcoming)
@@ -23,7 +23,7 @@ In this chapter we review assessments of uncertainty in spatial research using p
 <small> <em> r-spatial.org </em> and <em> Comprehensive R Archive Network </em> (CRAN)
 <br/>
 
-This post introduces the geostan R package by walking through an example analysis of international data on life expectancy and per capita GDP. The software package implements a variety of spatial-statistical models and provides a suite of tools for handling spatial data. The post illustrates how to specify and visualize spatial connectivity, fit common spatial regression models, and interpret the output of the Bayesian models. You can read the post at <a href="https://r-spatial.org/r/2024/08/02/geostan-introduction.html"> r-spatial.org</a>. A summary of package functionality is in the <a href="https://joss.theoj.org/papers/10.21105/joss.04716"> Journal of Open Source Software</a> (2022) and package documentation can be found at <a href="https://connordonegan.github.io/geostan"> https://connordonegan.github.io/geostan</a>.
+This post introduces the geostan R package by walking through an example analysis of international data on life expectancy and per capita GDP. The software package implements a variety of spatial-statistical models and provides a suite of tools for handling spatial data. The post illustrates how to specify and visualize spatial connectivity, fit common spatial regression models, and interpret the output of the Bayesian models. You can read the post at <a href="https://r-spatial.org/r/2024/08/02/geostan-introduction.html"> r-spatial.org</a>. 
 <br/>
 <center>
 <img src="/assets/geostan-intro-LE-income-maps.png" style="width:60%">
@@ -33,7 +33,7 @@ This post introduces the geostan R package by walking through an example analysi
 
 
 <b style="color:Charcoal;">Plausible Reasoning and Spatial-Statistical Theory: A Critique of Recent Writings on 'Spatial Confounding'.</b><br/>
-<small><i> Geographical Analysis </i> (2024) <a href="https://doi.org/10.1111/gean.12408"> https://doi.org/10.1111/gean.12408 </a>
+<small><i> Geographical Analysis </i> (2024) <a href="https://doi.org/10.1111/gean.12408"> https://doi.org/10.1111/gean.12408 </a> (open access)
 
 Statistical research on correlation with spatial data dates at least to Student's (W. S. Gosset's) 1914 paper on “the elimination of spurious correlation due to position in time and space.” Since 1968, much of this work has been organized around the concept of spatial autocorrelation (SA). A growing statistical literature is now organized around the concept of “spatial confounding” (SC) but is estranged from, and often at odds with, the SA literature and its history. The SC literature is producing new, sometimes flawed, statistical techniques such as Restricted Spatial Regression (RSR). This article brings the SC literature into conversation with the SA literature and provides a theoretically grounded review of the history of research on correlation with spatial data, explaining some of its implications for the the SC literature. The article builds upon principles of plausible inference to synthesize a guiding theoretical thread that runs throughout the SA literature. This leads to a concise theoretical critique of RSR and a clarification of the logic behind standard spatial-statistical models.
 <br/>
