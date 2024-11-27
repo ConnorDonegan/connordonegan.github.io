@@ -13,7 +13,8 @@ layout: page
 </figure>
 
 <p> Postdoctoral Researcher (2023-present) <br/>
-O'Donnell School of Public Health <br/>
+O'Donnell School of Public Health & <br/>
+Simmons Comprehensive Cancer Center <br/>
 UT Southwestern Medical Center <br/>
 Connor.Donegan@UTSouthwestern.edu <br/></p>
               
