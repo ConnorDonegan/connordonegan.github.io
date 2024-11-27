@@ -28,7 +28,7 @@ To illustrate, consider some data on colorectal cancer incidence downloaded from
 If this file were loaded into an R session as a data.frame named `dat`, the following code would produce a fitted model with time trends for each age group:
 
 ```
-fit = stan_rw(dat, time = Year, group = Age.Groups.Code)
+fit = stan_rw(dat, time = Year, group = Age.Groups)
 ```
 
 The function expects the case counts to be stored in the column named "Count" and the population count to be found in a column named "Population" (matching the CDC Wonder data export format). The `time = Year` argument tells it to find the time variable in the column named 'Year'. The `group = Age.Groups'` tell the software to produce separate models for each age group. (If there were just a single age group in the data, then we would simply omit the `group` argument.)
