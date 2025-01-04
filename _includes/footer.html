@@ -1,23 +1,36 @@
- 
-<footer class="site-footer h-card">
+<footer class="site-footer h-card">  
   <data class="u-url" href="{{ "/" | relative_url }}"></data>
 
   <div class="wrapper">
 
     <div class="footer-col-wrapper">
-      <div class="footer-col one-half">
-        <ul class="contact-list">
-            {%- if site.email -%}
-	    <li class="p-name">&#169; Connor Donegan 2024 </li>
-            {%- endif -%}
-        </ul>
-      </div>
+      <div class="footer-col">      
+	
+          <ul class="contact-list">
 
-      <div class="footer-col one-half">
-        <p>{{- site.description | escape -}}</p>
+          <a href="{{ site.feed.path | default: 'feed.xml' | absolute_url }}">
+            <svg class="svg-icon orange">
+              <use xlink:href="{{ 'assets/minima-social-icons.svg#rss' | relative_url }}"></use>
+            </svg><span>Subscribe</span>
+          </a>
+	  &emsp; | &emsp;
+	  <a class="u-email" href="mailto:{{ site.author.email }}">E-mail: connor.donegan@gmail.com</a>
+	  	  &emsp; | &emsp;
+	  <a href="https://github.com/{{ site.github_username| cgi_escape | escape }}"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use></svg> </span></a>
+&emsp; | &emsp;
+          <a href="https://www.linkedin.com/in/connor-donegan-8283b427b"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#linkedin' | relative_url }}"></use></svg> </a>      
+
+        </ul>	
+
+      </div>
+      <div class="footer-col">
+        <p>{{ site.description | escape }}</p>
+	&#169; {{ site.author.name | escape }} 2024		
       </div>
     </div>
 
   </div>
 
+
+	  
 </footer>

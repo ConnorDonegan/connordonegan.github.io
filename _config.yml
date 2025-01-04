@@ -8,7 +8,7 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 #
-# If you need help with YAML syntax, here are some quick references for you: 
+# If you need help with YAML syntax, here are some quick references for you:
 # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
 # https://learnxinyminutes.com/docs/yaml/
 #
@@ -18,25 +18,32 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-author: Connor Donegan
-title:  Connor Donegan
-email: Connor.Donegan@UTSouthwestern.edu
-description: >- # this means to ignore newlines until "baseurl:" 
-#        Spatial statistics, public health and inequality
-baseurl: #"https://connordonegan.github.io" # the subpath of your site, e.g. /blog
-url: "https://connordonegan.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: 
-github_username: ConnorDonegan
-google_analytics: UA-116873024-1
-ga_analytics: G-KZ3W90J8SJ
-show_downloads: true
+title: Connor Donegan
+email: "ConnorDonegan@UTSouthwestern.edu"
+description: Writing on statistics, geography, probability, et cetera.
+baseurl: 
+url: "https://connordonegan.github.io"  
+github_username:  ConnorDonegan
+linkedin: connor-donegan-8283b427b
 
+author:
+  name: Connor Donegan
+  email: "connor.donegan@gmail.com"
+  
 # Build settings
 theme: minima
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-toc
+
+header_pages:
+  - software.markdown
+  - articles.markdown
+  - about.markdown
+
+syntax_highlighter: rouge
 
 # Exclude from processing.
 # The following items will not be processed, by default.
