@@ -56,7 +56,8 @@ The log-rates begin at some unknown, initial value (\(\eta_1\)). To anchor the m
 
 $$\eta_1 \sim Normal(a, c), \hspace{1em} \eta_t < 0$$
 
-<p>where \(a\) and \(c\) have default values of \(a = -6\) and \(c = 5\). In the typical use cases, this is going to be flat over the range of plausible values; users can always change this (more on this below).
+<p>
+where \(a\) and \(c\) have default values of \(a = -6\) and \(c = 5\). In the typical use cases, this is going to be flat over the range of plausible values; users can always change this (more on this below).
 </p>
 
 <h3> Illustration: fitting time trend models </h3>
@@ -214,7 +215,7 @@ Correlation matrix: FALSE
 <h3> Custom plots with base R </h3>
 
 <p>
-The default plots are created using the 'ggplot2' R package, but we can also use the data stored in <code>fit$summary</code> to create custom plots. Here's an example for plotting a single time trend, for ages 50-54.
+The default plots are created using the 'ggplot2' R package. We can use the data stored in <code>fit$summary</code> to create custom plots using whatever method we prefer. Here's an example for plotting a single time trend, for ages 50-54, using base R functions.
 </p>
 
 {% highlight r %}

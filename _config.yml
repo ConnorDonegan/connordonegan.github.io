@@ -31,7 +31,10 @@ author:
   email: "connor.donegan@gmail.com"
   
 # Build settings
-theme: minima
+
+## removed minima theme: this is now a locally hosted, 'regular theme'
+#theme: minima
+
 plugins:
   - jekyll-feed
   - jekyll-seo-tag

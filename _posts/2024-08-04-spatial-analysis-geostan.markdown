@@ -7,7 +7,7 @@ categories: [Statistics, Public health]
 ---
 
 <em>
-Re-posting from <a href="https://r-spatial.org">r-spatial.org</a> with a couple updates.
+Re-posting from <a href="https://r-spatial.org">r-spatial.org</a>, with a few updates.
 </em>
 
 
@@ -794,7 +794,11 @@ polygon(
 rug(world$gdpPercap / 1e3, lwd = .5, ticksize = .025, col = col)
 {% endhighlight %}
 
-<img src="/assets/spatial-analysis-with-geostan/fig-88.png" width="85%">
+<center>
+<figure>
+<img src="/assets/spatial-analysis-with-geostan/fig-8a.png" width="75%">
+</figure>
+</center>
 
 Per this dataset, about 50% of the world population lives in countries
 with GDP per capita below $12,300.
