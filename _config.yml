@@ -29,6 +29,9 @@ author: Connor Donegan
 github_username: ConnorDonegan
 linkedin_username: connor-donegan-8283b427b
 
+## this doesn't seem to worK:
+# show_exerpts: true
+
 # new items, not in jekyll by default
 ## banner_image: /assets/banner_image.svg #banner.svg
 
