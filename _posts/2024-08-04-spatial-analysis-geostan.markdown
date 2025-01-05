@@ -88,6 +88,32 @@ The 'world' data contains life expectancy and gross domestic product
 as of 2014, gathered from the World Bank. The rest of this post is going
 to be structured around a bivariate analysis of these variables.
 
+We will us this `map_pars` function to help with mapping; it breaks the variables into quantiles and returns the break points, colors, labels for mapping:
+
+{% highlight r %}
+map_pars <- function(x, 
+ brks = quantile(x, probs = seq(0, 1, by = 0.2), na.rm = TRUE), 
+ cols = c("#A8554EFF", "gray95", "#5D74A5FF")) {
+
+  # put x values into bins
+  x_cut <- cut(x, breaks = brks, include.lowest = TRUE)
+  
+  # labels for each bin
+  lbls <- levels( cut(x, brks, include.lowest = TRUE) )
+  
+  # colors 
+  rank <- as.numeric( x_cut )  
+  max_rank <- max( rank , na.rm = TRUE )
+  pal_fun <- colorRampPalette( cols )
+  pal <- pal_fun( max_rank )
+  colors <-  pal[ rank ]
+
+  # return list
+  ls <- list(brks = brks, lbls = lbls, pal = pal, col = colors)
+  return( ls )
+}
+{% endhighlight %}
+
 We are going to apply the Robinson map projection for the countries:
 
 {% highlight r %}
@@ -158,9 +184,7 @@ par(ogpar)
 <em>Choropleth maps of GDP per capita and life expectancy.</em>
 </p>
 
-The `map_pars` function breaks the variables into quantiles and returns
-breaks, colors, labels for the maps; it can be found at the end of the
-post. There will be no discussion of substantive (non-statistical)
+There will be no discussion of substantive (non-statistical)
 issues here, for which one can consult any number of texts on global
 power and inequality (such as Birn, Pillay, and Holz’s <em>Textbook of International Health</em>, or John Perkins's <em>Confessions of an Economic Hit Man</em>).
 
@@ -819,32 +843,6 @@ package more useful to fields other than `geostan`’s current focus
 (human geography and public health), such as ecology, would be
 especially welcome.
 
-<h2> Appendix </h2>
-
-{% highlight r %}
-# function for getting colors, breaks, and labels for mapping
-map_pars <- function(x, 
- brks = quantile(x, probs = seq(0, 1, by = 0.2), na.rm = TRUE), 
- cols = c("#A8554EFF", "gray95", "#5D74A5FF")) {
-
-  # put x values into bins
-  x_cut <- cut(x, breaks = brks, include.lowest = TRUE)
-  
-  # labels for each bin
-  lbls <- levels( cut(x, brks, include.lowest = TRUE) )
-  
-  # colors 
-  rank <- as.numeric( x_cut )  
-  max_rank <- max( rank , na.rm = TRUE )
-  pal_fun <- colorRampPalette( cols )
-  pal <- pal_fun( max_rank )
-  colors <-  pal[ rank ]
-
-  # return list
-  ls <- list(brks = brks, lbls = lbls, pal = pal, col = colors)
-  return( ls )
-}
-{% endhighlight %}
 
 <h2> References </h2>
 
