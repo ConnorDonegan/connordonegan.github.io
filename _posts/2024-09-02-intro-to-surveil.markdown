@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "Modeling time trends in disease incidence with the 'surveil' R package"
-date:   2024-09-02
 author: Connor
 categories: [Statistics, Public health]
 toc: true
@@ -57,7 +56,7 @@ The log-rates begin at some unknown, initial value (\(\eta_1\)). To anchor the m
 $$\eta_1 \sim Normal(a, c), \hspace{1em} \eta_t < 0$$
 
 <p>
-where \(a\) and \(c\) have default values of \(a = -6\) and \(c = 5\). In the typical use cases, this is going to be flat over the range of plausible values; users can always change this (more on this below).
+where \(a\) and \(c\) have default values of \(a = -6\) and \(c = 5\). In the typical use cases, this is going to be flat over the range of plausible values; users can change the priors if wanted.
 </p>
 
 <h3> Illustration: fitting time trend models </h3>

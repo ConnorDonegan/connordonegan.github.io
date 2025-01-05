@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "Spatial analysis with geostan"
-date:   2024-09-02
 author: Connor 
 categories: [Statistics, Public health]
 ---
