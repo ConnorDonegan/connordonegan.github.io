@@ -7,22 +7,20 @@ categories: GIS
 
 For a recent project, I a wanted a basemap that would display the local street network with some basic infrastructure and hydrology, but without any labels. It is now easy to add web maps to a GIS project by connecting to OpenStreetMap (OSM), CartoDB, or another web tile server. However, if you want to change the styling or control what type of objects are shown (and at what scales), then a web tile server won't get you very far. 
 
-The closest I found to a minimalist basemap is CartoDB's Positron. They provide a version without any labels:
+The closest I've seen to the kind of minimalist basemap I'd like to have is CartoDB's Positron. They provide a version without any labels:
 
 <center>
-<img src="/assets/2025/minimalist-basemap/positron-no-labels.png" width='100%'>
+<img src="/assets/2025/minimalist-basemap/positron-no-labels.png" width='65%'>
 <p class="caption">
 <em>CartoDB's Positron, without labels</em>
 </p>
 </center>
 
-The basemaps are going to be used in a small set of maps that show some site locations, a population density choropleth, and one or two other choropleths for the Dallas-Fort Worth, Texas area (highlighted in the map above). The CartoDB option looks okay but its pretty bland. I'd like to improve the contrast and to see at least some of the street network at this scale.
+The CartoDB option looks pretty bland. I'd like to improve the contrast and to see at least some of the street network at this scale. The basemaps are going to be used in a small set of maps that show some site locations, a population density choropleth, and one or two other choropleths for the Dallas-Fort Worth, Texas area (highlighted in the map above). These are for an old fashioned document, not web mapping.
 
 I'm going to share a few methods I worked through to create a custom basemap - vector tiles, the Overpass API, and Census Bureau files. In the end I primarily used data from the Census Bureau and USGS.
 
 <h2> OSM vector tiles </h2>
-
-[//]: <> ( some more advanced stuff: https://tech.marksblogg.com/osm-mvt-vector-tiles.html )
 
 Using vector tiles, it is possible to control how the OSM basemap is rendered. *The Wandering Cartographer* has a nice introduction to [vector tiles](https://wanderingcartographer.wordpress.com/2021/01/09/qgis-3-and-vector-map-tiles/). When we load a basemap as a regular web tile, we receive images without any ability to adjust the styling. When you load a vector tile, you can control the symbology for every object that is part of the OSM layer.
 
@@ -86,7 +84,7 @@ After you set the symbology for some layers using Project Colors and Variables, 
 You can also adjust the minimum zoom level for each OSM vector layer - supposedly. I was able to change the values for the minimum zoom level in the symbology, but the map didn't render differently. Maybe I'm just missing some information here, but for my purposes its becoming a bit of a hassle. The map is not bad at this point, but I'd like a bit more detail than this.
 
 <center>
-<img src="/assets/2025/minimalist-basemap/osm-vector-tile-dfw.png" width='100%'>
+<img src="/assets/2025/minimalist-basemap/osm-vector-tile-dfw.png" width='65%'>
 <p class="caption">
 <em> OSM vector tiles with custom styling </em>
 </p>
@@ -186,7 +184,7 @@ The shaded relief layer adds some subtle dimensionality to the basemap. This can
 Compared to the generic basemap we started with, this one has more detail at smaller map scales, while stil being minimalist. Applying a [blending mode](https://www.helenmakesmaps.com/post/how-to-use-blending-modes-in-mapping) to the layers is one firther step to help them stand out. 
 
 <center>
-<img src="/assets/2025/minimalist-basemap/minimal-basemap.png" width='100%'>
+<img src="/assets/2025/minimalist-basemap/minimal-basemap.png" width='90%'>
 <p class="caption">
 <em> A minimalist basemap </em>
 </p>
