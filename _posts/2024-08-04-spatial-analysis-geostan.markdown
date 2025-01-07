@@ -179,7 +179,7 @@ legend("left",
 par(ogpar)
 {% endhighlight %}
 
-<img src="/assets/spatial-analysis-with-geostan/fig-1.png">
+<img src="/assets/2024/spatial-analysis-with-geostan/fig-1.png">
 <p class="caption">
 <em>Choropleth maps of GDP per capita and life expectancy.</em>
 </p>
@@ -285,7 +285,7 @@ plot(graph, add = TRUE, type = 'p')
 plot(graph, add = TRUE, type = 'l')
 {% endhighlight %}    
 
-<img src="/assets/spatial-analysis-with-geostan/fig-2.png" style="display: block; margin: auto;" />
+<img src="/assets/2024/spatial-analysis-with-geostan/fig-2.png" style="display: block; margin: auto;" />
 
     par(ogpar)
 
@@ -362,7 +362,7 @@ We should look at the revised adjacency matrix:
     plot(graph, add = TRUE, type = 'p')
     plot(graph, add = TRUE, type = 'l')
 
-<img src="/assets/spatial-analysis-with-geostan/fig-3.png" style="display: block; margin: auto;" />
+<img src="/assets/2024/spatial-analysis-with-geostan/fig-3.png" style="display: block; margin: auto;" />
 
     par(ogpar)
 
@@ -429,7 +429,7 @@ plot(fit_lm)
 
     ## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
 
-<img src="/assets/spatial-analysis-with-geostan/fig-4.png" style="display: block; margin: auto;" />
+<img src="/assets/2024/spatial-analysis-with-geostan/fig-4.png" style="display: block; margin: auto;" />
 
 The mean of the distribution is reported in the `mean` column. For those
 who are more familiar with concepts from sampling theory, the `mean` may
@@ -496,7 +496,7 @@ rdf <- resid(fit_lm)
 moran_plot(rdf$mean, A)
 {% endhighlight %}
 
-<img src="/assets/spatial-analysis-with-geostan/fig-5.png" style="display: block; margin: auto;" />
+<img src="/assets/2024/spatial-analysis-with-geostan/fig-5.png" style="display: block; margin: auto;" />
 
 <h2> Spatial regression </h2>
 
@@ -590,7 +590,7 @@ legend("left",
  )
 {% endhighlight %}
 
-<img src="/assets/spatial-analysis-with-geostan/fig-6.png" style="display: block; margin: auto;" />
+<img src="/assets/2024/spatial-analysis-with-geostan/fig-6.png" style="display: block; margin: auto;" />
 
     par(ogpar)
 
@@ -669,7 +669,7 @@ plot(fit_sar)
 
     ## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
 
-<img src="/assets/spatial-analysis-with-geostan/fig-7.png" style="display: block; margin: auto;" />
+<img src="/assets/2024/spatial-analysis-with-geostan/fig-7.png" style="display: block; margin: auto;" />
 
 The spatial dependence parameter is around 0.7, which indicates
 moderately strong SA. The mean life expectancy is about 71 (probably
@@ -819,7 +819,7 @@ rug(world$gdpPercap / 1e3, lwd = .5, ticksize = .025, col = col)
 
 <center>
 <figure>
-<img src="/assets/spatial-analysis-with-geostan/fig-8a.png" width="75%">
+<img src="/assets/2024/spatial-analysis-with-geostan/fig-8a.png" width="75%">
 </figure>
 </center>
 
