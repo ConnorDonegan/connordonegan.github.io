@@ -6,7 +6,7 @@ categories: [Statistics, Public health]
 toc: true
 ---
 
-<p> This post introduces the 'surveil' R package to model time trends in disease incidence or mortality, including age-standardization, percent change analyses, and other quantities of interest.
+<p> This post introduces the 'surveil' R package for modelling time trends in disease incidence or mortality, including age-standardization, percent change analyses, and other quantities of interest.
 
 <p> 'surveil' requires fairly minimal R programming skills. If you download disease or mortality data from the CDC Wonder database, you'll find that the file is automatically in the correct format to start modeling with 'surveil'.</p>
 
