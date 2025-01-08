@@ -154,7 +154,7 @@ plot(fit, scale = 100e3)
 
 <center>
 <figure>
-<img src="/assets/2024/intro-to-surveil/crc-trends.png" alt="CRC time trends in one plot" style="width:75%">
+<img src="/assets/{{ page.date | date: "%Y" }}/{{ page.slug }}/crc-trends.png" alt="CRC time trends in one plot" style="width:75%">
 <figcaption> <em>Age-specific CRC incidence per 100,000, Texas 1999-2020</em> </figcaption>
 </figure>
 </center>
@@ -172,7 +172,7 @@ plot(fit, facet = TRUE, facet_scales = 'free', size = 0, scale = 100e3)
 
 <center>
 <figure>
-<img src="/assets/2024/intro-to-surveil/crc-trends-facet.png" alt="CRC time trends with one small plot (facet) per age group" style="width:70%">
+<img src="/assets/{{ page.date | date: "%Y" }}/{{ page.slug }}/crc-trends-facet.png" alt="CRC time trends with one small plot (facet) per age group" style="width:70%">
 <figcaption> <em> Plotting with facets </em> </figcaption>
 </figure>
 </center>
@@ -277,7 +277,7 @@ mtext("Cases per 100,000", side = 2, line = 2)
 
 <center>
 <figure>
-<img src="/assets/2024/intro-to-surveil/crc-trend-50-54.png" alt="CRC time trend for ages 50-54" style="width:70%">
+<img src="/assets/{{ page.date | date: "%Y" }}/{{ page.slug }}/crc-trend-50-54.png" alt="CRC time trend for ages 50-54" style="width:70%">
 <figcaption> <em>CRC incidence, ages 50-54 (plotting with base R) </em> </figcaption>
 </figure>
 </center>
@@ -299,7 +299,7 @@ plot(fit_pc, cumulative = TRUE)
 
 <center>
 <figure>
-<img src="/assets/2024/intro-to-surveil/crc-trends-cpc.png" alt="Plots of cumulative percent change in CRC incidence rates" style="width:90%">
+<img src="/assets/{{ page.date | date: "%Y" }}/{{ page.slug }}/crc-trends-cpc.png" alt="Plots of cumulative percent change in CRC incidence rates" style="width:90%">
 <figcaption> <em> Cumulative percent change in age-specific CRC incidence, Texas 1999-2020 </em> </figcaption>
 </figure>
 </center>
@@ -347,7 +347,7 @@ The output, <code>fit_st</code>, can be treated just like the other 'surveil' mo
 
 <center>
 <figure>
-<img src="/assets/2024/intro-to-surveil/crc-standardized-trends.png" alt="Plots of age standardized CRC incidence" style="width:60%">
+<img src="/assets/{{ page.date | date: "%Y" }}/{{ page.slug }}/crc-standardized-trends.png" alt="Plots of age standardized CRC incidence" style="width:60%">
 <figcaption> <em> Directly age-standardized CRC incidence, Texas 1999-2020 </em> </figcaption>
 </figure>
 </center>
@@ -361,7 +361,7 @@ plot(fit_st_pc, cum = TRUE)
 
 <center>
 <figure>
-<img src="/assets/2024/intro-to-surveil/crc-stand-cum-change.png" alt="Plots of cumulative change in age standardized CRC incidence" style="width:60%">
+<img src="/assets/{{ page.date | date: "%Y" }}/{{ page.slug }}/crc-stand-cum-change.png" alt="Plots of cumulative change in age standardized CRC incidence" style="width:60%">
 <figcaption> <em> Cumulative percent change in age-standardized CRC incidence, Texas 1999-2020 </em> </figcaption>
 </figure>
 </center>
