@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "Modeling time trends in disease incidence with the 'surveil' R package"
-author: Connor
-categories: [Statistics, Public health]
+author: Connor Donegan
+categories: [Statistics, Public_health]
 toc: true
 ---
 

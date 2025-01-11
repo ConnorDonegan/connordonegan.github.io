@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "A minimalist basemap for urban cartography"
-author: Connor 
+author: Connor Donegan
 categories: GIS
 ---
 

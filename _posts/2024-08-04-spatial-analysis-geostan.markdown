@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "Spatial analysis with geostan"
-author: Connor 
-categories: [Statistics, Public health]
+author: Connor Donegan
+categories: [Statistics, Public_health]
 ---
 
 <em>
