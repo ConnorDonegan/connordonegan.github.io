@@ -6,14 +6,15 @@ categories: [Statistics, Public_health]
 toc: true
 ---
 
-
-
 This post is a tutorial on modeling spatial-temporal data using the Stan modeling language, with a focus on areal data. When we take the right approach, Stan can provide a great platform for spatial statistics (presumably, so would other Hamiltonian Monte Carlo samplers). I'll illustrate by modeling mortality rates for U.S. states and D.C., covering the years 1999 through 2020.
 
-The computational methods presented here are a pretty straigtforward extension of my work on CAR models. I first began using these models in my dissertation proposal ('years ago'!) and now, finally, I am getting around to sharing them. Feedback would be welcome.
+The computational methods presented here are a fairly straigtforward extension of my previous work on CAR models for <a href="https://connordonegan.github.io/geostan">geostan</a> (mainly presented in this OSF <a href="https://osf.io/3ey65/">preprint</a>). I first began using these space-time models in my dissertation proposal and now, finally, I am getting around to sharing them. Feedback would be welcome.
 
+**Contents:**
+* TOC
+{:toc} 
 
-<h2> Disease mapping, minus the jargon </h2>
+##  Disease mapping, minus the jargon
 
 We'll be modeling state mortality rates for the years 1999&ndash;2020, for women ages 35&mdash;44 only. The goal for this kind of modeling project, which is often referred to as 'disease mapping', is to make inferences about systematic disease risk for population segments. We want sound answers to questions like: are mid-life mortality rates rising in Wisconsin? How fast are they rising? Is mortality higher in Ohio than Pennsylvania?
 
@@ -33,7 +34,7 @@ where \( y \) is the mortality count and \( p \) is the population count. The wa
 
 The state-level data that we will be using here was chosen in part to keep the case study simple, rather than to illustrate all the problems of small numbers. Many of our rates are based on quite large numbers. 
 
-<h2> The statistical models </h2>
+## The statistical models 
 
 Our modeling framework takes after the hierarchical Bayesian approach developed by C. Wikle, M. Berliner, and N. Cressie (1998; after Berliner 1996). The CAR-AR model specification to be discussed here was introduced by A. Rushworth, D. Lee, and R. Mitchell (2014), who also implement it in the 'CARBayesST' R package (our specification differs from theirs only in minor ways). A similar model was introduced by M.D. Ugarte and others (Urgarte et al. 2012), but they developed it within the alternative modeling framework introduced by Knorr-Held (2000). (Morris et al., 2019, may provide a good starting point for implementing the Knorr-Held approach in Stan.)
 
@@ -56,7 +57,7 @@ $$E {\Large[} \frac{y_{i,t}}{p_{i,t}} {\Large]} = \eta_{i,t}.$$
 This Poisson model is our likelihood for the observed rates. The next part of the model provides a prior probability distribution for the systematic risk ('rates' or 'risk' for short).
 </p>
 
-<h3> Evolution through time </h3>
+### Evolution through time 
 
 The next stage of the model is focused on inferences about the systematic risk. The remainder of the modeling will be working with them on the log-scale:
 
@@ -78,7 +79,7 @@ $$\phi_{i,t} \sim Normal(\beta \cdot \phi_{i, t-1}, \tau^2).$$
 
 If we were to stop at this point we would have a perfectly valid model for our state incidence rates (understanding that we still need to assign some prior distributions for the parameters). To model the evolution of mortality rates in 50 states, for example, we would simply apply this auto-regressive Poisson model to each state (one model per state). We could do them all at once so that they all share the same AR coefficient; or all the AR coefficients could be fixed at 1; or each state could have its own AR coefficient. But in any case, the results may be perfectly usable for public health monitoring. 
 
-<h3> Spatial auto-regression </h3>
+### Spatial auto-regression 
 
 Now let's start over and look at the rates differently. Instead of the time series auto-regression, we could improve our inferences about any given mortality rate by looking at the rates that are nearby and/or part of the same geographic region. Geographic trends are typically weaker than trends in time, so we won't consider fixing the auto-correlation parameter at 1, as we did above.
 
@@ -106,7 +107,7 @@ What happens next depends on the likelihood. With respect to the crude rates tha
 The main difference here, with our spatial auto-regression, is that we are getting more precise by 'shrinking' our estimates towards a local mean \( \mu + \rho \cdot C (\phi - \mu) \), rather than the overall mean. This can make quite the difference. Mortality rates in Mississippi, for example, may be outliers relative to the national average. But if you understand the U.S. South as a region then it is really inappropriate to impose that kind of skepticism on the rates. Similarly for Appalachia, or for any number of areas at various spatial scales. To use the standard model would be biased (in the common-sense meaning of the word).
 </p>
 
-<h4> The CAR model </h4>
+#### The CAR model 
 
 There are multiple ways to translate our concept of an auto-regression from the one-dimensional temporal domain into the two-dimensional spatial domain (Cliff and Ord 1981). We will adopt what is known as the conditionally-specified spatial auto-regressive (CAR) model. The CAR model is a multivariate normal distribution, defined by its covariance matrix:
 
@@ -146,7 +147,7 @@ Specifically, we have a scalar variance parameter \( \tau \) multiplied by the i
 $$m_{i,i} = \tau_i = \frac{1}{w_i} \tau.$$
 </p>
 
-<h4> CARs only </h4>
+#### CARs only 
 
 Now lets return to our space-time mortality data. We are specifying an alternative to the simple vector auto-regression approach that we specified earlier. We can proceed in an analogous way, though, by applying the CAR model successively at each time period. Including the likelihood, we have:
 
@@ -180,7 +181,7 @@ The spatial auto-correlation parameter \( \rho \) will be assigned a uniform pri
 Once again, we have a simple way to proceed but it is nonetheless a valid space-time model which can be (and, strictly speaking, is often) applied to public health data.
 </p>
 
-<h3> The CAR-AR model </h3>
+### The CAR-AR model 
 
 Now we have two options for modeling our rates: the serial auto-regressive model and the spatial auto-regressive model. Our third approach is to combine them. We model a time trend for each location, and then we apply the CAR model to their cross-sectional errors.
 
@@ -217,7 +218,7 @@ Because the CAR and AR models are proper probability models, we don't have to wo
 
 Next we are going to take a look at the mortality data, and then we'll implement each of our three model specifications using Stan and R.
 
-<h2> The mortality data </h2>
+## The mortality data 
 
 I accessed mortality data from the CDC Wonder database and restricted the request to females between the ages of 35 and 44. I then cleaned up the column names. I'll be using R for this. You can download the data abstract from my github page:
 
@@ -327,7 +328,7 @@ for (st in unique(dat$State)) {
 </center>
 
 
-<h2> Multiple AR models in Stan </h2>
+## Multiple AR models in Stan 
 
 This is the first of three model specifications that we will build. In this part, we model time trends for each state using the hierarchical Poisson AR models discussed above. We will apply one AR time trend model for each state.
 
@@ -561,7 +562,7 @@ hi_idx <- grep(paste0(',', hi_tmp, '\\]'), colnames(eta))
 eta_hi <- eta[ , hi_idx ]
 {% endhighlight %}
 
-<h2> Multiple CAR models in Stan </h2>
+## Multiple CAR models in Stan 
 
 Our CAR models require two data inputs than are not in AR models: (1) a spatial connectivity matrix, and (2) some quantities that will help us calculate (more quickly) the probability density for the CAR model.
 
@@ -569,7 +570,7 @@ Also, before getting started, note that we will be dropping Hawaii and Alaska fr
 
 We are going to prepare the spatial data first, then we'll work on our Stan model.
 
-<h3> Preparing the spatial data </h3>
+### Preparing the spatial data 
 
 I will use the 'geostan' (Donegan 2022) R package for help with the CAR models, 'tigris' (Walker 2023) to download some cartographic boundaries, and 'sf' (Pebesma 2018) for GIS operations and mapping.
 
@@ -713,7 +714,7 @@ print(mc_est)
 
 The results indicate moderately positive SA. A quick eyeball analysis suggests that the degree of SA was not changing much over time (it seems to be bouncing around 0.38, without any trend).
 
-<h3> CAR models in Stan </h3>
+### CAR models in Stan 
 
 It is possible to use Stan's built-in multivariate normal distribution functions to fit CAR models. But we want to take advantage of the fact that the connectivity matrix is sparse, as this allows us to use sparse matrix multiplication. We can also use some well-known tricks for calculating the log-determinant of the covariance matrix. For details, see the OSF preprint on CAR models in Stan (Donegan 2021). According to that study, these models can sample about 10 times faster than CAR models in Nimble (a popular R package for MCMC with spatial models).
 
@@ -935,7 +936,7 @@ generated quantities {
 {% endhighlight %}
 </details>
 
-<h3> Running the CAR models </h3>
+### Running the CAR models 
 
 Save the Stan model code in a file named 'CARs.stan'. Then we sample from the model and print some results. On my laptop, sampling completed in 5.5 seconds per chain; using parallel processing, the full runtime was 14 seconds.
 
@@ -974,7 +975,7 @@ convergence, Rhat=1).
 </pre>
 
 
-<h2> The CAR-AR model in Stan </h2>
+## The CAR-AR model in Stan 
 
 Finally, we can fit our full CAR-AR model. We don't need to make any changes to our <code>stan_dl</code> data list (after the CAR models). We have all the peices ready for the Stan model, too, we just need to put them together.
 
@@ -1097,7 +1098,7 @@ If these results were being reported in a publication, I would run this again wi
 
 There is one interesting feature of these results already. The estimate for <code>rho</code> is 0.98, which is actually <em>higher</em> than it was in the 'CARs only' model. Why? The CAR model here is applied to deviations from the state time trends (the AR residuals). My reading of this is that the mortality rates for neighboring states are more similar in their year-by-year movements than they are in their levels.
 
-<h2> Model comparison </h2>
+## Model comparison 
 
 For each of our three models, we collected samples for the log-likelihoods. Those are for computing information criteria. I will use the DIC for these models. 
 
@@ -1137,11 +1138,11 @@ For interpretation: lower values of DIC indicate a better fit, and small differe
 
 The 'CARs only' model looks similar to the AR-only model, while the CAR-AR model has considerably lower DIC than both of the others (a difference of at least -500, including a considerably smaller penalty term). We'll use the CAR-AR model for final section.
 
-<h2> Visualizing mortality trends </h2>
+## Visualizing mortality trends 
 
 Using the CAR-AR model results, we will first plot time trends for a selection of states. Next we'll map mortality for 2020. Finally, we'll chart percent change in mortality rates from 1999 to 2019 (stopping just before the pandemic). 
 
-<h3> Model-based time trends </h3>
+### Model-based time trends 
 
 <p>
 Here we need to summarize MCMC samples by state and year. Once we extract a matrix of samples for <code>phi</code> (\( \phi \)), we exponentiate them to get the rates \( \eta \). Then we need to identify which columns correspond to whatever state we are interested in. The regular expressions found in the code below are introduced for that task.
@@ -1257,7 +1258,7 @@ for (s in seq_along(selection)) {
 </figure>
 </center>
 
-<h3> Mapping mortality </h3>
+### Mapping mortality 
 
 <p>
 Here we map mortality rate estimates for the year 2020. We'll start again by getting our matrix samples for \( \eta \), then we extract the columns corresponding to \( t = 22 \) (year 2020). 
@@ -1345,7 +1346,7 @@ legend("bottomleft",
 </center>
 
 
-<h3> Percent change analysis </h3>
+### Percent change analysis 
 
 <p>
 This is our last analysis. We will use our matrix of MCMC samples for the rates \( \eta \) to produce samples from the posterior probability distributions for our quantities of interest, namely percent change over time. Then we will summarize those samples and put them into a figure that displays the change in mortality rates for each state plus D.C.
@@ -1462,7 +1463,7 @@ dev.off()
 </center>
 
 
-<h2> Time-varying parameters </h2>
+## Time-varying parameters 
 
 We can easily adjust our Stan models to specify time-varying parameters. Exploratory analysis and standard model comparison techniques (or workflows) can assist in deciding whether such an expansion of the model is worthwhile to consider. Our bit of exploratory analysis (time plots and Moran's I) suggest that this level of flexibility is not warranted in this case. 
 
@@ -1729,13 +1730,13 @@ generated quantities {
 </details>
 
 
-<h2> Addressing MCMC sampling failures </h2>
+## Addressing MCMC sampling failures 
 
 All of our models sampled smoothly and quickly. If our data were more sparse, this may not have gone as smoothly. By 'sparse', I mean (based on limited experience) that many of our small areas have fewer than 10 observations. With sparse data, the CAR models I have provided above will tend to sample poorly (sampling may proceed in fits and starts, convergence statistics will be bad, and you may have warnings of divergent transitions). This is not due to a problem with, or limitation of, proper CAR models. Rather, this is a general phenomenon encountered in hierarchical modeling with MCMC.
 
 If you use this, let me know how it goes (especially if it gives you trouble or you find an issue).
 
-<h3> Re-parameterizing the CAR model </h3>
+### Re-parameterizing the CAR model 
 
 To fix it, we just have to change the way we encode our model. This is generally discussed as a change from the 'centered' to 'non-centered' parameterization (see, e.g., <a href="https://sjster.github.io/introduction_to_computational_statistics/docs/Production/Reparameterization.html">here</a>). 
 
@@ -1773,7 +1774,7 @@ where \( \mu \) may contains the AR model.
 
 An important note: neither the standard ('centered') nor the adjusted, 'sparse-data' parameterization will work well in all situations. If you apply the latter parameterization to non-sparse data (like our state mortality rates) it will probably sample poorly. If one doesn't seem to work well, try the other.
 
-<h3> Stan code for the sparse-data fix </h3>
+### Stan code for the sparse-data fix 
 
 We can use the 'sparse-data' CAR model without making any other changes to our workflow.
 
@@ -1959,9 +1960,9 @@ generated quantities {
 </details>
 
 
-<h2> Resources </h2>
+## Resources 
 
-This tutorial is part of a fairly small body of work focused on implementing spatial model in Stan, including the following:
+This tutorial is part of a fairly small body of work focused on implementing spatial model in Stan, including the following [please let me know if I've missed any work that you've found helpful]:
 
  - Max Joseph's work on proper <a href="https://mc-stan.org/users/documentation/case-studies/mbjoseph-CARStan.html">CAR models</a>. These methods are implemented in the 'brms' R package.
  - Mitzi Morris's work on <a href="https://mc-stan.org/users/documentation/case-studies/icar_stan.html">intrinsic CAR</a> models.
@@ -1970,7 +1971,7 @@ This tutorial is part of a fairly small body of work focused on implementing spa
  - My own work on proper <a href="https://osf.io/3ey65/">CAR</a> models and spatial econometric models for <a href="https://connordonegan.github.io/geostan">geostan</a>, and <a href="https://github.com/ConnorDonegan/Stan-IAR">extending</a> Howe's contributions with M. Morris.
 
 
-<h2> References </h2>
+## References 
 
 Berliner, L. Mark (1996). Hierarchical Bayesian time series models. In K. Hanson and R. Silver (eds), <em>Maximum Entropy and Bayesian Methods</em>, Kluwer Academic Publishers, Dordrecht, pp. 15&mdash;22.
 
@@ -1999,13 +2000,3 @@ Walker, Kyle (2023). <em>tigris: Load Census TIGER/Line Shapefiles</em>. R packa
 Wikle, Christopher K., L. Mark Berliner, and Noel Cressie (1998). Hierarchical Bayesian space-time models. <em> Environmental and Ecological Statistics </em> 5, 117&mdash;154.
 
 
-<!---
-<h2> Complete R code </h2>
-
-<details class="details-example">
-    <summary>Complete R code for the post</summary>
-{% highlight r %}
-stan_cars
-{% endhighlight %}
-</details>
---->
