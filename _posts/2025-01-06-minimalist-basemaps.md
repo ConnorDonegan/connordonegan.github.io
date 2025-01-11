@@ -20,7 +20,12 @@ The CartoDB option looks pretty bland. I'd like to improve the contrast and to s
 
 I'm going to share a few methods I worked through to create a custom basemap - vector tiles, the Overpass API, and Census Bureau files. In the end I primarily used data from the Census Bureau and USGS.
 
-<h2> OSM vector tiles </h2>
+**Contents:**
+* TOC
+{:toc}
+
+
+## OSM vector tiles
 
 Using vector tiles, it is possible to control how the OSM basemap is rendered. *The Wandering Cartographer* has a nice introduction to [vector tiles](https://wanderingcartographer.wordpress.com/2021/01/09/qgis-3-and-vector-map-tiles/). When we load a basemap as a regular web tile, we receive images without any ability to adjust the styling. When you load a vector tile, you can control the symbology for every object that is part of the OSM layer.
 
@@ -93,7 +98,7 @@ You can also adjust the minimum zoom level for each OSM vector layer - supposedl
 
 The [QuickOSM plugin](https://plugins.qgis.org/plugins/QuickOSM/) is another way to pull OSM data (it builds queries and sends them to the Overpass API). I used it to get layers for airports ('aeroways'). The DFW airport has a footprint the size of a medium sized city, so its nice to have this even on a smaller scale map of the region.
 
-<h2> U.S. Census Bureau products </h2>
+## U.S. Census Bureau products 
 
 The Census Bureau maintains detailed spatial data on road networks, including local roads, and also provides nice hydrology layers (streams and water bodies). These can be fairly large files. If the map area were a single county, the process would be fairly simple. For multiple counties we want to use some programming. If you can use R or Python, then I recommend getting these layers from the 'tigris' (or 'pygris') package.
 
@@ -172,7 +177,7 @@ The Project Colors are invoked like stored variables using <code>project_color_o
     ELSE  @lwd_road7 
     END
 
-<h2> USGS </h2>
+## USGS 
 
 The final touch will be a shaded relief map from USGS. You can get this as a Web Map Service (WMS). The process is similar to getting vector tiles: in the QGIS browser panel, find the WMS/WMTS item. Right-click on it and select 'New Connection'. You can name it whatever you like (e.g., 'USGS'), and use the following URL:
 
@@ -180,7 +185,7 @@ The final touch will be a shaded relief map from USGS. You can get this as a Web
 
 The shaded relief layer adds some subtle dimensionality to the basemap. This can help even in a place as topographically boring as Dallas-Fort Worth, although the effects dependent on your map scale.
 
-<h2> Our minimalist basemap </h2>
+## Our minimalist basemap 
 
 Compared to the generic basemap we started with, this one has more detail at smaller map scales, while stil being minimalist. Applying a [blending mode](https://www.helenmakesmaps.com/post/how-to-use-blending-modes-in-mapping) to the layers is one firther step to help them stand out. 
 

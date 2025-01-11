@@ -45,6 +45,7 @@ Software*](https://doi.org/10.21105/joss.04716) reports these and other
 features and provides the recommended citation when using `geostan`
 (Donegan 2022).
 
+**Contents:**
 * TOC
 {:toc}
 
