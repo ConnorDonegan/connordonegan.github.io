@@ -39,7 +39,7 @@ The state-level data that we will be using here was chosen in part to keep the c
 
 ## The statistical models 
 
-Our modeling framework takes after the hierarchical Bayesian approach developed by C. Wikle, M. Berliner, and N. Cressie (1998; after Berliner 1996). The CAR-AR model specification to be discussed here was described in that article. However, they adopted an approach similar to one described by Cliff and Ord (1981, p. 233), a kind of first-order vector auto-regression that inludes time-lagged spatial neighbors.
+Our modeling framework takes after the hierarchical Bayesian approach developed by C. Wikle, M. Berliner, and N. Cressie (1998; after Berliner 1996). The CAR-AR model specification to be discussed here was described in that article. However, they adopted an approach similar to one described by Cliff and Ord (1981, p. 233), a kind of first-order vector auto-regression that inludes time-lagged spatial neighbors. Santos-Fernandez et al. (2022) extend this to model stream network data (implemented in the <a href="https://edgarsantos-fernandez.github.io/SSNbayes/">SSNbayes</a> R package, with Stan).
 
 The CAR-AR model (defined below) was proposed again by A. Rushworth, D. Lee, and R. Mitchell (2014), who implement it in the 'CARBayesST' R package (our specification differs from theirs only in minor ways). They reference a similar model that was introduced by M.D. Ugarte and others (Urgarte et al. 2012). Ugarte et al. are working within the alternative modeling framework introduced by Knorr-Held (2000), which remains very popular. I will note various advantages of the present framework after I have introduced it.
 
@@ -1988,9 +1988,11 @@ Others who have worked on implementing spatial models in Stan include:
  - Mitzi Morris's work on <a href="https://mc-stan.org/users/documentation/case-studies/icar_stan.html">intrinsic CAR</a> models.
  - James Hogg's work on CAR models and disease modeling, including the <a href="https://doi.org/10.1016/j.healthplace.2024.103295">Leroux<a/> CAR specification.
  - Adam Howe's contribution to adjusting ICAR models for <a href="https://athowes.github.io/posts/2021-11-04-fast-disconnected-icar-in-stan/">disconnected graphs</a>.
+ - Edgar Santos-Fernandez's spatio-temporal stream network models and the <a href="https://edgarsantos-fernandez.github.io/SSNbayes/index.html">SSNbayes</a> R package.
+ - Marco Gramatica's multivariate CAR models and <a href="https://doi.org/10.1111/rssc.12480">misaligned areal</a> data (with Peter Congdon and Slivia Liverani).
  - My own work on proper <a href="https://osf.io/3ey65/">CAR</a> models and spatial econometric models for <a href="https://connordonegan.github.io/geostan">geostan</a>, and <a href="https://github.com/ConnorDonegan/Stan-IAR">extending</a> Howe's contributions with M. Morris.
 
-Let me know if I've missed anything that you've written or found helpful.
+I'm sure there are others; let me know if I've missed anything that you've found helpful.
  
 ## How to cite
 
@@ -2022,6 +2024,8 @@ Morris, Mitzi, Katherine Wheeler-Martin, Dan Simpson, Stephen J. Mooney, Andrew 
 Pebesma, Edzer (2018). Simple Features for R: Standardized Support for Spatial Vector Data. The R Journal 10 (1), 439-446,  <https://doi.org/10.32614/RJ-2018-009>
 
 Rushworth, Alastair, Duncan Lee, and Richard Mitchell (2014). A spatio-temporal model for estimating the long-term effects of air pollution on respiratory hospital admissions in Greater London. <em>Spatial and Spatio-temporal Epidemiology</em> 10, 29&mdash;38.
+
+Santos-Fernandez, E., Ver Hoef, J. M., Peterson, E. E., McGree, J., Isaak, D. J., & Mengersen, K. (2022). Bayesian spatio-temporal models for stream networks. <em>Computational Statistics & Data Analysis</em>, 170, 107446. <a href="https://doi.org/10.48550/arXiv.2103.03538">Pre-print pdf</a>
 
 Urgart, Maria Dolores, Jaione Etxeberria, T. Goicoa, and E. Ardanaz. Gender-speciﬁc spatio-temporal patterns of colorectal cancer incidence in Navarre, Spain (1990–2005). <em>Cancer Epidemiology</em> 36, 254&mdash;262.
 
