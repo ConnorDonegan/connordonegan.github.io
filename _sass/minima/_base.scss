@@ -252,3 +252,19 @@ table {
     border: 1px solid $grey-color-light;
   }
 }
+
+/**
+ * Details
+ */
+details {
+  padding: 10px;
+  background-color: lighten($brand-color, 50%); // #e4eaef;
+  border-radius: 15px;
+}
+
+summary {
+  color: $brand-color-comp;
+  padding: 2.5px;
+}
+
+

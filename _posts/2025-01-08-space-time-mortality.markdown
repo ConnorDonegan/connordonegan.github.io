@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Space-time modeling in Stan: mapping the evolution of U.S. mortality rates"
+title:  "Space-time modeling in Stan: charting the evolution of U.S. mortality rates"
 author: Connor Donegan
 categories: [Statistics, Public_health]
 toc: true
@@ -8,7 +8,8 @@ toc: true
 
 This post is a tutorial on modeling spatial-temporal data using the Stan modeling language, with a focus on areal data. When we take the right approach, Stan can provide a great platform for spatial statistics (presumably, so would other Hamiltonian Monte Carlo samplers). I'll illustrate by modeling mortality rates for U.S. states and D.C., covering the years 1999 through 2020.
 
-The computational methods presented here are a fairly straigtforward extension of my previous work on CAR models for <a href="https://connordonegan.github.io/geostan">geostan</a> (mainly presented in this OSF <a href="https://osf.io/3ey65/">preprint</a>). I first began using these space-time models in my dissertation proposal and now, finally, I am getting around to sharing them. Feedback would be welcome.
+The computational methods presented here are a fairly straigtforward extension of my previous work on CAR models for <a href="https://connordonegan.github.io/geostan">geostan</a> (mainly presented in this OSF <a href="https://osf.io/3ey65/">preprint</a>) and <a href="https://connordonegan.github.io/statistics/public_health/2024/09/02/intro-to-surveil.html">time trend</a> models for public health monitoring. I first began using these space-time models in my dissertation proposal and now, finally, I am getting around to sharing them. Feedback is welcome.
+
 
 **Contents:**
 * TOC
@@ -18,10 +19,12 @@ The computational methods presented here are a fairly straigtforward extension o
 
 We'll be modeling state mortality rates for the years 1999&ndash;2020, for women ages 35&mdash;44 only. The goal for this kind of modeling project, which is often referred to as 'disease mapping', is to make inferences about systematic disease risk for population segments. We want sound answers to questions like: are mid-life mortality rates rising in Wisconsin? How fast are they rising? Is mortality higher in Ohio than Pennsylvania?
 
-When the question pertains to massive groups of people, then raw data from a good vital statistics system can give us a suitable answer in the form of crude incidence rates. (Answering a statistical question is not the same, obviously, as developing an understanding of the matter.) Whenever our research questions concern small or 'smallish' groups of people, the patterns and trends of interest become obscured by chance (or causes of morbidity that are not persistent over time), and we may 'see' patterns where there are none.
+When the question pertains to massive groups of people, then raw data from a good vital statistics system can give us a suitable answer in the form of crude incidence rates. (Answering a statistical question is not the same, obviously, as developing an understanding of the matter.) Whenever our research questions concern small or 'smallish' groups of people, the patterns and trends of interest become obscured by chance (or causes of morbidity that are not persistent over time), and we may 'see' patterns where there are none. We proceed with the supposition that the data is without much error, but we distinguish conceptually between actual morbidity or mortality (crude rates) and the incidence or risk attributable to systematically maintained causes (natural and otherwise).[^1] 
+
+[^1]: At least, that is my best stab at communicating the reason these models are required, and what exactly the target of our inference is. The distinction is fundamental to this enterprise but the concept is rarely stated explicitly in the literature and is sometimes conflated with measurement error. 
 
 <p>
-The purpose of space-time disease mapping is to improve inferences about disease risk for a collection of population segments that are indexed by both time and geography. (Information about aggregates or averages, like whether mortality has been rising <em>on average</em> in the population, will emerge naturally from our disease mapping model if we are successful at making inferences about our collection of rates at each unit of observation.) In this case, we have mortality data for 50 states plus D.C. ( \( S = 51 \) ) spanning 22 years (\( T = 22 \)). This means we have a total of \(N = S \times T = 1,122 \) 'rates' about which we might like to make inferences. 
+The purpose of space-time disease mapping is to improve inferences about disease risk for a collection of population segments that are indexed by both time and geography. (Questions about aggregates or averages, like whether mortality has been rising <em>on average</em> in the population, are secondary; answers to those questions will emerge naturally from our disease mapping model if we are successful at making inferences about our collection of rates at each unit of observation.) In this case, we have mortality data for 50 states plus D.C. ( \( S = 51 \) ) spanning 22 years (\( T = 22 \)). This means we have a total of \(N = S \times T = 1,122 \) 'rates' about which we might like to make inferences. 
 </p>
 
 <p>
@@ -29,26 +32,30 @@ The crude mortality rate is defined as
 
 $$r_{i,t} = \frac{y_{i,t}}{p_{i,t}},$$
 
-where \( y \) is the mortality count and \( p \) is the population count. The way we improve upon the crude rate is by taking information from context. We look at rates in previous years, nearby places, similar age-groups, or other demographic segments. Having divided the population into any number of discrete, often well-motivated but at least semi-artificial categories (age groups, places, "races", etc.), we want our models to acknowledge that the categories are not so discrete after all. Whenever the crude rate itself contains minimal information (because the population or time-window of observation is small), our inferences will be more dependent on the 'external' information borrowed from neighbors.
+where \( y \) is the mortality count and \( p \) is the population count. The way we improve upon the crude rate is by taking information from context. We look at rates in previous years, nearby places, similar age-groups, or other demographic segments. Having divided the population into any number of discrete, often well-motivated but at least semi-artificial categories (age groups, places, "races", etc.), we want our models to acknowledge that the categories are not so discrete after all. 
 </p>
 
 The state-level data that we will be using here was chosen in part to keep the case study simple, rather than to illustrate all the problems of small numbers. Many of our rates are based on quite large numbers. 
 
 ## The statistical models 
 
-Our modeling framework takes after the hierarchical Bayesian approach developed by C. Wikle, M. Berliner, and N. Cressie (1998; after Berliner 1996). The CAR-AR model specification to be discussed here was introduced by A. Rushworth, D. Lee, and R. Mitchell (2014), who also implement it in the 'CARBayesST' R package (our specification differs from theirs only in minor ways). A similar model was introduced by M.D. Ugarte and others (Urgarte et al. 2012), but they developed it within the alternative modeling framework introduced by Knorr-Held (2000). (Morris et al., 2019, may provide a good starting point for implementing the Knorr-Held approach in Stan.)
+Our modeling framework takes after the hierarchical Bayesian approach developed by C. Wikle, M. Berliner, and N. Cressie (1998; after Berliner 1996). The CAR-AR model specification to be discussed here was described in that article. However, they adopted an approach similar to one described by Cliff and Ord (1981, p. 233), a kind of first-order vector auto-regression that inludes time-lagged spatial neighbors.
+
+The CAR-AR model (defined below) was proposed again by A. Rushworth, D. Lee, and R. Mitchell (2014), who implement it in the 'CARBayesST' R package (our specification differs from theirs only in minor ways). They reference a similar model that was introduced by M.D. Ugarte and others (Urgarte et al. 2012). Ugarte et al. are working within the alternative modeling framework introduced by Knorr-Held (2000), which remains very popular. I will note various advantages of the present framework after I have introduced it.
 
 <p>
 We start with the distinction between chance variation and systematic risk. Because we are modeling rare events, we use the Poisson distribution:
 
 $$y_{i,t} \sim Poisson(\mu_{i,t}).$$
 
-This states that we expect the number of cases or deaths \( y \) at any site \( i \) and time \( t \) to fluctuate around a mean value, equal to the population size multiplied by the systematic risk or 'incidence rate':
+This states that we expect the number of cases or deaths \( y \) at any site \( i \) and time \( t \) to fluctuate around a mean value, equal to the population size multiplied by the systematic risk:
 
+$$
 \begin{aligned}
-&\mu_{i,t} &= p_{i,t} \cdot \eta_{i,t} \\
-          &=  exp(log(p_{i,t}) + log(\eta_{i,t})).
+\mu_{i,t} &= p_{i,t} \cdot \eta_{i,t} \\
+&= exp(log(p_{i,t}) + log(\eta_{i,t})).
 \end{aligned}
+$$
 
 Then the expectation of the observed rate is
 
@@ -84,15 +91,34 @@ If we were to stop at this point we would have a perfectly valid model for our s
 Now let's start over and look at the rates differently. Instead of the time series auto-regression, we could improve our inferences about any given mortality rate by looking at the rates that are nearby and/or part of the same geographic region. Geographic trends are typically weaker than trends in time, so we won't consider fixing the auto-correlation parameter at 1, as we did above.
 
 <p>
-A spatial auto-regression for our log-mortality rates \( \phi_{,t} \)  may be written in matrix notation as
+As a starting point, a spatial auto-regression for any generic, spatially-indexed vector \( x \) may be written as
 
-$$\phi_{,t} = \mu + \rho \cdot C (\phi_{,t} - \mu) + \epsilon,$$
+$$x = \mu + \rho \cdot C (x - \mu) + \epsilon,$$
 
-where \( \rho \) is an auto-correlation parameter, \( C \) is a connectivity matrix (more below), and \( \mu \) is an intercept (we could add covariates here too, but we won't). \( \phi_{,t} \) is an \( S \)-length vector, a snapshot at time \( t \) of mortality for all \( S \) locations. The equation states that our expectations for \( \phi_{i,t} \) will be informed by the overall average rate \( \mu \), by the values near to the \( i \)th location, and by the overall degree of spatial auto-correlation \( \rho \). 
+where \( \rho \) is an auto-correlation parameter, \( C \) is a sparse connectivity matrix, and \( \mu \) is an intercept (we could add covariates here too). The error term \( \epsilon \) is white-noise. The expectation of \( x - \mu \) is zero, but the expected value for the \( i \)th site, given that we know the other \( n-1 \) values, is \( \mu + \rho \cdot C (x - \mu) \) (Cressie 2015, 564). The equation states that our expectation for \( x_i \) will be informed by the overall average rate \( \mu \), by the values near to the \( i \)th location, and by the overall degree of spatial auto-correlation \( \rho \).
+</p>
+
+(There is a special type of spatial regresion that has the spatial lag of the dependent variable in its expectation, rather than spatially-lagged residuals. This material does not apply to that 'spatial lag' model. That model really is quite different from this, and it is not normally called for.)
+
+<details>
+ <summary> Click for a short intoduction to \( C \) and spatial lags</summary>
+<p>
+The matrix \(C\) allows us to calculate the average of neighboring values for any focal observation; we call this the (mean) spatial lag. The \( i \)th row of \( C \) contains the weights required to calculate the spatial lag \( \tilde{ x } \) for the \( i \)th value of \( x \): \( \tilde{x}_i = \sum_j^n c_{i,j} \cdot x_j\). When we pre-multiply a vector \(x\) by \( C \), we apply this spatial lag operator to each element of \( x \) to yield a vector of spatially lagged values \( \tilde{x} = C x \). In a spatial auto-regressive model, the spatial lag of residuals \( C ( x - \mu ) \) is made more or less important to our expectations when it is multiplied by \( \rho \), the spatial auto-correlation (SA) parameter.
 </p>
 
 <p>
-A comparison with a more standard model may be helpful. Remember that this part of the model is our prior distribution for the rates \( \phi \) (for the moment, these could be an \( S \)-length vector, or an \( S \times T \) vector). A simple prior probability model could state that the mortality rates should display some characteristic amount of variation \( \tau \) around a center of gravity \( \mu \):
+Lets say that \( x \) is indexed to the 48 contiguous U.S. states and D.C., so each \(x_i\) corresponds to a 'state'. We can construct an \( n \)-by-\( n \) adjacency matrix \( A \) that identifies which states are neighbors of one another. If we order states alphabetically so the first (\(i = 1\)) observation is for Alabama, then the first row of \( A \), the row vector denoted by \(A_{i,}\), will contain 1s in those index positions that correspond to the neighbors of Alabama (Florida \(i=9\), Georgia \(i=10\), Mississippi \(i=23\), Tennessee \(i=41\)) and the rest will be zeroes (including \(i=1\) for Alabama itself). Then \( \tilde{x}_i = \sum_j^n a_{i,j} \cdot x_j\) will yield the sum of the neighboring or spatially-lagged values for the \( i \)th value. Dividing this by the number of neighbors (4 for Alabama) gives the mean spatial lag.
+</P>
+
+<p>
+The matrix \( C \) can be constructed out of \(A\), often by row-normalizing: dividing the elements of each row by their corresponding row sum. For Alabama, \(C_{1,}\) will contain \(1/4\) just where \(A_{1,}\) contains 1.
+</p>
+
+You can find an introduction to spatial connectivity matrices <a href="https://connordonegan.github.io/geostan/articles/spatial-weights-matrix.html">here</a>.
+</details>
+
+<p>
+A comparison with a more standard model may be helpful. Remember that this part of the model is our prior distribution for the rates \( \phi \) (for the moment, these could be an \( S \)-length vector, or an \( S \times T \) vector). A simple prior probability model could state that the rates have a finite, characteristic amount of variation \( \tau \) around their mean \( \mu \):
 
 $$\phi_{i,t} \sim Normal( \mu, \tau^2).$$
 
@@ -100,7 +126,7 @@ As a prior distribution, this will assign low probability to values of \( \phi_{
 </p>
 
 <p>
-What happens next depends on the likelihood. With respect to the crude rates that already contain a lot of information (i.e., they are based on large population sizes), our inferences will not be sensitive to our prior skepticism; the likelihood will overwhelm the prior, and the posterior probability for \( \eta_{i,t} \) will be centered right on the crude rate \( r_{i,t} \). The smaller the population is, the more our inferences will be sensitive to our prior skepticism. That skepticism is saying 'I think the systematic risk here is more like the overall mean \( \mu \), and less like the crude rate'. This is the 'shrinkage' to the mean that hierarchical models often impose on estimates.
+What happens next depends on the likelihood. With respect to the crude rates that already contain a lot of information (i.e., they are based on large population sizes), our inferences will not be sensitive to our prior skepticism; the likelihood will overwhelm the prior, and the posterior probability for \( \eta_{i,t} \) will be centered right on the crude rate \( r_{i,t} \). The smaller the population is, the more our inferences will be sensitive to our prior skepticism. That skepticism is saying 'I think the systematic risk here is probably more near to the overall mean \( \mu \) than the crude rate alone indicates'. This is the 'shrinkage' to the mean that hierarchical models often impose on estimates.
 </p>
 
 <p>
@@ -130,11 +156,7 @@ $$
 $$
 
 <p>
-The range of values that \( \rho \) can take on is limited by our requirement that \( \Sigma \) be a properly specified covariance matrix; depending on how one creates \( C \), the range may (or may not) be similar to a correlation coefficient: its maximum value may be 1 or less than 1, and its minimum permissible value often differs from \( -1 \). Whatever its range, the spatial dependence parameter of the CAR model does not 'behave' similarly to Pearson's correlation coefficient. A value of 0.9 is a very strong degree of correlation, but it is a more moderate value for the CAR model. (The simultaneously-specified spatial auto-regressive (SAR) model does have an SA parameter that 'behaves' more like the correlation coefficient.)
-</p>
-
-<p>
-You can find an introduction to spatial connectivity matrices <a href="https://connordonegan.github.io/geostan/articles/spatial-weights-matrix.html">here</a>. <!--- Note that the term 'spatial lag' or 'mean spatial lag' refers to the average of the surrounding values for any given focal location. For focal site \( i \), take its neighboring values \( \phi_{j} \) and calculate their average. If you repeat that for every site \( i \) you obtain an \( S \)-length vector of spatial lags, one for each location. In matrix notation, this is \( \tilde{x} = C x \), where the \( i \)th row of matrix \( C \) contains the weights required to calculate the \( i \)th spatial lag. --->
+The range of values that \( \rho \) can take on is limited by our requirement that \( \Sigma \) be a properly specified covariance matrix; depending on how one creates \( C \), the range may (or may not) be similar to a correlation coefficient: its maximum value may be 1 or less than 1, and its minimum permissible value often differs from \( -1 \). In the most common specification ('WCAR', used here), the maximum value is 1. Whatever its range, in certain respects the spatial dependence parameter of the CAR model does not 'behave' similarly to Pearson's correlation coefficient. A value of 0.9 is a very strong degree of correlation, but it is a more moderate value for the auto-correlation parameter of the CAR model. (The simultaneously-specified spatial auto-regressive or SAR model does have an auto-correlation parameter that seems to satisfy the intuition that we develop through the study of correlation.)
 </p>
 
 <p>
@@ -159,7 +181,7 @@ $$
 $$
 
 <p>
-If desired, one can allow the parameters of the model to vary over time. The mean \( \mu \) can evolve over time, as may the auto-correlation \( \rho \) and and scale \( \tau \) parameters (yielding \(\mu_t, \rho_t, \tau_t \)).
+\( \phi_{,t} \) is an \( S \)-length vector, a snapshot of mortality for all \( S \) locations at time \( t \). If desired, one can allow the parameters of the model to vary over time. The mean \( \mu \) can evolve over time, as may the auto-correlation \( \rho \) and and scale \( \tau \) parameters (yielding \(\mu_t, \rho_t, \tau_t \)).
 </p>
 
 <p>
@@ -168,13 +190,13 @@ The last part of this model is to add prior distributions for those parameters. 
 
 $$
 \begin{aligned}
-&\mu \sim Normal( -4, 4) \\
+&\mu \sim Normal( -4, 4), \mu < 0 \\
 &\tau \sim Normal(0, 1), \tau > 0. 
 \end{aligned}
 $$
 
 <p>
-The spatial auto-correlation parameter \( \rho \) will be assigned a uniform prior distribution across its full support, which is determined by the eigenvectors of \( C \) 
+The constraints on the parameters imply that those are half-normal distributions. The spatial auto-correlation parameter \( \rho \) will be assigned a uniform prior distribution across its full support, which is determined by the eigenvectors of \( C \). 
 </p>
 
 <p>
@@ -183,7 +205,7 @@ Once again, we have a simple way to proceed but it is nonetheless a valid space-
 
 ### The CAR-AR model 
 
-Now we have two options for modeling our rates: the serial auto-regressive model and the spatial auto-regressive model. Our third approach is to combine them. We model a time trend for each location, and then we apply the CAR model to their cross-sectional errors.
+Now we have two options for modeling our rates: the time-series auto-regression and the spatial auto-regression. Our third approach is to combine them. We model a time trend for each location, and then we apply the CAR model to their cross-sectional errors.
 
 <p>
 Altogether, our third model is:
@@ -650,7 +672,7 @@ D <- C * D
 # a proper DCAR specification: connectivity is proportional to distance
 dcar_dl <- prep_car_data(D, 'DCAR', k = 1)
 
-# how to create an inverse distance matrix
+# creates an inverse distance matrix
 # (this is done internally by prep_car_data when type='DCAR')
 k <- 1
 gamma <- 0
@@ -691,19 +713,18 @@ stan_dl$log_pop <- log( pop )
 stan_dl <- c(stan_dl, car_parts)
 {% endhighlight %}
 
-Before starting, we can examine Moran's I, the index of spatial auto-correlation, at teach time point (this 'geostan' <a href="https://connordonegan.github.io/geostan/articles/measuring-sa.html">vignette</a> provides a short introduction to Moran's I, which is also known as the Moran coefficient).
+Before starting, we can examine Moran's I, the index of spatial auto-correlation, at teach time point (this 'geostan' <a href="https://connordonegan.github.io/geostan/articles/measuring-sa.html">vignette</a> provides a short introduction to Moran's I, which is also known as the Moran coefficient). This exercise can also serve as a quick check on our input data <code>stan_dl</code>: if Moran's I values are near zero then we may have just screwed up the indexing/order.
 
 {% highlight r %}
-# Moran's I index of spatial autocorrelation, by year
+# Moran's I index of spatial auto-correlation (SA), by year
 # x = crude rates
-#  (also serves as another check on stan_dl: if Moran's I values are near zero then our indexing is probably incorrect.)
 mc_est <- numeric(length = TT)
 for (tt in 1:TT) {
     y = stan_dl$y[tt,]
     den = stan_dl$log_pop[tt,] |>
         exp()
     x = y/den    
-    mc_est[tt] <- mc(x, car_parts$C)
+    mc_est[tt] <- geostan::mc(x, car_parts$C)
 }
 print(mc_est)
 {% endhighlight %}
@@ -739,6 +760,8 @@ Below is our custom Stan function for calculating the log-probability of the CAR
  * @param n Length of y
  *
  * @return Log probability density of CAR prior up to additive constant
+ *
+ * @author Connor Donegan (connor.donegan@gmail.com), Jan 2025 
  */
 real wcar_normal_lpdf(vector y, vector mu,
               real tau, 
@@ -786,6 +809,8 @@ real wcar_normal_lpdf(vector y, vector mu,
  * @param n Length of y
  *
  * @return Log probability density of CAR model up to additive constant
+ *
+ * @author Connor Donegan (connor.donegan@gmail.com), Jan 2025
 */
 real car_normal_lpdf(vector y, vector mu,
 		     real tau, real rho,
@@ -1102,7 +1127,7 @@ There is one interesting feature of these results already. The estimate for <cod
 
 For each of our three models, we collected samples for the log-likelihoods. Those are for computing information criteria. I will use the DIC for these models. 
 
-(You can use WAIC if you want to; if you check diagnostics using the 'loo' R package, you may find that the diagnostics are crap for your spatial models. As I understand it, that is just a feature of WAIC with auto-correlated data, and it does not necessarily indicate a problem with your model.)
+(You can use WAIC if you want to; if you check diagnostics using the <a href="http://mc-stan.org/loo/">loo</a> R package, you may find that the diagnostics are crap for your spatial models. As I understand it, that is just a feature of WAIC with auto-correlated data, and it does not necessarily indicate a problem with your model.)
 
 This code first defines an R function to calculate DIC from a Stan model (the model must contain a <code>log_lik</code> parameter vector), and then applies it to our three models:
 
@@ -1124,7 +1149,7 @@ rbind(
 ) |>
   as.data.frame() |>
   transform(
-    model = c('ARs', 'CARs', 'CAR-AR')
+    model = c('AR', 'CAR', 'CAR-AR')
   )
 {% endhighlight %}
 <pre>
@@ -1653,7 +1678,6 @@ generated quantities {
 
 <details>
 <summary>Click for the full CAR-AR model with options</summary>
-This includes the options for time-varying parameters, and it also includes a flag for inclusion of the log-likelihood, <code>keep_log_lik</code>. With large N, storing samples of <code>log_lik</code> can have a major impact on computational efficiency, due to memory overload. So its nice to be able to keep them only when you really want them.
 {% highlight stan %}
 functions {
 #include car_lpdf.stan
@@ -1882,11 +1906,7 @@ model {
   for (tt in 1:TT) {
     
     if (type == 0) {
-      target += std_normal_lpdf(phi_tilde[tt] - alpha);      
-      // same as:
-      //phi_tilde_mu[tt] = rep_vector(alpha, S);
-      //target += normal_lpdf(phi_tilde[tt] | phi_tilde_mu[tt], 1);
-      
+      target += std_normal_lpdf(phi_tilde[tt] - alpha);            
     }
     
     if (type == 1) {
@@ -1962,13 +1982,21 @@ generated quantities {
 
 ## Resources 
 
-This tutorial is part of a fairly small body of work focused on implementing spatial model in Stan, including the following [please let me know if I've missed any work that you've found helpful]:
+Others who have worked on implementing spatial models in Stan include:
 
  - Max Joseph's work on proper <a href="https://mc-stan.org/users/documentation/case-studies/mbjoseph-CARStan.html">CAR models</a>. These methods are implemented in the 'brms' R package.
  - Mitzi Morris's work on <a href="https://mc-stan.org/users/documentation/case-studies/icar_stan.html">intrinsic CAR</a> models.
  - James Hogg's work on CAR models and disease modeling, including the <a href="https://doi.org/10.1016/j.healthplace.2024.103295">Leroux<a/> CAR specification.
  - Adam Howe's contribution to adjusting ICAR models for <a href="https://athowes.github.io/posts/2021-11-04-fast-disconnected-icar-in-stan/">disconnected graphs</a>.
  - My own work on proper <a href="https://osf.io/3ey65/">CAR</a> models and spatial econometric models for <a href="https://connordonegan.github.io/geostan">geostan</a>, and <a href="https://github.com/ConnorDonegan/Stan-IAR">extending</a> Howe's contributions with M. Morris.
+
+Let me know if I've missed anything that you've written or found helpful.
+ 
+## How to cite
+
+Attribution for the CAR models presented here should be to Donegan (2021) or Donegan (2022). Recommended citation for the blog post:
+
+> Donegan, C. (2025) "Space-time modeling in Stan: charting the evolution of U.S. mortality rates." Retrieved [date] from <https://connordonegan.github.io/statistics/public_health/2025/01/08/space-time-mortality.html>
 
 
 ## References 
@@ -1978,6 +2006,8 @@ Berliner, L. Mark (1996). Hierarchical Bayesian time series models. In K. Hanson
 Bivand R (2023). classInt: Choose Univariate Class Intervals. R  package version 0.4-10, <https://CRAN.R-project.org/package=classInt>.
 
 Cliff, AD and JK Ord (1981). <em> Spatial Processes: Models and Applications</em>. Pion Press.
+
+Cressie, Noel (2015 (1993)). Statistics for Spatial Data. Wiley Classics, Revised Edition.
 
 Donegan, Connor (2021). Building spatial conditional autoregressive (CAR) models in the Stan programming language.  OSF Preprints. <https://doi.org/10.31219/osf.io/3ey65> <em>Nb: the present blog post contains an updated implementation of the Stan models that were introduced by this OSF preprint.</em>
 
@@ -2000,3 +2030,4 @@ Walker, Kyle (2023). <em>tigris: Load Census TIGER/Line Shapefiles</em>. R packa
 Wikle, Christopher K., L. Mark Berliner, and Noel Cressie (1998). Hierarchical Bayesian space-time models. <em> Environmental and Ecological Statistics </em> 5, 117&mdash;154.
 
 
+## Endnotes 

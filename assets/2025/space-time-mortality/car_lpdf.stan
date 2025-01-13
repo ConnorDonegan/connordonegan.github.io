@@ -14,6 +14,8 @@
  * @param n Length of y
  *
  * @return Log probability density of CAR prior up to additive constant
+ *
+ * @author Connor Donegan (connor.donegan@gmail.com) Jan 2025
  */
 real wcar_normal_lpdf(vector y, vector mu,
               real tau, 
