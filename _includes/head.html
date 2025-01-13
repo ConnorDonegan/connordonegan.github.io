@@ -12,8 +12,14 @@
 
   <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="/feed.xml">
   
+  <!--- previous MathJax method, which was super slow:
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  new method [ per https://docs.mathjax.org/en/stable/start.html ]:
+  --->
+  <script type="text/javascript"src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  <!--- this doesn't play well with the new cdn, and appears similar to the default
   <script>
   MathJax = {
     tex: {      
@@ -29,5 +35,7 @@
   tex: {packages: {'[+]': ['mathtools']}}
   };
 </script>
+  --->
+  
 </head>
 
