@@ -505,7 +505,7 @@ stan_dl$log_pop <- log( pop )
 {% endhighlight %}
 
 <details class="details-example">
-    <summary>Click here for practice creating arrays in R, they are tricky</summary>
+    <summary>Click for practice creating arrays in R, they are tricky</summary>
 {% highlight r %}
 # notice: there's no warning for size mis-match; and the values fill up column-wise 
 x = 1:13
@@ -789,7 +789,7 @@ real wcar_normal_lpdf(vector y, vector mu,
 
 
 <details class="details-example">
-    <summary>Click here for a more generally applicable CAR model</summary>
+    <summary>Click for a more generally applicable CAR model</summary>
    The <code> wcar_lpdf </code> function is usually what you need. If you fit distance-based CAR models, you need a more general specification. The WCAR is generally faster than this, but this is still pretty good. This one works for any valid CAR specification (including WCAR). Again, see Donegan (2021) for details.
    
 {% highlight stan %}
@@ -901,7 +901,7 @@ model {
 
 
 <details class="details-example">
-    <summary>Click here for the complete 'multiple CARs' Stan model</summary>
+    <summary>Click for the complete 'multiple CARs' Stan model</summary>
 {% highlight stan %}  
 functions {
 #include car_lpdf.stan
