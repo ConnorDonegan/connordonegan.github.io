@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "A minimalist basemap for urban cartography"
-author: Connor 
+author: Connor Donegan
 categories: GIS
 ---
 
@@ -10,7 +10,7 @@ For a recent project, I a wanted a basemap that would display the local street n
 The closest I've seen to the kind of minimalist basemap I'd like to have is CartoDB's Positron. They provide a version without any labels:
 
 <center>
-<img src="/assets/2025/minimalist-basemap/positron-no-labels.png" width='65%'>
+<img src="/assets/{{ page.date | date: "%Y" }}/{{ page.slug }}/positron-no-labels.png" width='65%'>
 <p class="caption">
 <em>CartoDB's Positron, without labels</em>
 </p>
@@ -20,15 +20,21 @@ The CartoDB option looks pretty bland. I'd like to improve the contrast and to s
 
 I'm going to share a few methods I worked through to create a custom basemap - vector tiles, the Overpass API, and Census Bureau files. In the end I primarily used data from the Census Bureau and USGS.
 
-<h2> OSM vector tiles </h2>
+**Contents:**
+* TOC
+{:toc}
+
+
+## OSM vector tiles
 
 Using vector tiles, it is possible to control how the OSM basemap is rendered. *The Wandering Cartographer* has a nice introduction to [vector tiles](https://wanderingcartographer.wordpress.com/2021/01/09/qgis-3-and-vector-map-tiles/). When we load a basemap as a regular web tile, we receive images without any ability to adjust the styling. When you load a vector tile, you can control the symbology for every object that is part of the OSM layer.
 
 Adding an OSM vector tile into the open-source [QGIS](https://qgis.org) desktop software is straightforward. There are now various ways to access OpenStreetMap vector tiles for free. I'm using Esri's server for this (there's no need to create an account with them). To do the same, go to the QGIS Browser panel and find the 'Vector Tiles' item; right-click on it and select 'New ArcGIS Vector Tile Service Connection'. A window will pop-up where you simply provide a couple URLs (given below) and then click 'OK'.
 
+
 <center>
-<img src="/assets/2025/minimalist-basemap/qgis-browser-panel.png" width='45%'>
-<img src="/assets/2025/minimalist-basemap/add-vector-tile-connection.png" width='50%'>
+<img src="/assets/{{ page.date | date: "%Y" }}/{{ page.slug }}/qgis-browser-panel.png" width='45%'>
+<img src="/assets/{{ page.date | date: "%Y" }}/{{ page.slug }}/add-vector-tile-connection.png" width='50%'>
 <p class="caption">
 <em>Adding OSM vector tiles to QGIS</em>
 </p>
@@ -45,7 +51,7 @@ For the Style URL, use this:
 After clicking 'OK', it the new 'osm_esri' layer should be listed under Vector Tiles in the browser. Add it to your map canvass by dragging-and-dropping (or right-click, 'add layer to project'). At that point, your map canvass should contain an OpenStreetMap basemap. The difference from the usual basemap is that you have detailed control over the symbology. If you double-click on the 'osm-esri' layer, as listed in your Layers panel, you can open up the Symbology. You'll find a long list of items, every one of which has its own styling. 
 
 <center>
-<img src="/assets/2025/minimalist-basemap/osm-esri-symbology.png" width='100%'>
+<img src="/assets/{{ page.date | date: "%Y" }}/{{ page.slug }}/osm-esri-symbology.png" width='100%'>
 <p class="caption">
 <em>The symbology panel for the OSM vector tiles</em>
 </p>
@@ -60,11 +66,11 @@ If you switch from Symbology to Labels in the same Layer Properties window (show
 The downside to using vector tiles should be clear already - there are a lot of rules to adjust here. To avoid repeating this process every time you want to adjust the settings, use QGIS 'project colors' and 'project variables' (the *Wandering Cartographer* posts linked to above also covers this, as does the QGIS documentation). I wanted to adjust the width of the lines used to symbolize the roads - highways should be thicker (or maybe just darker) than side streets. I knew that different road types would need a different width (and/or color), so I stored two project variables: one named 'lwd_roads5' and another named 'lwd_roads7'. The numbers 5 and 7 are just a way for me to distinguish between 'larger' and 'smaller' roads; the choice of numbers was based on their (default) minimum zoom levels. 
 
 <center>
-<img src="/assets/2025/minimalist-basemap/qgis-project-lwd.png" width='100%'>
+<img src="/assets/{{ page.date | date: "%Y" }}/{{ page.slug }}/qgis-project-lwd.png" width='100%'>
 <p class="caption">
 <em>Custom project variables (from the Project Properties window)</em>
 </p>
-<img src="/assets/2025/minimalist-basemap/qgis-project-colors.png" width='100%'>
+<img src="/assets/{{ page.date | date: "%Y" }}/{{ page.slug }}/qgis-project-colors.png" width='100%'>
 <p class="caption">
 <em>Custom project colors (from the Project Properties window)</em>
 </p>
@@ -73,7 +79,7 @@ The downside to using vector tiles should be clear already - there are a lot of 
 Given you've saved some project variables and project colors, you can go about using them to adjust the OSM symbology. In the symbology, I started by filtering for 'roads', then looked for the layers with minimum zoom level of 5. I went through each and set them to same dark gray (which I named 'Roads - heavy'). I then went through roads with zoom level of 7, 8, and 9 and gave each of them the same color (my 'Roads - light' variable). Then I searched for 'water' and changed the color, using a project color again. 
 
 <center>
-<img src="/assets/2025/minimalist-basemap/qgis-styling-a-road.png" width='100%'>
+<img src="/assets/{{ page.date | date: "%Y" }}/{{ page.slug }}/qgis-styling-a-road.png" width='100%'>
 <p class="caption">
 <em> Setting symbology to a 'project color' </em>
 </p>
@@ -84,7 +90,7 @@ After you set the symbology for some layers using Project Colors and Variables, 
 You can also adjust the minimum zoom level for each OSM vector layer - supposedly. I was able to change the values for the minimum zoom level in the symbology, but the map didn't render differently. Maybe I'm just missing some information here, but for my purposes its becoming a bit of a hassle. The map is not bad at this point, but I'd like a bit more detail than this.
 
 <center>
-<img src="/assets/2025/minimalist-basemap/osm-vector-tile-dfw.png" width='65%'>
+<img src="/assets/{{ page.date | date: "%Y" }}/{{ page.slug }}/osm-vector-tile-dfw.png" width='65%'>
 <p class="caption">
 <em> OSM vector tiles with custom styling </em>
 </p>
@@ -92,7 +98,7 @@ You can also adjust the minimum zoom level for each OSM vector layer - supposedl
 
 The [QuickOSM plugin](https://plugins.qgis.org/plugins/QuickOSM/) is another way to pull OSM data (it builds queries and sends them to the Overpass API). I used it to get layers for airports ('aeroways'). The DFW airport has a footprint the size of a medium sized city, so its nice to have this even on a smaller scale map of the region.
 
-<h2> U.S. Census Bureau products </h2>
+## U.S. Census Bureau products 
 
 The Census Bureau maintains detailed spatial data on road networks, including local roads, and also provides nice hydrology layers (streams and water bodies). These can be fairly large files. If the map area were a single county, the process would be fairly simple. For multiple counties we want to use some programming. If you can use R or Python, then I recommend getting these layers from the 'tigris' (or 'pygris') package.
 
@@ -140,18 +146,18 @@ roads <- subset(roads, !is.na("RTTYP"))
 st_write(roads, GeoPkg, 'roads')
 {% endhighlight %}
 
-The water layers needed to be trimmed down first. The water bodies layer contains all sorts of tiny ponds. When mapping all of them, it looks like someone speckled paint over the canvass. I already have an idea of which bodies of water are substantial enough to include, and I can find their area (in square meters) in the <code>AWATER</code> field, which is a standard field in Census Bureau layers. After some trial and error, I subset the water bodies to include only those with area greater than 1,070,000 m^2; likewise, I remove the creeks, ditches, ponds, and unnamed hydrology from the linear water layer.
+The water layers needed to be trimmed down first. The water bodies layer contains all sorts of tiny ponds. When mapping all of them, it looks like someone speckled paint over the canvass. I already have an idea of which bodies of water are substantial enough to include, and I can find their area (in square meters) in the <code>AWATER</code> field, which is a standard field in Census Bureau layers. After some trial and error (you may want to employ some more thoughtful criteria here), I subset the water bodies to include only those with area greater than 1,070,000 m^2; likewise, I remove the creeks, ditches, ponds, and unnamed hydrology from the linear water layer.
 
 As before, I want to style the roads differently based on their type: large arterials should be more prominent than local streets. I use the same Project Colors and Project Variables as before to set the colors and line widths. You could split the roads layer into two based on some criteria, but its much easier to use a conditional expression to set the style.
 
 Road type is stored in a field called "RTTYP", where entries of "I" and "US" indicated interstate/U.S. highways. For highways, I'll use the heavy color and slightly thicker line width. 
 
 <center>
-<img src="/assets/2025/minimalist-basemap/qgis-styling-a-road-expression.png" width='100%'>
+<img src="/assets/{{ page.date | date: "%Y" }}/{{ page.slug }}/qgis-styling-a-road-expression.png" width='100%'>
 <p class="caption">
 <em> Opening the expression builder for the road symbology </em>
 </p>
-<img src="/assets/2025/minimalist-basemap/qgis-styling-a-road-expression-window.png" width='100%'>
+<img src="/assets/{{ page.date | date: "%Y" }}/{{ page.slug }}/qgis-styling-a-road-expression-window.png" width='100%'>
 <p class="caption">
 <em> Using the expression builder </em>
 </p>
@@ -171,7 +177,7 @@ The Project Colors are invoked like stored variables using <code>project_color_o
     ELSE  @lwd_road7 
     END
 
-<h2> USGS </h2>
+## USGS 
 
 The final touch will be a shaded relief map from USGS. You can get this as a Web Map Service (WMS). The process is similar to getting vector tiles: in the QGIS browser panel, find the WMS/WMTS item. Right-click on it and select 'New Connection'. You can name it whatever you like (e.g., 'USGS'), and use the following URL:
 
@@ -179,12 +185,12 @@ The final touch will be a shaded relief map from USGS. You can get this as a Web
 
 The shaded relief layer adds some subtle dimensionality to the basemap. This can help even in a place as topographically boring as Dallas-Fort Worth, although the effects dependent on your map scale.
 
-<h2> Our minimalist basemap </h2>
+## Our minimalist basemap 
 
 Compared to the generic basemap we started with, this one has more detail at smaller map scales, while stil being minimalist. Applying a [blending mode](https://www.helenmakesmaps.com/post/how-to-use-blending-modes-in-mapping) to the layers is one firther step to help them stand out. 
 
 <center>
-<img src="/assets/2025/minimalist-basemap/minimal-basemap.png" width='90%'>
+<img src="/assets/{{ page.date | date: "%Y" }}/{{ page.slug }}/minimal-basemap.png" width='90%'>
 <p class="caption">
 <em> A minimalist basemap </em>
 </p>

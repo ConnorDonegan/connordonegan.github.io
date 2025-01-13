@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "Spatial analysis with geostan"
-author: Connor 
-categories: [Statistics, Public health]
+author: Connor Donegan
+categories: [Statistics, Public_health]
 ---
 
 <em>
@@ -45,7 +45,12 @@ Software*](https://doi.org/10.21105/joss.04716) reports these and other
 features and provides the recommended citation when using `geostan`
 (Donegan 2022).
 
-<h2> Installation </h2>
+**Contents:**
+* TOC
+{:toc}
+
+
+## Installation 
 
 Using your R console, you can install from CRAN as follows:
 
@@ -72,7 +77,7 @@ If you are using Mac and installing with `install_github` then you may
 need to install Xcode Command Line Tools first.
 
 
-<h2> Getting started </h2>
+## Getting started 
 
 To begin, load the 'geostan' and 'sf' packages into your R environment,
 as well as the 'world' data:
@@ -220,7 +225,7 @@ regions. We will want to account for this dependence using a spatial
 model (for background see Chun and Griffith 2012; Donegan 2024). The
 first step will be to construct a spatial weights matrix.
 
-<h2> Adjacency matrix </h2>
+## Adjacency matrix 
 
 This section will illustrate use of two `geostan` functions for creating
 an revising a spatial weights matrix: `shape2mat` and `edges`. The
@@ -377,7 +382,7 @@ E <- edges(A, shape = world)
 st_write(E, "world.gpkg", layer = "edge list")
 {% endhighlight %}
 
-<h2> Non-spatial regression </h2>
+## Non-spatial regression 
 
 Fitting regression models with `geostan` is similar to using base R’s
 `glm` function: the user provides a model formula, data, and the model
@@ -498,7 +503,7 @@ moran_plot(rdf$mean, A)
 
 <img src="/assets/2024/spatial-analysis-with-geostan/fig-5.png" style="display: block; margin: auto;" />
 
-<h2> Spatial regression </h2>
+## Spatial regression 
 
 Options for spatial regression models currently include conditional
 autoregressive (CAR), simultaneous autoregressive (SAR/spatial error),
@@ -721,7 +726,7 @@ print(fit_scaled)
     ## and Rhat is the potential scale reduction factor on split chains (at 
     ## convergence, Rhat=1).
 
-<h2> Predicted values </h2>
+## Predicted values 
 
 We can visualize the model results by plotting the expected life
 expectancy across the full range of GDP per capita. We use the `predict`
@@ -826,7 +831,7 @@ rug(world$gdpPercap / 1e3, lwd = .5, ticksize = .025, col = col)
 Per this dataset, about 50% of the world population lives in countries
 with GDP per capita below $12,300.
 
-<h2> Future work and support </h2>
+## Future work and support 
 
 You can submit any questions, requests, or issues on the package [issues
 page](https://github.com/connordonegan/geostan/issues) or the
@@ -844,7 +849,7 @@ package more useful to fields other than `geostan`’s current focus
 especially welcome.
 
 
-<h2> References </h2>
+## References 
 
 Chun, Yongwan, and Daniel A Griffith. 2012. “Spatial Statistics and
 Geostatistics: Theory and Applications for Geographic Information

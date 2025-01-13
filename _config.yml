@@ -54,6 +54,8 @@ header_pages:
 
 syntax_highlighter: rouge
 
+markdown: kramdown
+
 
 
 

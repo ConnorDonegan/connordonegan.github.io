@@ -1,57 +1,64 @@
 ---
 layout: post
 title:  "Modeling time trends in disease incidence with the 'surveil' R package"
-author: Connor
-categories: [Statistics, Public health]
+author: Connor Donegan
+categories: [Statistics, Public_health]
 toc: true
 ---
 
-<p> This post introduces the 'surveil' R package for modelling time trends in disease incidence or mortality, including age-standardization, percent change analyses, and other quantities of interest.
 
-<p> 'surveil' requires fairly minimal R programming skills. If you download disease or mortality data from the CDC Wonder database, you'll find that the file is automatically in the correct format to start modeling with 'surveil'.</p>
+This post introduces the 'surveil' R package for modelling time trends in disease incidence or mortality, including age-standardization, percent change analyses, and other quantities of interest.
 
-<p> Among my motivations for developing the software was to provide an accessible alternative to join-point regression, which is a standard method in public health (and especially cancer prevention) research. The advantages over join-point include the use direct (rather than indirect) age-standardization, more appropriate measures of uncertainty, and the ability to make inferences about all sorts of (derived) quantities of interest including change over time and health disparities.</p>
 
-<p>
+'surveil' requires fairly minimal R programming skills. If you download disease or mortality data from the CDC Wonder database, you'll find that the file is automatically in the correct format to start modeling with 'surveil'.
+
+
+Among my motivations for developing the software was to provide an accessible alternative to join-point regression, which is a standard method in public health (and especially cancer prevention) research. The advantages over join-point include the use direct (rather than indirect) age-standardization, more appropriate measures of uncertainty, and the ability to make inferences about all sorts of (derived) quantities of interest including change over time and health disparities.
+
 The models were built using the probabilistic programming language <a href="https://mc-stan.org/">Stan</a>.
-</p>
 
-<h3> Installation </h3>
+**Contents:**
+* TOC
+{:toc}
 
-<p>You can install 'surveil' from R by calling:</p>
+
+## Installation 
+
+You can install 'surveil' from R by calling:
 
 {% highlight r %}
 install.packages("surveil")
 {% endhighlight %}
 
-<h3>Models for time trends</h3>
+## Models for time trends 
 
-<p>
 The models implemented in 'surveil' have two components or levels: first is a Poisson or binomial likelihood for the number of cases (deaths or disease incidence), accounting for chance variation around the trend-level of risk. The second component is a model for the time trend in the level of risk itself (a prior probability for the rates). The model used for the time trends is known variably as the random-walk, first difference, or intrinsic autoregressive model.
-</p>
 
 For the Poisson likelihood, this can also be described as
 
 $$y_t \sim Poisson(p_t \cdot \lambda_t)$$
 
 <p>
-where \(y_t\) is the count of cases (or deaths), \(p_t\) is the number of people at risk, and \(\lambda_t\) is the rate of incidence. The subscript \(t\) indexes the time period. This likelihood basically says, 'I expect the crude incidence rates, \(y_t/p_t\), to be somewhere in the neighborhood of the trend rate \(\lambda_t\); and, in small populations the crude rates will be more variable and noisy than in large populations'.
+where \(y_t\) is the count of cases (or deaths), \(p_t\) is the number of people at risk, and \(\lambda_t\) is the rate of incidence. The subscript \(t\) indexes the time period. The likelihood says, 'I expect the crude incidence rates, \( y_t / p_t \), to be somewhere in the neighborhood of the trend rate \(\lambda_t\); and, in small populations the crude rates will be more variable and noisy than in large populations'.
 </p>
 
-The log-rate \(\eta_t = log(\lambda_t)\) is assigned random walk prior probability distribution:
+<p>
+The log-rate \( \eta_t = log(\lambda_t) \) is assigned random walk prior probability distribution:
+</p>
 
 $$\eta_t = \eta_{t-1} + \epsilon_t, \hspace{1em} t = 2, 3, \dots, n$$
 
 <p>
-The purpose of the time trend model is, essentially, to encode the following sentiment: 'I expect the underlying level of population risk to evolve smoothly over time, not to jump up and down'. Or, 'large \(\epsilon_t\) have low probability'.
-</p> 
+The purpose of the time trend model is, essentially, to encode the following sentiment: 'I expect the underlying level of population risk to evolve smoothly over time, not to jump up and down'. Or, 'large \( \epsilon_t \) have low probability'.
+ </p>
 
 <p>
 This is encoded into the model by assigning a normal (Gaussian) distribution to the deviations \(\epsilon_t\), 
 
 $$\epsilon_t \sim Normal(0, \tau^2).$$
 
-The log-rates begin at some unknown, initial value (\(\eta_1\)). To anchor the model, we assign this value a half-normal (negative values only) prior distribution centered on some small value (remembering that these rates are on the log scale): 
+The log-rates begin at some unknown, initial value (\( \eta_1 \)). To anchor the model, we assign this value a half-normal (negative values only) prior distribution centered on some small value (remembering that these rates are on the log scale): 
+</p>
 
 $$\eta_1 \sim Normal(a, c^2), \hspace{1em} \eta_t < 0$$
 
@@ -59,9 +66,9 @@ $$\eta_1 \sim Normal(a, c^2), \hspace{1em} \eta_t < 0$$
 where \(a\) and \(c\) have default values of \(a = -6\) and \(c = 5\). In the typical use cases, this is going to be flat over the range of plausible values; users can change the priors if wanted.
 </p>
 
-<h3> Illustration: fitting time trend models </h3>
+## Illustration: fitting time trend models 
 
-<p>To illustrate, take some data on colorectal cancer incidence downloaded from CRC Wonder for various age groups in Texas (5-year age groups, from 40 to 84).
+To illustrate, we will take some data on colorectal cancer incidence downloaded from CRC Wonder for various age groups in Texas (5-year age groups, from 40 to 84).
 
 You can load this data into an R session as follows:
 
@@ -142,7 +149,7 @@ fit_50 = stan_rw(dat_50, time = Year)
 {% endhighlight %}
 </p>
 
-<h3> Viewing results </h3>
+## Viewing results 
 
 <p>
 With one more line of code, we have a figure showing trends in CRC incidence per 100,000 at risk by age group:
@@ -154,7 +161,7 @@ plot(fit, scale = 100e3)
 
 <center>
 <figure>
-<img src="/assets/2024/intro-to-surveil/crc-trends.png" alt="CRC time trends in one plot" style="width:75%">
+<img src="/assets/{{ page.date | date: "%Y" }}/{{ page.slug }}/crc-trends.png" alt="CRC time trends in one plot" style="width:75%">
 <figcaption> <em>Age-specific CRC incidence per 100,000, Texas 1999-2020</em> </figcaption>
 </figure>
 </center>
@@ -172,7 +179,7 @@ plot(fit, facet = TRUE, facet_scales = 'free', size = 0, scale = 100e3)
 
 <center>
 <figure>
-<img src="/assets/2024/intro-to-surveil/crc-trends-facet.png" alt="CRC time trends with one small plot (facet) per age group" style="width:70%">
+<img src="/assets/{{ page.date | date: "%Y" }}/{{ page.slug }}/crc-trends-facet.png" alt="CRC time trends with one small plot (facet) per age group" style="width:70%">
 <figcaption> <em> Plotting with facets </em> </figcaption>
 </figure>
 </center>
@@ -211,7 +218,7 @@ Correlation matrix: FALSE
 </code></pre>
 </p>
 
-<h3> Custom plots with base R </h3>
+## Custom plots with base R 
 
 <p>
 The default plots are created using the 'ggplot2' R package. We can use the data stored in <code>fit$summary</code> to create custom plots using whatever method we prefer. Here's an example for plotting a single time trend, for ages 50-54, using base R functions.
@@ -277,12 +284,12 @@ mtext("Cases per 100,000", side = 2, line = 2)
 
 <center>
 <figure>
-<img src="/assets/2024/intro-to-surveil/crc-trend-50-54.png" alt="CRC time trend for ages 50-54" style="width:70%">
+<img src="/assets/{{ page.date | date: "%Y" }}/{{ page.slug }}/crc-trend-50-54.png" alt="CRC time trend for ages 50-54" style="width:70%">
 <figcaption> <em>CRC incidence, ages 50-54 (plotting with base R) </em> </figcaption>
 </figure>
 </center>
 
-<h3> Percent change analysis </h3>
+## Percent change analysis 
 
 <p>
 We can summarize these age-specific trends by calculating percent change statistics for them. Dividing cumulative percent change by the number of time periods gives the average annual percent change. ('surveil' also returns annual percent change estimates; those are always subject to much more uncertainty than the cumulative change.)
@@ -299,7 +306,7 @@ plot(fit_pc, cumulative = TRUE)
 
 <center>
 <figure>
-<img src="/assets/2024/intro-to-surveil/crc-trends-cpc.png" alt="Plots of cumulative percent change in CRC incidence rates" style="width:90%">
+<img src="/assets/{{ page.date | date: "%Y" }}/{{ page.slug }}/crc-trends-cpc.png" alt="Plots of cumulative percent change in CRC incidence rates" style="width:90%">
 <figcaption> <em> Cumulative percent change in age-specific CRC incidence, Texas 1999-2020 </em> </figcaption>
 </figure>
 </center>
@@ -332,7 +339,7 @@ From 1999 to 2019, the 45-49 and 50-54 age groups saw CRC incidence increase by 
 The trend of rising CRC incidence among younger ages groups is now found internationally, and it is the reason why the recommended age to begin screening has been moved down to 45. However, most research has focused on 'early-onset CRC', meaning (somewhat arbitrarily) 'before age 50'. Unfortunately, that focus is probably too narrow and potentially quite misleading. As some have argued, it is more accurate to describe the problem as 'increasing CRC incidence among those born since 1955' (see <a href="https://doi.org/10.1038/s41575-023-00841-9">Murphy and Zaki 2024</a> in <em>Nature Reviews Gastroenterology & Hepatology</em>). The sharp rise of incidence among the 50-54 age group ought to be taken as a warning for the near future.
 </p>
 
-<h3> Age standardized rates </h3>
+## Age standardized rates 
 
 An advantage of 'surveil' (and Markov chain Monte Carlo analysis generally) is that users can calculate any kind of summary statistic from the model results, and obtain appropriate credible intervals for them. (Appropriate for the model, that is; whether the model is fit to purpose is a separate question.) An important example is age-standardization. 
 
@@ -347,7 +354,7 @@ The output, <code>fit_st</code>, can be treated just like the other 'surveil' mo
 
 <center>
 <figure>
-<img src="/assets/2024/intro-to-surveil/crc-standardized-trends.png" alt="Plots of age standardized CRC incidence" style="width:60%">
+<img src="/assets/{{ page.date | date: "%Y" }}/{{ page.slug }}/crc-standardized-trends.png" alt="Plots of age standardized CRC incidence" style="width:60%">
 <figcaption> <em> Directly age-standardized CRC incidence, Texas 1999-2020 </em> </figcaption>
 </figure>
 </center>
@@ -361,18 +368,18 @@ plot(fit_st_pc, cum = TRUE)
 
 <center>
 <figure>
-<img src="/assets/2024/intro-to-surveil/crc-stand-cum-change.png" alt="Plots of cumulative change in age standardized CRC incidence" style="width:60%">
+<img src="/assets/{{ page.date | date: "%Y" }}/{{ page.slug }}/crc-stand-cum-change.png" alt="Plots of cumulative change in age standardized CRC incidence" style="width:60%">
 <figcaption> <em> Cumulative percent change in age-standardized CRC incidence, Texas 1999-2020 </em> </figcaption>
 </figure>
 </center>
 
-<h3> Custom quantities of interest </h3>
+## Custom quantities of interest 
 
 <p>
 Age-standardized rates and percent change analyses are examples of inferences about 'quantities of interest', where the quantities that can be derived from the model's estimates. These inferences are made done using standard Markov chain Monte Carlo (MCMC) techniques. For more of MCMC analyiss with 'surviel' - such as how to complete a percent change analysis for a custom date range -you can see this <a href="https://connordonegan.github.io/surveil/articles/surveil-mcmc.html">vignette</a> from the package documentation.
 </p>
 
-<h3> Citing 'surveil' </h3>
+## Citing 'surveil' 
 
 <p>
 If you use 'surveil' in your work, please provide a citation. The package was introduced in the following article, which provides the recommended citation:
