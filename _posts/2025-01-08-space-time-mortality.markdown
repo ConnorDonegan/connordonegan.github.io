@@ -1346,8 +1346,7 @@ x_cut <- classIntervals(est_2020, n = 6, style = "jenks")
 
 # create map data (colors, legends)
 mp <- map_pars(x = t_est,
-               brks = x_cut$brks,
-               pal = proj_pal)
+               brks = x_cut$brks)
 
 # create map
 par(mar = rep(0, 4), oma = rep(0, 4))
