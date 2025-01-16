@@ -18,8 +18,8 @@ model {
   for (tt in 1:TT) {
       if (tt == 1) phi_mu[1] = rep_vector(alpha, S);
       if (tt > 1)  phi_mu[tt] = beta_ar * phi[tt-1];
-      target += normal_lpdf(phi[tt] | phi_mu[tt], tau);	
-      y[tt] ~ poisson_log(log_pop[tt] + phi[tt]);    
+      target += normal_lpdf(phi[tt] | phi_mu[tt], tau);
+      target += poisson_log_lpmf(y[tt] | log_pop[tt] + phi[tt]);      
       }
 
   target += normal_lpdf(alpha | -4, 4);

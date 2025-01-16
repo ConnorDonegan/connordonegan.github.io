@@ -103,7 +103,6 @@ iter = 1e3
 cores = 4
 
 ar_model <- stan_model("assets/2025/space-time-mortality/ARs.stan")
-#ar_model <- stan_model("assets/2025/space-time-mortality/ARs_lpmf.stan")
 
 S1 <- sampling(ar_model,
                data = stan_dl, 
@@ -111,7 +110,6 @@ S1 <- sampling(ar_model,
                cores = cores)
 
 print(S1, pars = c('alpha', 'beta_ar', 'tau'))
-
 
 # get Alaska and Hawaii
 
@@ -235,6 +233,16 @@ print(S3, pars = c('alpha', 'beta_ar', 'rho', 'tau'))
 ## Model comparison with DIC
 #################################
 
+DIC <- function(object, digits = 2) {
+  ll <- as.matrix(object, 'log_lik')
+  dev <- -2 * apply(ll, 1, FUN = sum)
+  dev_bar <- mean(dev)
+  penalty <- 0.5 * var(dev)
+  DIC <- dev_bar + penalty
+  x = round(c(DIC = DIC, penalty = penalty), digits)
+  return(x)
+}
+
 rbind(
   DIC(S1),
   DIC(S2),
@@ -244,6 +252,20 @@ rbind(
   transform(
     model = c('AR', 'CAR', 'CAR-AR')
   )
+
+### WAIC
+library(loo)
+S3LL <- as.array(S3, "log_lik")
+lapply(list(as.array(S3, 'log_lik')), loo::waic)
+
+( S1_waic = loo::waic(as.array(S1, 'log_lik')) )
+( S2_waic = loo::waic(as.array(S2, 'log_lik')) )
+( S3_waic = loo::waic(as.array(S3, 'log_lik')) )
+
+# S1 can't be compared by this method b/c no. observations differs
+# but S1 slight higher WAIC than S2.
+# overall, results are effectively the same as DIC
+loo::compare(S3_waic, S2_waic)
 
 
 #########################################
@@ -344,6 +366,8 @@ dev.off()
 ## Mapping mortality
 #######################
 
+library(classInt)
+
 map_pars <- function(x,
                      brks,
                      pal = c('#b2182b','#ef8a62','#fddbc7','#d1e5f0','#67a9cf','#2166ac'),
@@ -384,8 +408,7 @@ brks <- classIntervals(t_est, n = 6, style = "jenks")$brks
 
 # create map data (colors, legends)
 mp <- map_pars(x = t_est,
-               brks = brks,
-               pal = proj_pal)
+               brks = brks)
 
 # create map
 png("assets/2025/space-time-mortality/model-map-2020.png",
@@ -394,7 +417,10 @@ png("assets/2025/space-time-mortality/model-map-2020.png",
     units = 'in',
     res = 300)
 
-par(mar = rep(0, 4), oma = rep(0, 4))
+par(mar = rep(0, 4),
+    oma = rep(0, 4)
+    )
+
 plot(st_geometry(geo),
      col = mp$col,
      bg = 'gray95'
@@ -530,8 +556,6 @@ system.time(
     )
 
 DIC(S4)
-
-
 
 
 

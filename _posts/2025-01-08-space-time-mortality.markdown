@@ -1981,6 +1981,8 @@ generated quantities {
 
 ## Resources 
 
+You can find the R code for this tutorial (as a single R script), <a href="https://github.com/ConnorDonegan/connordonegan.github.io/tree/main/assets/2025/space-time-mortality">here</a> on the github page for this post, together with the data and Stan files.
+
 Others who have worked on implementing spatial models in Stan include:
 
  - Max Joseph's work on proper <a href="https://mc-stan.org/users/documentation/case-studies/mbjoseph-CARStan.html">CAR models</a>. These methods are implemented in the 'brms' R package.
