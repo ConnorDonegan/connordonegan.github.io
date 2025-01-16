@@ -8,7 +8,7 @@ permalink: /articles/
 <br/>
 
 <b style="color:Charcoal;">Investigating Cancer Inequalities in Urbanizing Texas with Plausible Reasoning</b> <br/>
-<small> <em> The Annals of the American Association of Geographers </em> (2024)  <a href="https://doi.org/10.1080/24694452.2024.2425807"> doi:10.1080/24694452.2024.2425807 </a>
+<small> <em> The Annals of the American Association of Geographers </em> (2024) DOI:10.1080/24694452.2024.2425807
 <br/>
 
 This article examines changes in the social geography of colorectal cancer (CRC) incidence following the spread of improved preventive technology circa 2003, namely screening colonoscopy. It adopts a realist approach to social science methodology, and a political-economy of health perspective on disease prevention. <a href="{{ site.url }}/assets/Donegan 2024 - Annals of AAG.pdf">PDF</a>
