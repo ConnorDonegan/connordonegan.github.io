@@ -1,9 +1,0 @@
----
-layout: page
-title: ""
-permalink: /aag-2024-manuscript/
----
-
-<p style="color:Gray">Donegan, Connor (2024). Investigating cancer inequalities in urbanizing Texas with plausible reasoning. <em>Annals of the American Association of Geographers</em> 1--22. <a style="color:DarkSlateGray" href="https://doi.org/10.1080/24694452.2024.2425807"> doi:10.1080/24694452.2024.2425807</a></p>
-
-<object data="../assets/Donegan-2024-AAG.pdf" width="900" height="600" width="700" type='application/pdf'></object>
