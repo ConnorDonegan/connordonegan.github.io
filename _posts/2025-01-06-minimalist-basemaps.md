@@ -125,7 +125,7 @@ wbody <- area_water(state = 48, county = county_names)
 wbody <- st_transform(wbody, crs = TX_CRS)
 
 # remove little ponds, etc.
-wbody <- subset(wbody, AWATER > 1070000)
+wbody <- subset(wbody, AWATER > 800000)
 
 # save to a GeoPackage
 st_write(wbody, GeoPkg, 'water bodies')
