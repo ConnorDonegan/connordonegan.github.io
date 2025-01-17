@@ -25,6 +25,13 @@ This chapter introduces basic concepts from the frequency-based theory and from 
 
 Statistical research on correlation with spatial data dates at least to Student's (W. S. Gosset's) 1914 paper on “the elimination of spurious correlation due to position in time and space.” Since 1968, much of this work has been organized around the concept of spatial autocorrelation (SA). A growing statistical literature is now organized around the concept of “spatial confounding” (SC) but is estranged from, and often at odds with, the SA literature and its history. The SC literature is producing new, sometimes flawed, statistical techniques such as Restricted Spatial Regression (RSR). This article brings the SC literature into conversation with the SA literature and provides a theoretically grounded review of the history of research on correlation with spatial data, explaining some of its implications for the the SC literature. The article builds upon principles of plausible inference to synthesize a guiding theoretical thread that runs throughout the SA literature. This leads to a concise theoretical critique of RSR and a clarification of the logic behind standard spatial-statistical models.
 
+<b style="color:Charcoal;">Building spatial conditional autoregressive models in the Stan modeling language</b>
+<br/>
+<small><em>OSF Preprints</em> (2021)  <https://osf.io/preprints/3ey65> (open access)</small>
+<br/>
+
+This paper details some of the computational methods used to implement spatial CAR models in the geostan R package. A comparison of Markov chain Monte Carlo (MCMC) samplers shows that these custom Stan models can sample about 10 times faster than CAR models in the popular platform Nimble (measured as effective sample size per minute of sampling). The paper models censored mid-life U.S. county mortality rates to demonstrate how geostan can support Bayesian spatial modeling with Stan.
+
 <b style="color:Charcoal;">Modeling community health with areal data: Bayesian inference with survey standard errors and spatial structure</b>
 <small>with co-authors Yongwan Chun and Daniel A. Griffith. <br/> <em> Internt'l J. of Environ. Research and Public Health</em> (2021)  <https://doi.org/10.3390/ijerph18136856> (open access)</small>
 <br/>
