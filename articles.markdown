@@ -11,7 +11,7 @@ permalink: /articles/
 <small> <em> The Annals of the American Association of Geographers </em> (2024) DOI:10.1080/24694452.2024.2425807
 <br/>
 
-This article examines changes in the social geography of colorectal cancer (CRC) incidence following the spread of improved preventive technology circa 2003, namely screening colonoscopy. It adopts a realist approach to social science methodology, and a political-economy of health perspective on disease prevention. <a href="{{ site.url }}/assets/Donegan 2024 - Annals of AAG.pdf">PDF</a>
+This article examines changes in the social geography of colorectal cancer (CRC) incidence following the spread of improved preventive technology circa 2003, namely screening colonoscopy. It adopts a realist approach to social science methodology, and a political-economy of health perspective on disease prevention. <a href="https://doi.org/10.31235/osf.io/27xyn">PDF (open access)</a>
 
 
 <b style="color:Charcoal;">Spatial Uncertainty and Probability</b> <br/>
