@@ -25,6 +25,13 @@ This chapter introduces basic concepts from the frequency-based theory and from 
 
 Statistical research on correlation with spatial data dates at least to Student's (W. S. Gosset's) 1914 paper on “the elimination of spurious correlation due to position in time and space.” Since 1968, much of this work has been organized around the concept of spatial autocorrelation (SA). A growing statistical literature is now organized around the concept of “spatial confounding” (SC) but is estranged from, and often at odds with, the SA literature and its history. The SC literature is producing new, sometimes flawed, statistical techniques such as Restricted Spatial Regression (RSR). This article brings the SC literature into conversation with the SA literature and provides a theoretically grounded review of the history of research on correlation with spatial data, explaining some of its implications for the the SC literature. The article builds upon principles of plausible inference to synthesize a guiding theoretical thread that runs throughout the SA literature. This leads to a concise theoretical critique of RSR and a clarification of the logic behind standard spatial-statistical models.
 
+<b style="color:Charcoal;">Modeling community health with areal data: Bayesian inference with survey standard errors and spatial structure</b>
+<small>with co-authors Yongwan Chun and Daniel A. Griffith. <br/> <em> Internt'l J. of Environ. Research and Public Health</em> (2021)  <https://doi.org/10.3390/ijerph18136856> (open access)</small>
+<br/>
+
+This study examines the potential for sampling error in the U.S. Census Bureau's American Community Survey (ACS) estimates to influence research findings when ACS estimates are used as covariates. Of particular concern are predictive models that may be used to assess needs for service provision. Based on the reported standard errors, the quality of ACS estimates differ considerably across survey questions, place, scale, and demographics. We show how survey standard errors can be incorporated into a Bayesian hierarchical model for spatial regression and/or disease mapping, and we show why standard (non-spatial) measurement error models are inadequate for small-area ACS estimates. The method is now available part of the geostan R package.
+
+
 <b style="color:Charcoal;">The Making of Florida's 'Criminal Class': Race, Modernity, and the Convict Leasing Program, 1877-1919</b>
 <br/>
 <small><i> Florida Historical Quarterly </i> (2019)</small>
