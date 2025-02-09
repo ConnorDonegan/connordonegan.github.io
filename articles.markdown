@@ -4,7 +4,7 @@ title: Articles
 permalink: /articles/
 ---
 
-<em>A selection of my academic publications</em>
+<em>A selection of my publications</em>
 <br/>
 
 <b style="color:Charcoal;">Investigating Cancer Inequalities in Urbanizing Texas with Plausible Reasoning</b> <br/>
@@ -46,5 +46,17 @@ This study examines the potential for sampling error in the U.S. Census Bureau's
 
 Under the State of Florida’s convict leasing program (1877-1919) approximately 14,000 Floridians and visitors served sentences of hard labor, working for private interests like phosphate mines and lumber companies. This article draws on over four decades of reports on the prison system by its administrators in the Florida Department of Agriculture, geographic sentencing data, data on prisoner characteristics, minutes from the Board of Pardons, and additional materials held in the Convict Lease Subject Files in the Florida State Archives. The study engages with a number of questions revolving around the inter-connected themes of forced labor, industrial interests, violence, disability, and racial ideology. <a href="https://osf.io/preprints/osf/2wj7s">PDF (pre-print with images)</a>; <a href="https://stars.library.ucf.edu/fhq/vol97/iss4/">PDF (the *FHQ* article)</a>
 <center>
-<img src="/assets/FHQ-cover-photo.jpg" alt="Florida Historical Quarterly cover" style="width:33%">
+<img src="/assets/FHQ-cover-photo.jpg" alt="Florida Historical Quarterly cover" style="width:25%">
+</center>
+<br/>
+
+<b style="color:Charcoal;">Disciplining Labor, Dismantling Democracy: Rebellion and Control in Wisconsin</b>
+<br/>
+<small>Chapter 1 in <i><a href="https://monthlyreview.org/product/wisconsin_uprising/#prettyPhoto[product-gallery]/0/">Wisconsin Uprising: Labor Fights Back</a></i> (Ed. Michael Yates), Monthly Review Press 2012</small>
+<br/>
+
+In 2011, Wisconsin Governor Scott Walker introduced a 'Budget Repair Bill' and other legislation that aimed to break public sector unions, cut $4.2 billion from the budget, and divert public school funding to the private sector. Cuts to health and human services were combined with limits on local government autonomy to determine employee pay. The legislation sparked mass opposition that included student walk-outs, teacher sick-outs, an occupation of the capitol building, demonstrations with tens of thousands and ultimately over 100,000 participants. After a failed effort to recall the governor, Walker passed right to work legislation, betraying a campaign promise. This chapter discusses the struggle over the Budget Repair Bill and the broader anti-labor strategy of the conservative think tanks behind it. 
+
+<center>
+<img src="/assets/WI_Uprising_cover.jpg" alt="Wisconsin Uprising book jacket cover" style="width:25%">
 </center>
