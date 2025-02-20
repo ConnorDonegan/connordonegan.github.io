@@ -185,7 +185,7 @@ $$
 </p>
 
 <p>
-The last part of this model is to add prior distributions for those parameters. Because we are working with rates on the log scale, something like this is not unreasonable:
+The last part of this model is to add prior distributions for those parameters. Because we are working with small rates on the log scale, something like this is not unreasonable:
 </p>
 
 $$
@@ -330,7 +330,8 @@ plot(x = range(dat$Year),
      yaxt = 'n',
      xlab = NA,
      ylab = NA)
-axis(1, lwd.ticks = 0.5, lwd = 0); axis(2, lwd.ticks = 0.5, lwd = 0)
+axis(1, lwd.ticks = 0.5, lwd = 0)
+axis(2, lwd.ticks = 0.5, lwd = 0)
 
 # plot crude rates by state
 for (st in unique(dat$State)) {
@@ -369,7 +370,9 @@ data {
 }
 {% endhighlight %}
 
+<p>
 Then we can declare our scalar parameters plus an array of rates <code> phi </code> \(\phi\).
+</p>
 
 {% highlight stan %}
 parameters {
@@ -380,7 +383,9 @@ parameters {
 }
 {% endhighlight %}
 
+<p>
 Inside the <code>model</code> block, we are going to create another array, <code>phi_mu</code>, to store the mean of our model for the rates. For the first time period, our model for the rates \( \phi_{i,1} \) is
+</p>
 
 $$\phi_{i,1} \sim Normal( \alpha, \tau^2).$$
 
@@ -430,10 +435,9 @@ generated quantities {
 
 The loop is not computationally expensive, but storing large arrays of parameters can slow things down with large \(N\). 
 
+Here is the complete Stan code for the AR model:
 
-<details class="details-example">
-    <summary>Click for the complete AR Stan model</summary>
-{% highlight r %}
+{% highlight stan %}
 data {
   int S; // sites
   int TT; // time periods
@@ -473,7 +477,6 @@ generated quantities {
     }
 }
 {% endhighlight %}
-</details>
 
 <p>
 Our mortality data is stored in the data.frame <code>dat</code>. Creating arrays with the proper order requires a bit of care. We will first order our data.frame by state and year, and then prepare the list of data for Stan:
@@ -505,7 +508,7 @@ stan_dl$log_pop <- log( pop )
 {% endhighlight %}
 
 <details class="details-example">
-    <summary>Click for practice creating arrays in R, they are tricky</summary>
+    <summary>Careful using arrays in R, they are tricky</summary>
 {% highlight r %}
 # notice: there's no warning for size mis-match; and the values fill up column-wise 
 x = 1:13
@@ -556,12 +559,12 @@ Inference for Stan model: anon_model.
 4 chains, each with iter=1000; warmup=500; thin=1; 
 post-warmup draws per chain=500, total post-warmup draws=2000.
 
- mean se_mean   sd  2.5%   25%   50%   75% 97.5% n_eff Rhat
-alpha   -6.55   0 0.01 -6.57 -6.56 -6.55 -6.54 -6.53  26881
-beta_ar  1.00   0 0.00  1.00  1.00  1.00  1.00  1.00  25911
-tau  0.07   0 0.00  0.07  0.07  0.07  0.07  0.08   8691
+         mean se_mean   sd  2.5%   25%   50%   75% 97.5% n_eff Rhat
+alpha   -6.55       0 0.01 -6.57 -6.56 -6.55 -6.54 -6.53  2778    1
+beta_ar  1.00       0 0.00  1.00  1.00  1.00  1.00  1.00  2827    1
+tau      0.07       0 0.00  0.07  0.07  0.07  0.07  0.08  1244    1
 
-Samples were drawn using NUTS(diag_e) at Thu Jan  9 17:40:14 2025.
+Samples were drawn using NUTS(diag_e) at Thu Feb 20 16:44:50 2025.
 For each parameter, n_eff is a crude measure of effective sample size,
 and Rhat is the potential scale reduction factor on split chains (at 
 convergence, Rhat=1).
@@ -588,7 +591,7 @@ eta_hi <- eta[ , hi_idx ]
 
 Our CAR models require two data inputs than are not in AR models: (1) a spatial connectivity matrix, and (2) some quantities that will help us calculate (more quickly) the probability density for the CAR model.
 
-Also, before getting started, note that we will be dropping Hawaii and Alaska from the modeling at this point. Why? Because they are far from all the other states (physically and otherwise), so they won't benefit from this type of model. The AR Poisson model would suffice for those states.
+Also, before getting started, note that we will be dropping Hawaii and Alaska from the modeling at this point. Why? Because they are far from all the other states (physically and otherwise), so they won't benefit from this type of model. The AR Poisson model will suffice for those states.
 
 We are going to prepare the spatial data first, then we'll work on our Stan model.
 
@@ -655,7 +658,7 @@ Range of permissible rho values: -1.392, 1
 </pre>
 
 <details class="details-example">
-    <summary>Click for distance-based connectivity</summary>
+    <summary>Distance-based connectivity option</summary>
 This code snippet shows how to create a distance-based CAR specification. Details can be found in the OSF preprint on CAR models in Stan (Donegan 2021).
 
  For our model, the adjacency-based connectivity matrix is a better option. You can try both and compare using DIC and residual diagnostics.
@@ -789,7 +792,7 @@ real wcar_normal_lpdf(vector y, vector mu,
 
 
 <details class="details-example">
-    <summary>Click for a more generally applicable CAR model</summary>
+    <summary>A more generally applicable CAR model</summary>
    The <code> wcar_lpdf </code> function is usually what you need. If you fit distance-based CAR models, you need a more general specification. The WCAR is generally faster than this, but this is still pretty good. This one works for any valid CAR specification (including WCAR). Again, see Donegan (2021) for details.
    
 {% highlight stan %}
@@ -900,8 +903,8 @@ model {
 {% endhighlight %}
 
 
-<details class="details-example">
-    <summary>Click for the complete 'multiple CARs' Stan model</summary>
+Here is the complete Stan model:
+
 {% highlight stan %}  
 functions {
 #include car_lpdf.stan
@@ -959,7 +962,6 @@ generated quantities {
 }
 
 {% endhighlight %}
-</details>
 
 ### Running the CAR models 
 
@@ -1161,7 +1163,7 @@ rbind(
 
 For interpretation: lower values of DIC indicate a better fit, and small differences between DICs are not to be given much weight.
 
-The 'CARs only' model looks similar to the AR-only model, while the CAR-AR model has considerably lower DIC than both of the others (a difference of at least -500, including a considerably smaller penalty term). We'll use the CAR-AR model for final section.
+The CAR-only model looks similar to the AR-only model, while the CAR-AR model has considerably lower DIC than both of the others (a difference of at least -500, including a considerably smaller penalty term). We'll use the CAR-AR model for final section.
 
 ## Visualizing mortality trends 
 
@@ -1311,7 +1313,7 @@ This function takes a vector of values \( x \), break points for assigning value
 # for thematic mapping
 map_pars <- function(x,
                      brks,
-                     pal = c('#b2182b','#ef8a62','#fddbc7','#d1e5f0','#67a9cf','#2166ac'),
+                     pal = c("#2166ac", "#67a9cf", "#d1e5f0", "#fddbc7", "#ef8a62", "#b2182b"),		     
                      rev = FALSE) {
 
     stopifnot( length(brks) == (length(pal) +1) )
@@ -1446,7 +1448,7 @@ png("assets/2025/space-time-mortality/model-chart-pct-change.png",
     units = 'in',
     res = 350)
 
-par(mar = c(4, 13, 2, 2),
+par(mar = c(4, 14, 2, 2),
     bg = 'gray90')
 xlim <- range(c(df_pct$lwr, df_pct$upr))
 plot(
@@ -1458,8 +1460,7 @@ plot(
     xlim = xlim,
     xlab = NA,
     ylab = NA,
-    axes = FALSE,
-    bg = 'red' 
+    axes = FALSE
 )
 abline(v = 0, lty = 3)
 segments(
@@ -1546,7 +1547,7 @@ stan_dl$fixed_ar = 0
 The following drop-down style code blocks contain complete Stan models with options for time-varying parameters. Each also includes a flag for inclusion of the log-likelihood, <code>keep_log_lik</code>. With large N, storing samples of <code>log_lik</code> can reduce computational efficiency, due to memory overload. In that case, you can use this flag to drop those samples unless or until you need to use them.
 
 <details>
-<summary>Click for the 'AR only' Stan model with time-varying parameters</summary>
+<summary>The 'AR only' Stan model with time-varying parameters</summary>
 {% highlight stan %}
 data {
   int S; // sites
@@ -1606,7 +1607,7 @@ generated quantities {
 </details>
 
 <details>
-<summary>Click for the 'CARs only' Stan model with time-varying parameters</summary>
+<summary>The 'CARs only' Stan model with time-varying parameters</summary>
 {% highlight stan %}
 functions {
 #include car_lpdf.stan
@@ -1676,7 +1677,7 @@ generated quantities {
 </details>
 
 <details>
-<summary>Click for the full CAR-AR model with options</summary>
+<summary>The full CAR-AR model with options</summary>
 {% highlight stan %}
 functions {
 #include car_lpdf.stan
@@ -1854,7 +1855,7 @@ You can run this model using the same data input as our standard CAR-AR model, <
 Below, I provide full Stan code for this model but also apply the technique to each of our model types. 
 
 <details>
- <summary>Click to view the complete Stan model with sparse-data parameterization</summary>
+ <summary>The complete Stan model with sparse-data parameterization</summary>
  When using this Stan model, you have to specify which model type you want to use. In R:
 
 {% highlight r %}

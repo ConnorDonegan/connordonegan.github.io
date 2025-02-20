@@ -40,7 +40,8 @@ plot(range(dat$Year),
      yaxt = 'n',
      xlab = NA,
      ylab = NA)
-axis(1, lwd.ticks = 0.5, lwd = 0); axis(2, lwd.ticks = 0.5, lwd = 0)
+axis(1, lwd.ticks = 0.5, lwd = 0)
+axis(2, lwd.ticks = 0.5, lwd = 0)
 
 # plot crude rates by state
 for (st in unique(dat$State)) {
@@ -169,6 +170,17 @@ stopifnot(all(test_res == 1))
 # Create an adjacency matrix 
 C <- shape2mat(geo, "B", method = "rook")
 
+# save to avoid user dependency on tidycensus
+C_path = "assets/2025/space-time-mortality/C_matrix.txt"
+Cm <- as.matrix(C)
+Cm[1:length(as.numeric(Cm))] <- as.numeric(Cm)
+write.table(Cm, C_path, col.names = FALSE, row.names = FALSE)
+
+# for loading it back in:
+#C_path <- "https://raw.githubusercontent.com/ConnorDonegan/connordonegan.github.io/refs/heads/main/assets/2025/space-time-mortality/C_matrix.txt"
+Cx = read.table(C_path) |>
+    as.matrix()
+
 # Convert C to a list of data for CAR models
 car_parts <- prep_car_data(C, "WCAR")
 
@@ -217,7 +229,9 @@ print(S2, pars = c('alpha', 'rho', 'tau'))
 ## The CAR-AR model
 ######################
 
-car_ar_model <- stan_model("assets/2025/space-time-mortality/CAR_AR.stan")
+car_ar_path = "assets/2025/space-time-mortality/CAR_AR.stan"
+#car_ar_path = "https://raw.githubusercontent.com/ConnorDonegan/connordonegan.github.io/refs/heads/main/assets/2025/space-time-mortality/CAR_AR.stan"
+car_ar_model <- stan_model(car_ar_path)
 
 system.time(
     S3 <- sampling(car_ar_model,
@@ -370,7 +384,7 @@ library(classInt)
 
 map_pars <- function(x,
                      brks,
-                     pal = c('#b2182b','#ef8a62','#fddbc7','#d1e5f0','#67a9cf','#2166ac'),
+                     pal = c("#2166ac", "#67a9cf", "#d1e5f0", "#fddbc7", "#ef8a62", "#b2182b"),
                      rev = FALSE) {
 
     stopifnot( length(brks) == (length(pal) +1) )
@@ -420,7 +434,6 @@ png("assets/2025/space-time-mortality/model-map-2020.png",
 par(mar = rep(0, 4),
     oma = rep(0, 4)
     )
-
 plot(st_geometry(geo),
      col = mp$col,
      bg = 'gray95'
@@ -500,7 +513,7 @@ png("assets/2025/space-time-mortality/model-chart-pct-change.png",
     units = 'in',
     res = 350)
 
-par(mar = c(4, 13, 2, 2),
+par(mar = c(4, 14, 2, 2),
     bg = 'gray90')
 xlim <- range(c(df_pct$lwr, df_pct$upr))
 plot(
@@ -512,8 +525,7 @@ plot(
     xlim = xlim,
     xlab = NA,
     ylab = NA,
-    axes = FALSE,
-    bg = 'red' 
+    axes = FALSE
 )
 abline(v = 0, lty = 3)
 segments(
