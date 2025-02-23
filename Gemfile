@@ -8,6 +8,7 @@ source "https://rubygems.org"
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
 
+## Switched to 'regular theme', no longer using gem theme 'minima'
 #gem "jekyll", "~> 4.3.4"
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 #gem "minima", "~> 2.5"
@@ -37,3 +38,5 @@ gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 
 # Table of Contents
 gem 'jekyll-toc'
+
+
