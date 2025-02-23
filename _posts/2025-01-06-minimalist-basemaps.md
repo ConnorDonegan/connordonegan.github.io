@@ -196,3 +196,11 @@ Compared to the generic basemap we started with, this one has more detail at sma
 </p>
 </center>
 
+Below is how it looks with a population density layer. If you remove or hide all census blocks with zero population, prominent features in the base layer appear nicely. 
+
+<center>
+<img src="/assets/{{ page.date | date: "%Y" }}/{{ page.slug }}/Map-pop-density.png" width='90%'>
+<p class="caption">
+<em> Population density map for the Dallas-Fort Worth metropolitan area</em>
+</p>
+</center>
