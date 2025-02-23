@@ -55,8 +55,4 @@ Under the State of Florida’s convict leasing program (1877-1919) approximately
 <small>Chapter 1 in <i><a href="https://monthlyreview.org/product/wisconsin_uprising/#prettyPhoto[product-gallery]/0/">Wisconsin Uprising: Labor Fights Back</a></i> (Ed. Michael Yates), Monthly Review Press 2012</small>
 <br/>
 
-In 2011, Wisconsin Governor Scott Walker introduced a 'Budget Repair Bill' and other legislation that aimed to break public sector unions, cut $4.2 billion from the budget, and divert public school funding to the private sector. Cuts to health and human services were combined with limits on local government autonomy to determine employee pay. The legislation sparked mass opposition that included student walk-outs, teacher sick-outs, an occupation of the capitol building, demonstrations with tens of thousands and ultimately over 100,000 participants. After a failed effort to recall the governor, Walker passed right to work legislation, betraying a campaign promise. This chapter discusses the struggle over the Budget Repair Bill and the broader anti-labor strategy of the billionaire-backed think tanks behind it. 
-
-<center>
-<img src="/assets/WI_Uprising_cover.jpg" alt="Wisconsin Uprising book jacket cover" style="width:25%">
-</center>
+In 2011, Wisconsin Governor Scott Walker introduced a 'Budget Repair Bill' and other legislation that aimed to break public sector unions and cut $4.2 billion from the budget. The legislation sparked popular opposition on a scale not seen in decades, including spontaneous labor and student actions and demonstrations with over 100,000 people at the capitol. After a failed effort to recall the governor, Walker passed right-to-work legislation, betraying a promise to private sector unions. This chapter discusses the political conflict over the Budget Repair Bill and the broader strategy of the billionaire-backed think tanks behind Walker's political agenda. 
