@@ -7,69 +7,72 @@ toc: true
 ---
 
 
-A raft of recent articles in journals of statistics assert that spatial regression models are 'biased'. Elsewhere, I've outlined why I find their arguments unconvincing. This post takes a closer look at 'spatial+', which is among the recent proposals for fixing this supposed bias. With standard Monte Carlo methods, it is easy to turn the tables and show that spatial+ is obviously biased. 
+A raft of recent articles in journals of statistics assert that spatial regression models are 'biased' (a term of art for statisticians). Some are now referring to this supposed bias as 'spatial confounding'. Red warning flags abound in this literature. This post examines 'spatial+', which is among the more recent proposals for fixing the supposed bias of spatial regression models.
 
 **Contents:**
 * TOC
 {:toc}
 
 
-## What is 'spatial confounding'?
+## Is 'spatial confounding' a problem?
 
-Spatial autocorrelation (SA), and its implications for analyses of correlation and (later) regression, has been a topic of statistical research for more than a century. However, it remains somewhat of a specialist topic rather than one of general statistical knowledge (among trained statisticians, I mean). In fact, it appears that many authors are not aware that this research dates back at least to W.S. Gosset's work on experimental design, including his 1914 paper on 'The elimination of spurious correlation due to position in time or space'. 
+There is a long history of research on the topic of spatial autocorrelation (SA), including its influence in analyses of covariance and regression. SA refers to map patterns in data values. Any time you can display a variable on a map and find that there is a spatial pattern to the arrangement of values, there's SA to peak of. SA is ubiquitous in spatial data. It is analogous to serial autocorrelation in time series data.
 
-A growing number of articles in journals of statistics begin with the assertion that spatial regression analysis is a new area of study (as distinct from geostatistics and other 'prediction' tasks). The papers are organized around what they call 'spatial confounding', which is one way of describing the challenge of estimating correlations with spatially referenced data. If you search through this literature you will notice that the authors routinely assert that research on correlation with spatial data dates back only to 1993, and was hardly even noticed again until 2006! 
+SA has been a topic of study for more than a century. The work dates back at least to W.S. Gosset and it was even central to his clash with Fisher over experimental designs. Many of the concepts that we work with in spatial analysis today were already present in Gosset's work. As I argue in my article in [Geographical Analysis](https://doi.org/10.1111/gean.12408), the newly formed literature on 'spatial confounding' is, unfortunately, proceeding as if the literature on SA did not exist. The two bodies of work seek to address some similar questions, but their theoretical frameworks are completely different.
 
-What do these authors mean when they use the term 'spatial confounding'? Here are the first two sentences from the abstract of the paper `Spatial+: A novel approach to spatial confounding' (Dupont et al. 2021):
-
-> In spatial regression models, collinearity between covariates and spatial effects can lead to <em>significant bias in effect estimates</em>. This problem, known as spatial confounding, is encountered [in this paper] modeling forestry data to assess the effect of temperature on tree health. Reliable inference is difficult as results depend on whether or not spatial effects are included in the model. (emphasis added)
-
- The phrase 'collinearity between covariates and spatial effects' refers to the way that two variables may have similar spatial patterns in them; these correlated patterns `interfere with [the] effect estimates', as Dupont et al. put it. The term 'spatial confounding' refers to this 'interference'. 
-
-These ideas about 'spatial confounding' stem from the work of Reich et al. (2006) and Hodges and Reich (2010). Slowly, criticisms of the 'spatial confounding' literature are being published (Gilbert et al. 2024; Kahn and berrett 2023; Zimmerman and Ver Hoef 2021). I haven't yet seen a response from the spatial econometrics literature to the claims that their favorite models are biased. I have argued that the conceptual framework that defines the literature on 'spatial confounding' is internally inconsistent, and that authors in this sub-literature do not acknowledge (let alone respond to) the existing body of theory that supports standard spatial analysis methods (Donegan 2025). Of course the existing theory is not a complete or perfect body of knowledge, and some of the important insights are mired in the familiar nonsense of orthodox statistics, but one has to recognize and understand it before advancing beyond it.
-
-## 30 years ago in *Biometriks*
-
-The paper by Dupont et al. makes a striking contrast to previous articles in *Biometriks* that cover the same topic. I do not intend to pick on these authors; rather, the contrast I want to make is clearly one between entire professional networks or generations of researchers. 
-
-Here is the first sentence of Dupont et al.'s (2022) article:
+For a sense of what's going on here, consider the first two sentences of the paper `Spatial+: A novel approach to spatial confounding' (Dupont et al. 2021) published in *Biometrics*:
 
 > Regression models for spatially referenced data use spatial random effects to account for residual spatial correlation in the response data. As first noted by Clayton et al. (1993), these models can be problematic when estimation of individual covariate effects are of interest.
 
-We are told (1) spatial auto-regressive models are bad for estimating regression coefficients, and (2) this was first noticed by David Clayton and some co-authors in 1993.
+This is pretty standard stuff for a paper on 'spatial confounding' and deserves some comment. The first sentence is just frequency-theory jargon for 'people use spatial models for spatial data'. The second sentence is something I've noticed in a number of papers on 'spatial confounding'. They are attributing their ideas to a 1993 paper by David Clayton and others. Here's a passage from a recent article in *Journal of the Royal Statistical Society Series A* (Bobb et al. 2020):
 
-As a matter of fact, Clayton et al. argued the opposite of this: they explained why a failure to adjust for spatial autocorrelation can easily lead to 'confounded' results. They were advocating for the use of spatial auto-regressive models. Their observations about 'confounding' were already germane to a substantial body of research on spatial autocorrelation dating to Gosset.
+> Although spatial modelling is conceptually straightforward, prior statistical literature has shown that it can actually increase bias relative to fitting a non-spatial model, even when there is an important unmeasured spatial confounder (Clayton et al., 1993; Hodges & Reich, 2010; Paciorek, 2010; Page et al., 2017; Schnell and Papadogeorgou 2020). Hodges and Reich (2010) illustrated this potential for increased bias...
 
-Now here is the first sentence of an article by Pierre Dutilleul, published March of 1993 in *Biometriks*:
+In fact, David Clayton and his co-authors argued the *opposite* of what both Dupont et al. and Bobb et al. are claiming.  Clayton et al. explain why a failure to adjust a regression for SA can easily lead to 'confounded' estimates, and they advocate for the use of spatial regression models to fix this. What Bobb et al. and Dupont et al. appear to be missing is that by 1993 there was already an established theoretical framework for understanding SA. The theory has an impressive pedigree (including Gosset, Besag, and many others) and it differs substantively from their own notion of 'spatial confounding'. 
 
-> Spatial autocorrelation in sample data can alter the conclusions of statistical analyses performed without due allowance for it, because autocorrelation does not provide minimum-variance unbiased linear estimators and produces a bias in the estimation of correlation coefficients and variances. This is well known for the analysis of correlation...
+As I've argued, the concept of 'spatial confounding', if it were to be adopted, would represent a reversal in the way we understand spatial analysis. But the 'spatial confounding' literature seems to studiously avoid acknowledging the SA literature. The mis-representation of Clayton's argument is another red flag. Some authors actually assert that the challenge of estimating correlations with spatial data constitutes a new area of research! That is, of course, false. 
 
-This is followed by a series of references to papers on correlation with spatial data. He goes on to list the 'several solutions' that were already available for making the appropriate adjustments, including pre-whitening and tend surface analysis (all of which are quite relevant to Dupont et al.'s 'spatial+' technique). 
+Spatial+ is a method designed to fix a supposed bias in spatial regressions (aka spatial autoregressive models). The spatial+ method is akin to a pre-whitening technique, as I'll explain below, but with a bit of a wrinkle. Before looking at spatial+ more closely, it will be interesting to look back at 1993.
 
-According to Dutilleul, spatial autocorrelation *in the data* interferes with standard methods and therefore spatial analysis techniques are required so that proper adjustments can be made. According to Dupont et al. (and the entire 'spatial confounding' literature), spatial regression models are themselves 'problematic' because of the adjustments they make. These are very different ways of looking at this topic, with the latter view being almost a complete inversion of the former (Donegan 2025 offers more details on this inversion of statistical theory).
+## Back to 1993
 
-Dutilleul's contribution was a critical response to Clifford et al.s (1993) article in *Biometriks* titled 'Modifying the t Test for Assessing the Correlation Between Two Spatial Processes'. Papers by Clifford, Richardson, and Hemon are standard references in the spatial autocorrelation literature. But Dutilleul points out that Clifford et al. fail to reference a much-cited paper by Roger Bivand (1980) on the same topic. 'This is a major oversight', he says, since Bivand's study clearly anticipates the way Clifford et al. deploy the concept of effective sample size.
- 
-Dupont et al.'s article was, on balance, well received in discussion papers. In discussion, no one mentioned that the reference to Clayton et al. is misleading, nor was it mentioned that a variety of potentially important references are missing. In fact, *none* of the papers cited by Dutilleul, including Clifford et al., are referenced by Dupont et al. This is something like 'a major oversight' of the discussion, but its one that is symptomatic of the entire 'spatial confounding' literature.
+Here is the first sentence of an article by Pierre Dutilleul, published March of 1993 in *Biometrics*:
+
+> Spatial autocorrelation in sample data can alter the conclusions of statistical analyses performed without due allowance for it, because autocorrelation does not provide minimum-variance unbiased linear estimators and produces a bias in the estimation of correlation coefficients and variances. This is well known for the analysis of correlation  (in space: see, e.g., Bivand, 1980; Cliff and Ord, 1981, &sect;7.3.1; Richardson and H&#233;mon, 1982; Clifford, Richardson, and H&#233;mon, 1989; Haining, 1990)
+
+In this passage, Dutilleul is expressing the standard view on SA: spatial autocorrelation *in the data* interferes with standard methods and, therefore, spatial analysis techniques are required so that proper adjustments can be made.  He goes on to list the 'several solutions' that were already available for making the appropriate adjustments, including pre-whitening and tend surface analysis. Dutilleul's paper was a somewhat critical response to Clifford et al.s (1989) article in *Biometrics* titled 'Modifying the t Test for Assessing the Correlation Between Two Spatial Processes'. This and other papers by Clifford, Richardson, and H&#233;mon are now standard references in the SA literature (see, e.g., Vallejos et al. 2020).
+
+Looking back, a weakness of the SA literature in that period of time was its unquestioned use of null hypothesis significance testing. However, there was a lot of thorough, very careful work completed. The exchange between Dutilleul and Clifford et al. is exemplary of the care with which the SA literature developed its basic concepts. As a result, the contributions from this period have proven to be of enduring value. 
+
+Comparing with Dupont et al.'s paper in the same journal, it is striking that reviewers and discussants not only failed to catch the false interpretation of Clayton et al.'s work, but also were apparently unaware of the existing literature on pre-whitening techniques in spatial analysis. Those papers are highly relevant to spatial+. None (or almost none) of the papers cited by Dutilleul, including Clifford et al., are referenced by Dupont et al., and this is typical of 'spatial confounding' papers. It is almost as if the literature on SA has vanished and we are starting over from scratch.
 
 ## Pre-whitening and correlation with spatial data
 
-As reported by Dutilleul, one of the standard methods to adjust for spatial autocorrelation is a pre-whitening procedure (see also Cliff and Ord 1981; Haining 1991). The term 'pre-whitening' is an analogy to white noise: to pre-whiten a variable is to remove any spatial pattern (signal) from the values. You pre-whiten both variables so that you can apply the old standard statistical techniques to them, like Pearson's correlation coefficient or OLS regression. Such methods may still appear sometimes for pedagogical purposes in textbooks, but otherwise I do not see them applied very often in the spatial statistics literature.
+As reported by Dutilleul, among the standard methods to adjust for SA are pre-whitening procedures (see Cliff and Ord 1981; Haining 1991). The term 'pre-whitening' is an analogy to white noise: to pre-whiten a variable is to remove any spatial pattern (signal) from the values. You pre-whiten both variables so that you can then apply the old standard statistical techniques to the output of the procedure, like Pearson's correlation coefficient or OLS regression.
 
-In the 'spatial confounding' literature, pre-whitening techniques are presented as something like the cutting edge of spatial statistics research (Dupont et al. 2021; Thaden and Kneib 2018).
+You can still find these methods in some spatial statistics and geography textbooks (mainly for pedagogical reasons), but they are not applied very often anymore (e.g., Chun and Griffith 2013). In the 'spatial confounding' literature, pre-whitening techniques are presented as something like the cutting edge of spatial statistics research. Go figure.
 
 <p>
-One can use a spatial difference operator to pre-whiten a spatial variable. That is, given some spatially-referenced vector \(x\),
-$$\tilde{x} = (I - \rho \cdot W) x$$
-or with \(M = (I - \rho \cdot W) \),
-$$\tilde{x} = M x,$$
-where \(\rho\) is a spatial autocorrelation parameters, \(W\) is a row-standardized spatial or network connectivity matrix, and \(I\) is the identity matrix. This is matrix notation for \( \tilde{x} = x - \rho \cdot \sum_{j=1} w_{[i,j]} \cdot x \). If \(\rho\) were equal to 1, then this simply subtracts the average neighboring value from \(x\).
+One can use a spatial difference operator to pre-whiten a spatial variable. That is, given some spatially-referenced vector \(x\), you can calculate the average spatially-lagged value of \(x\) using a spatial weights matrix \(W\). The weights can be based on binary neighbor criteria (1 for neighbors, else 0) or inverse distance. Then the pre-whitening procedure would be
+$$\tilde{x} = x - \rho \cdot \sum_{j=1} w_{[i,j]} \cdot x,$$
+where \( \rho \) is a spatial dependence parameter that needs to be estimated first. If \(\rho\) were equal to 1, then this simply subtracts the average neighboring value from \(x\).
+
+Using matrix notation, the spatial difference operator is 
+$$\tilde{x} = (I - \rho \cdot W) x,$$
+where \(\rho\) is the spatial dependence parameter, \(W\) is a row-standardized spatial or network connectivity matrix, and \(I\) is the \(N\)-by-\(N\) identity matrix.
+Or we can say
+\begin{equation}
+\begin{aligned}
+M &= (I - \rho \cdot W) \\
+\tilde{x} &= M x.
+\end{aligned}
+\end{equation}
 </p>
 
 <p>
 It is easy to design a Monte Carlo study to show that pre-whitening two spatial variables can correct for the problems that are caused by SA. After pre-whitening, you can apply a standard correlation coefficient or linear regression to your two variables, \( \tilde{x}_1 \) and \(\tilde{x}_2\).
 
-We will walk through each step here. After this, we will be better positioned to examine spatial+.
+We will walk through each step here, starting with a look at how SA impacts standard statistical results. I'll illustrate with Monte Carlo analysis and then narrate the result using some basic SA theory. After this, we will be better positioned to examine spatial+.
 </p>
 
 ### Monte Carlo study 1: SA and OLS regression 
@@ -77,7 +80,7 @@ We will walk through each step here. After this, we will be better positioned to
 We will first write a Monte Carlo program that simply illustrates how SA impacts regression analyses (after, e.g., Bivand 1980). We'll take the following steps:
 
 <ol>
-  <li> Draw two spatially autocorrelated vectors, \(x\) and \(y\), using a spatial auto-regressive model; </li>
+  <li> Draw two spatially autocorrelated vectors, \(x\) and \(y\), using a spatial autoregressive model; </li>
 
 <li> Calculate a regression coefficient and its standard error using OLS; </li>
 
@@ -97,29 +100,95 @@ x = M^{-1} \epsilon_x.
 </p>
 
 <p>
+I implement it in R as follows, implicitly referencing the variables to a regular \( 12 \times 12 \) grid (\(N=144\)):
+</p>
+
+{% highlight r %}
+library(geostan)
+
+# N: number of observations (144)
+#  on a 12-by-12 grid
+row = 12
+col = 12
+N = row * col
+
+# create connectivity matrix (rook adjacency criteria)
+W = geostan::prep_sar_data2(row, col)$W
+
+# take N draws from the standard normal distribution 
+epsilon_x = rnorm(N)
+
+# Spatial dependence parameter
+rho = 0.7
+
+# Identity matrix
+I = diag(N)
+
+# Spatial difference operator
+M_diff = (I - rho * W)
+
+# Invert it to get the spatial smoothing operator
+M_smooth = solve(M_diff)
+
+# Create x by adding SA to epsilon_x
+x = M_smooth %*% epsilon_x
+{% endhighlight %}
+
+<p>
 Now we can make the regression coefficient \(\beta\) whatever value we like, say \(\beta = 0.5\), and create \(y\) from a fresh set of standard normal draws, \( \epsilon_y \):
 $$
 y = \beta \cdot x + M^{-1} \epsilon_y.
 $$
 </p>
 
+In R:
+{% highlight r %}
+# regression coefficient
+beta = 0.5
+
+# residual scale of y
+sigma_y = 0.3
+
+# N independent normal deviates
+epsilon_y = rnorm(n = N, sd = sigma_y)
+
+# Add: correlation with x, and SA
+y = beta * x + M_smooth %*% epsilon_y
+{% endhighlight %}
+
 <p>
-To start, let's draw these spatially-autocorrelated variables with parameter values of \(\beta = 0.5 \) and \( \rho = 0.7 \) and, at each iteration, fit a linear model by ordinary least squares (OLS). (Both variables will have the same degree of SA.) The variables and the adjacency matrix will be referenced to a regular \( 12 \times 12 \) grid (\(N=144\)). You can see the R code below for all of the details. Call this 'Monte Carlo study 1'. 
+At each Monte Carlo iteration, I'll draw these spatially-autocorrelated variables with parameter values of \(\beta = 0.5 \) and \( \rho = 0.7 \) and then fit a linear model by ordinary least squares (OLS). The R code at the bottom of this post has all the details. Call this 'Monte Carlo study 1'. 
 </p>
 
 <p>
 In Study 1, we don't make any corrections for SA when it comes to estimating \(\beta\). We just use OLS and document what happens.
 </p>
 
+{% highlight r %}
+for (i in 1:N_mc) {
+  # ... draw variates as described above 
+  # ...
+  
+  # fit regression
+  fit = lm(y ~ x)
+
+  # Collect coefficient estimate and its standard error;
+  results = coef(summary( fit ))[ "x" , c("Estimate", "Std. Error") ]
+
+  # save to disk
+  results = matrix(results, nrow = 1)  
+  write.table(results, ... )
+}
+{% endhighlight %}    
 <p>
-What we always expect from a model is that the calculated standard errors are about equal to the Monte Carlo variability, i.e., the standard deviation of the estimates. If the estimates are 'unbiased', then their standard deviation is also the root-mean-squared error (RMSE) of the Monte Carlo estimates. This 'long-run' sampling RMSE is basically the meaning of 'standard error', so the RMSE in a Monte Carlo study ought to be about equal to the analytical standard error.
+What we always expect from a model is that the calculated standard errors are about equal to the Monte Carlo variability, i.e., the standard deviation of the estimates. If the estimates are 'unbiased', then their standard deviation is also the root-mean-squared error (RMSE) of the Monte Carlo estimates. This synthetic sampling RMSE is almost equivalent to the meaning of 'standard error' in the frequency theory of probability. The RMSE in a Monte Carlo study like this ought to be very nearly equal to the analytical standard error.
 </p>
 
 <p>
-We see that the average of the estimates for \(\beta\) is about 0.5 (so OLS is 'unbiased' here) and that the RMSE is 0.043. At each iteration, we also collect the standard error of the estimate of \( \beta \); their mean value is 0.025.
+We see that the average of the estimates of \(\beta\) equals about 0.5. This means that OLS is 'unbiased' here. At each iteration, we also collect the standard error of the estimate of \( \beta \); the mean of these standard errors is 0.025. The actual RMSE is 0.043. 
 </p>
 
-In this case, the the RMSE of the Monte Carlo study is about 1.7 times the (average) calculated standard error.
+So in this case, the estimates are 'unbaised' but 'actual' RMSE is about 1.7 times the (average) calculated standard error. 
 
 <table border=1>
 <caption> Summary of Monte Carlo results, study 1: OLS estimates. \(N=144\) observations on a \(12 \times 12 \) grid, \(\rho = 0.7\), \(\beta=0.5\), and \(M = 200\) Monte Carlo iterations.</caption>
@@ -135,7 +204,7 @@ In this case, the the RMSE of the Monte Carlo study is about 1.7 times the (aver
  </tr>
    </table>
 
-Of course one can change the parameter of the study to yield different quantities and proportions, but adding positive SA to both variables will always <em>add error</em> to OLS estimates. 
+Of course one can change the parameter of the study to yield different quantities and proportions, but adding positive SA to both variables will always <em>add error</em> to OLS estimates. The added error shows up as an increase in RMSE beyond what can be derived from sampling theory with the assumption of independent observations. This illustrates what the geographer Dan Griffith calls this the principal property of (positive) SA: variance inflation. Here, we see it inflating the sampling variance of a test statistic.
 
 ### Error and information symmetry
 
@@ -149,16 +218,16 @@ With a finite grid space (as it always is), it may be easy for clusters of two v
 [^dag]: This challenge is similar to a classroom lesson that Daniel Griffith liked to use in his spatial statistics course. Also see the papers on correlation with spatial data by Clifford, Richardson, and Hemon (1989) and Richardson and Clifford (1991). Rudy (2011) makes good use of these ideas.
 
 <p>
-When two variables share a map pattern, that shared pattern <em>inflates</em> the absolute value of their correlation coefficient. The 'inflation' is illegitimate because it arises merely from the duplication of values (as if we had counted the same observation one and a half times). Non-shared map patterns (i.e., autocorrelation patterns that are unique to one of the two variables) <em>deflate</em> the absolute value of their correlation coefficient. Together, these two factors add error to correlation and regression coefficients. That is, they inflate the RMSE of their sampling distributions (Griffith and Paelinck 2011).
+When two variables share a map pattern, that shared pattern <em>inflates</em> the absolute value of their correlation coefficient. The 'inflation' is illegitimate or deceptive because it arises merely from the duplication of values (as if we had counted the same observation one and a half times). Non-shared map patterns (i.e., autocorrelation patterns that are unique to one of the two variables) <em>deflate</em> the absolute value of their correlation coefficient. Together, these two factors add error to correlation and regression coefficients. That is, they inflate the RMSE of their sampling distributions (Griffith and Paelinck 2011).
 </p>
 
 <p>
 Pearson's correlation, like OLS, is 'unbiased' in our first Monte Carlo study because these two kinds of error-inflation factors mutually balanced one another across the \( M = 200 \) iterations. Some iterations have a larger than expected positive error, others have a larger than expected negative error. In some cases, the inflation/deflation factors may effectively cancel out.
 </p>
 
-From the above description of where these extra errors come from (shared and non-shared map patterns), we find no reason why the added error should be positive rather than negative. This means that our state of knowledge is one of <em>information symmetry</em> with respect to the SA-induced error. This symmetry was present in the design of the first Monte Carlo study. And of course the same principle of error cancellation is embedded in OLS.
+From the above description of where these extra errors come from (shared and non-shared map patterns), we find no reason why the added error should be positive rather than negative. This means that our state of knowledge is one of <em>information symmetry</em> with respect to the SA-induced error. 
 
-If we wanted to, we could design a Monte Carlo study that adds an SA-induced error that is always positive or always negative, in which case OLS would appear biased. The reason studies in spatial statistics tend to be designed like our Study 1 is, ultimately, that the 'fixed bias' study represents a very specific state of knowledge, and one rarely, if ever, has the kind of information that would be required to know in advance that an SA-induced error is positive or negative; these matters are complicated, which is why we are using statistical models to begin with. By contrast, our higher-entropy study design reflects our usual state of knowledge (at the start of a study), which is ignorance with respect to the sign of the SA-induced error. 
+If we wanted to, we could design a Monte Carlo study that adds an SA-induced error that is always positive or always negative, in which case OLS would obviously appear biased. The reason studies in spatial statistics tend to be designed like our 'Study 1' is that we rarely, if ever, have the kind of information that would be required to know or even suspect in advance that an SA-induced error is positive or negative. By contrast, our study design here reflects the usual (prior) state of knowledge, which is ignorance with respect to the sign of the SA-induced error. 
 
 ### Monte Carlo study 2: pre-whitening and OLS regression
 
@@ -169,17 +238,35 @@ Our second Monte Carlo study shows what happens to the OLS estimates when we use
 $$x = M^{-1} \epsilon_x,$$
 and similarly for \(y\).
 
-Now when we proceed to pre-whiten the variables, we are just inverting the function we applied to add SA to them:
+When we proceed to pre-whiten the variables, we are just applying our spatial difference operator, which is the inverse of our spatial smoothing operator:
 $$\tilde{x} = M x,$$
 and similarly for \(y\).
 </p>
 
+In R code, the pre-whitening procedure could unfold as follows:
+
+{% highlight r %}
+# Create correlated, spatially autocorrelated variables
+x = M_smooth %*% epsilon_x
+y = beta * x + M_smooth %*% epsilon_y
+
+# Pre-whiten them 
+xtilde = M_diff %*% x
+ytilde = M_diff %*% y
+
+# Fit regression
+fit = lm(ytilde ~ xtilde)
+{% endhighlight %}
+
+
+<!---
 <p>
-We are trying to recover \(\epsilon_x\) and \(\epsilon_y\), which we now call \(\tilde{x}\) and \( \tilde{y} \). As is often the case for Monte Carlo studies, all we are really doing here is checking that our own reasoning is <em>consistent</em>: specifically, that our function \(M\) really is the inverse of \(M^{-1}\), as found in our contrived 'data generating model'. 
+In the pre-whitening stage, we are trying to recover \(\epsilon_x\) and \(\epsilon_y\), which we now call \(\tilde{x}\) and \( \tilde{y} \). As is often the case for Monte Carlo studies, all we are really doing here is checking that our own reasoning is <em>consistent</em>: specifically, that our function \(M\) really is the inverse of \(M^{-1}\), as found in our contrived 'data generating model'. 
 </p>
+--->
 
 <p>
-To obtain an estimate of \(\rho\) (which we need in order to create \( M \) ), we can fit an intercept-only SAR model to the data. The pre-whitened values are just the residuals from the intercept-only SAR model. (Alternatively, we can skip the estimation of \(\rho\) and just apply our spatial difference operator to \(x\) and \(y\), because we know what \(\rho\) is for our fabricated data.)
+As indicated above, we can implement the pre-whitening stage by applying our spatial difference operator. (Because we know exactly what \(\rho\) is, we don't really have to estimate it.) Alternatively, we can obtain an estimate of \(\rho\) by fitting an intercept-only SAR model to the \(x\) and \(y\), respectively. Then the pre-whitened values \(\tilde{x}\) and \(\tilde{y}\) will be the residuals from the intercept-only SAR model. 
 </p>
 
 <p>
@@ -197,9 +284,7 @@ So our procedure now becomes:
 </ol>
 </p>
 
-<p>
-As expected, the summary of results shows that the mean of the estimates is about 0.5 and that the RMSE of the estimates is effectively equal to its theoretical value (the latter is again represented here by the mean of the calculated standard errors). 
-</p>
+As expected, the summary of results shows that the mean of the estimates equals 0.50 (it is 'unbiased') and the RMSE of the estimates is effectively equal to its theoretical value (where the latter is again represented by the mean of the calculated standard errors). 
 
 <table border=1>
 <caption>Summary of Monte Carlo results, study 2: pre-whitened OLS estimates. \(N=144\) observations on a \(12 \times 12 \) grid, \(\rho = 0.7\), \(\beta=0.5\), and \(M = 200\) Monte Carlo iterations.</caption>
@@ -218,16 +303,19 @@ As expected, the summary of results shows that the mean of the estimates is abou
 ## Equivalent spatial regression
 
 <p>
-As mentioned above, pre-whitening is not used very much anymore, at least in spatial statistics. The primary reason is that computational improvements have made spatial regression a trivial thing to apply. The results are nearly the same as pre-whitening for bivariate regression, and of course a spatial regression is easily extended for multivariate analysis. Spatial regression models use the information in the data (\(W, x, y \)) to determine whether the SA-induced error is more likely positive or negative, and they effectively cut that error out of the estimate (see Donegan 2025 for details). 
+As mentioned above, pre-whitening is not used very much anymore, at least in spatial statistics. The primary reason is that computational improvements have made spatial regression a trivial thing to apply. The results are nearly the same as pre-whitening for bivariate regression&mdash;but of course a spatial regression model is easily extended for multivariate analysis, unlike pre-whitening. Spatial regression models use the information in the data (\(W, x, y \)) to determine whether the SA-induced error is more likely positive or negative. They effectively cut that error out of the estimate (see Donegan 2025 for details). 
 </p>
 
 <p>
-Once again, we use the simultaneous spatial autoregression model with the form
-$$y = \mu + (I - \rho \cdot W)^{-1} \epsilon,$$
-where we have \(\mu = \alpha + \beta \cdot x \). Put differently,
-$$y = \mu + \rho \cdot W (y - \mu) + \epsilon.$$
-For any particular case, the estimates will be tend to be quite similar but not identical to pre-whitening; the two are the same in expectation. The results confirm this, and show that the spatial regression estimate is 'unbiased' and has standard errors that are honest. We are also completely unsurprised that the SAR model's RMSE is only 60% that of the OLS model. The results are clearly better than OLS and comparable to pre-whitening.
+In our third Monte Carlo study, we follow the same procedure as previously for generating the data, but in the estimation step we use the simultaneous spatial autoregressive (SAR) model:
+
+$$y = \alpha + \beta \cdot x + (I - \rho \cdot W)^{-1} \epsilon.$$
+
+The estimates from this model will be tend to be similar, but not identical, to pre-whitening; the two are at least the same in expectation.
 </p>
+
+
+The results show that the spatial regression estimate is 'unbiased' and it has standard errors that are honest. We are also completely unsurprised that the RMSE for the SAR model is only 60% that of the OLS model. The results are very similar to pre-whitening.
 
 <table border=1>
 <caption> Summary of Monte Carlo results, study 3: spatial autoregressive model. \(N=144\) observations on a \(12 \times 12 \) grid, \(\rho = 0.7\), \(\beta=0.5\), and \(M = 200\) Monte Carlo iterations.</caption>
@@ -243,20 +331,21 @@ For any particular case, the estimates will be tend to be quite similar but not 
    </table>
 
 <p>
-(I used a Bayesian model to estimate the spatial regression. In place of the standard error, which is a purely frequentist term, what I reported is the standard deviation of the posterior distribution of \(\beta\). Since there's no important prior information here, the posterior distribution resembles the likelihood or sampling distribution. Hence, the table still reports this as the 'standard error'.)
+(I used a Bayesian model to estimate the spatial regression. In place of the standard error, which is a purely frequentist term, what I reported is the standard deviation of the posterior distribution of \(\beta\). Since there's no important prior information here, the posterior distribution resembles the likelihood or sampling distribution. Hence, in the table I still label this as the 'standard error'.)
 </p>
 
 ## Is spatial+ biased?
 
-Dupont et al. present spatial+ as a way to address what they call 'spatial confounding'. At a glance, what they say is that spatial regressions are biased, and that their method is not. If true, then spatial+ and SAR (SEM) estimates differ in expectation. This means that if we repeat our Monte Carlo study again but this time use the spatial+ procedure in our estimation step, we ought to expect a definite bias in the spatial+ estimates. (The logic: any method that differs in expectation from an unbiased method is necessarily biased.)
+Dupont et al. present spatial+ as a way to address what they call 'spatial confounding'. At a glance, what they say is that spatial regressions are biased, and that their method is not baised. If that is true, then spatial+ and SAR (SEM) estimates differ in expectation. This means that if we repeat our Monte Carlo study again but this time use the spatial+ procedure in our estimation step, we ought to expect a definite bias in the spatial+ estimates. The logic is simple: any method that differs in expectation from an unbiased method (e.g., pre-whitening) is necessarily biased.
 
 <p>
-Spatial+ is a procedure, like pre-whitening, rather than a model. This means we can apply spatial+ using the SAR model, just like we can use the SAR model for pre-whitening. The spatial+ procedure consists of pre-whitening the covariate, \(x\), and then passing it into a spatial regression model, as \(\tilde{x}\). In our case, we will estimate \(\beta\) using
+Spatial+ is a procedure, like pre-whitening, rather than a model. This means we can apply spatial+ using the SAR model. The spatial+ procedure consists of pre-whitening the covariate, \(x\) and then passing it into a spatial regression model. In our case, we will estimate \(\beta\) with the SAR model:
+
 $$y = \alpha + \beta \cdot \tilde{x} + (I - \rho \cdot W)^{-1} \epsilon.$$
 </p>
 
 <p>
-The summary of results shows that the estimates are centered around 0.43, rather than \(\beta = 0.5\). Below the table is a histogram of estimates from each of the four models, in which the blue vertical lines mark out \(\beta = 0.5\). Spatial+ does differ in expectation from OLS, pre-whitening, and proper spatial regression models; therefore, it has a definite bias that is not present in any of the standard methods.
+The summary of results shows that the estimates are centered around 0.43, rather than 0.5. Below the table is a histogram of estimates from each of our four models. The blue vertical lines mark out \(\beta = 0.5\). Spatial+ does differ in expectation from OLS, pre-whitening, and proper spatial regression models; therefore, it has a definite bias that is not present in any of the standard methods.
 </p>
 
 <table border=1>
@@ -315,7 +404,7 @@ Some of the patterns in \(y\) may also be present in \(x\), and those shared pat
 
 Recall that a premise of our Monte Carlo studies is that our information about SA is symmetric: all of our reasons for expecting the SA-induced error to be positive are balanced by similar reasons that would lead us to expect a negative error. A positive error is no more probable than a negative one. We leave it up to the model (the likelihood) to determine whether the observations point one way or another. That is the purpose for which various spatial-statistical techniques were designed in the first place: improve estimates of correlation by considering a kind of <em>data</em> that the standard techniques do not incorporate, namely the spatial arrangement of the observations. 
 
-What kind of prior information would lead one to suppose that the SA-induced error <em>must be</em> positive (or negative)? If spatial+ is to be justified, it seems we need to have some kind of asymmetric prior information. If you know of a specific confounder that you have not controlled for, that would be reason to expect a certain bias. And the spatial+ procedure, like Thaden and Kneib's (2018) work, is concerned precisely with making adjustments for a missing confounder. 
+What kind of prior information would lead one to suppose that the SA-induced error <em>must be</em> positive (or negative)? If spatial+ is to be justified, it seems we need to have some kind of asymmetric prior information. If you know of a specific confounder that you have not controlled for, that would be reason to expect a certain bias. The spatial+ procedure, like Thaden and Kneib's (2018) work, is concerned with making adjustments for a missing confounder. 
 
 <p>
 The Monte Carlo studies designed by Dupont et al. and Thaden and Kneib (and others) are designed to see what happens when you ignore a confounding variable which also exhibits SA. They want to show that their own techniques are unbiased when there is a spatially-patterned confounder. Using our own notation and specific techniques, Thaden and Kneib would have us begin our Monte Carlo study by constructing the following variables:
@@ -324,14 +413,16 @@ $$ x = \gamma \cdot c + \epsilon_x$$
 $$ y = \beta \cdot x - c + \epsilon_y.$$
 where \(c\) is going to act as a confounder. Dupont et al. add residual SA to \(y\), as in:
 $$ y = \beta \cdot x - c +  M^{-1} \epsilon_y.$$
-Now in the estimation stage of our Monte Carlo study, we will pretend that we do not have \(c\). The point of the study will be to say something about how various techniques are affected by the bias caused by this missing confounder. 
+Now in the estimation stage of our Monte Carlo study, we will pretend that we do not have \(c\). The point of such a study is to say something about how various techniques are affected by the bias that has been induced by this missing confounder. 
 </p>
 
-It should be perfectly clear at this point that we are no longer talking about the problem of correlation with spatial data, or the challenges posed by SA; we are just talking about confounding. A missing confounder adds bias to any technique that is otherwise 'unbiased'. That is why one includes confounders as covariates, when possible.
+A missing confounder adds bias to any technique that is otherwise 'unbiased'. That is why one includes confounders as covariates, whenever possible. Hence, this kind of study is not really speaking to the problem of correlation with spatial data, or the challenges posed by SA; at this point we are just talking about confounding. 
 
 <p>
-Our last Monte Carlo study repeats all the previous studies, but uses Dupont et al.'s method for generating the data. So we are seeing the impact of a missing confounder, \(c\), on each technique. One can get quite different results depending on the Monte Carlo study parameters; the bias can be positive or negative, large or small, for example. But our results are not what we hope for, spatial+ is no less biased than the other methods. In this case it looks worse than the SAR model. 
+Our last Monte Carlo study repeats all the previous studies, but uses Dupont et al.'s method for generating the data. So we are seeing the impact of a missing confounder, \(c\), on each technique. One can get quite different results depending on the Monte Carlo study parameters; the bias can be positive or negative, large or small, for example. Obviously we want our study design to allow us to identify any bias easily, not to hide it, and I've chosen parameter values with that purpose for all of the Monte Carlo studies.
 </p>
+
+The results here are not what we should hope for: with a confounder, spatial+ is no less biased than the other methods. In this case it looks worse than the SAR model. 
 
 <table border=1>
 <caption> Summary of Monte Carlo results, study 6: confounded estimates. \(N=144\) observations on a \(12 \times 12 \) grid, \(\rho = 0.7\), \(\beta=0.5\), and \(M = 200\) Monte Carlo iterations.</caption>
@@ -368,15 +459,11 @@ Our last Monte Carlo study repeats all the previous studies, but uses Dupont et 
    </table>
 
 
-## Suggestions
+## My conclusion
 
-I had two motivations for writing this post. First, frustration with journals that keep publishing demonstrably false claims about the theory, motivation, and history behind spatial statistics. It does not help that words like 'bias' are being used in a flippant manner. The entire conceptual framework that has guided statistical research on SA for more than one hundred years is being pushed aside without any effort to seriously engage with it. Second, I had a genuine interest in spatial+. I was interested because it plays on the pre-whitening method, and at first glance I thought it might work well.
+I had two motivations for writing this post. First, frustration with journals that keep publishing demonstrably false claims about the theory, motivation, and history behind spatial statistics. It does not help that words like 'bias' are being used in a flippant manner. Second, I had a genuine interest in spatial+. I was interested because it plays on the pre-whitening method, and at first glance I honestly thought it might have a certain advantage. 
 
-Unfortunately, it seems to me that spatial+ provides another case where the concept of 'spatial confounding' (the meaning of which keeps changing) motivated the creation of an ad hoc procedure which turns out to be flawed. The first example of this is restricted spatial regression (RSR), which I focused on in my article in <em>Geographical Analysis</em>. Both techniquues are motivated by the mistaken premise that there is something obviously wrong with standard spatial regression models that ought to be fixed. 
-
-In light of all this confusion, I offer the following suggestions for spatial data analysis.
-
-First, you can and should use spatial regression models to estimate regression coefficients with spatial data. Spatial regressions are not 'biased'. Various authors have claimed that spatial regression models become problematic when both the dependent and independent variables exhibit SA; the methods were supposedly designed with the assumption that only the dependent variable exhibits SA. That is false and quite misleading. Spatial statistical methods (for data analysis and study design) were first developed precisely to address the challenges that arise when both variables exhibit SA. If by 'biased' one really means 'biased when there is confounding', then there is not much to discuss because that is a truism. Break out of it! 
+Unfortunately, it looks like spatial+ is actually biased in the standard statistical sense of the term. Spatial+ may be another case where a flawed notion of 'spatial confounding' has motivated the creation of an ad hoc procedure which also turns out to be flawed. The first example of this was restricted spatial regression (RSR) (for critiques see Donegan 2025; Zimmerman and Ver Hoef 2021). Both RSR and spatial+ were motivated by the mistaken premise that the adjustments made by spatial regression models are illogical. I suspect that the term 'spatial confounding' is causing confusion in part because it seems to reduce a problem of <em>autocorrelation</em> to one of confounding, whereas the two actually differ in meaningful ways.
 
 ## R code
 
@@ -829,9 +916,22 @@ for (f in c(f_0, f_1, f_2, f_3, f_4, f_5)) {
 </details>
 ## Bibliography
 
+<b>Probability theory</b>
+
+<em>The above references to 'information symmetry' stem from the 'probability as logic' school of thought. Clayton provides a great introduction to this tradition.</em>
+
+Clayton, A. (2021). *Bernoulli's Fallacy: Statistical Illogic and the Crisis of Modern Science*. New York: Columbia University Press.
+
+Jaynes, E.T. (2003). *Probability Theory: The Logic of Science*. Cambridge: Cambridge University Press.
+
+<b>Spatial autocorrelation</b>
+
+
+Bennett, R.J. and Haining, R. (1985) Spatial structure and spatial interaction: Modelling approaches to the statistical analysis of geographical data (with discussion). <em>Journal of the Royal Statistical Society. Series A (General)</em>. 148 (1): 1&mdash;36. <https://doi.org/10.2307/2981508>
+
 Bivand, R. (1980). A Monte Carlo study of correlation coefficient estimation with spatially autocorrelated observations. *Quaestiones Geographicae* 6: 5&mdash;10. <https://ia904602.us.archive.org/3/items/bivand-1980/Bivand%201980.pdf>
 
-Cayton, Aubrey (2021). *Bernoulli's Fallacy: Statistical Illogic and the Crisis of Modern Science*. New York: Columbia University Press.
+Chun, Y. & Griffith, D.A. (2013) <em>Spatial Statistics and Geostatistics: Theory and Applications for Geographic Information Science and Technology</em>. Los Angeles, CA: Sage.
 
 Clayton, D.G., Bernardinelli, L. & Montomoli, C. (1993). Spatial Correlation in Ecological Analysis. <em>International Journal of Epidemiology</em>, 22(6), 1193–1202.
 
@@ -839,25 +939,17 @@ Cliff, A.D. & Ord, J.K. (1981). *Spatial Processes: Models and Applications*. Lo
 
 Clifford, Peter, Sylvia Richardson, and Denis Hemon (1989). "Assessing the significance of the correlation between two spatial processes." *Biometrics*, 45(1): 123-134. <https://doi.org/10.2307/2532039>
 
-Dupont, E., Wood, S. N., & Augustin, N. H. (2022). Spatial+: a novel approach to spatial confounding. <em>Biometrics</em>, 78(4), 1279-1290. <https://doi.org/10.1111/biom.13656>
+Donegan, C. (2025). Plausible Reasoning and Spatial‐Statistical Theory: A Critique of Recent Writings on 'Spatial Confounding'. <em>Geographical Analysis</em>, 57(1): 152&ndash;172. <https://doi.org/10.1111/gean.12408>
 
 Dutilleul, P. (1993) Modifying the t Test for Assessing the Correlation between Two Spatial Processes. *Biometrics*, 49(1), 305–314. <https://www.jstor.org/stable/2532625>
 
-Donegan, C. (2025). Plausible Reasoning and Spatial‐Statistical Theory: A Critique of Recent Writings on 'Spatial Confounding'. <em>Geographical Analysis</em>, 57(1): 152&ndash;172. <https://doi.org/10.1111/gean.12408>
-
 Getis, A., & Griffith, D. A. (2002). Comparative spatial filtering in regression analysis. *Geographical Analysis*, 34(2). <https://doi.org/10.1111/j.1538-4632.2002.tb01080.x>
-
-Gilbert, B., Ogburn, E. L., & Datta, A. (2024). Consistency of common spatial estimators under spatial confounding. *Biometrika*, asae070. <https://arxiv.org/abs/2308.12181>
 
 Griffith, D.A. & Paelinck, J.H.P. (2011) <em>Non-standard Spatial Statistics and Spatial Econometrics</em>. Heidelberg: Springer
 
 Haining, R. (1991). Bivariate correlation with spatial data. *Geographical Analysis*, 23(3), 210&mdash;227.
 
-Hodges, J.S. & Reich, B.J. (2010) Adding Spatially-Correlated Errors Can Mess up the Fixed Effect you Love. <em>The American Statistician</em>, 64(4), 325&ndash;334. <https://doi.org/10.1198/tast.2010.10052>.
-
-Khan, K., & Berrett, C. (2023). Re-thinking spatial confounding in spatial linear mixed models. *arXiv* preprint. <https://arxiv.org/abs/2301.05743>
-
-Reich, B.J., Hodges, J.S. & Zadnik, V. (2006) Effects of Residual Smoothing on the Posterior of the Fixed Effects in Disease-Mapping Models. *Biometrics*, 62(4), 1197–1206. <https://doi.org/10.1111/j.1541-0420.2006.00617.x>
+Legendre, P., Oden, N. L., Sokal, R. R., Vaudor, A., and Kim, J. (1990). Approximate analysis of variance of spatially autocorrelated regional data. <em>Journal of Classification</em> 7: 53&mdash;75. <https://link.springer.com/article/10.1007/BF01889703>
 
 Richardson, Sylvia, and Peter Clifford (1991). "Testing association between spatial processes." *Lecture Notes-Monograph Series* (1991): 295-308.
 
@@ -865,7 +957,30 @@ Rudy Arthur, A General Method for Resampling Autocorrelated Spatial Data, <em>Ge
 
 Student [W.S. Gosset] (1914). The Elimination of Spurious Correlation Due to Position in Time and Space. <em>Biometrika</em>, 10, 179&ndash;180. <https://www.jstor.org/stable/2331746>
 
+Vallejos, R., Osorio, F. & Bevilacqua, M. (2020) <em>Spatial Relationships between Two Georeferenced Variables</em>. Cham: Springer Cham. <https://doi.org/10.1007/978-3-030-56681-4>
+
+<b>Spatial confounding</b>
+
+Bobb, J.F., Cruz M.F.,  Mooney, S.J., Drewnowski, A., Arterburn, D., & Cook, A.J. (2020) Accounting for spatial confounding in epidemiological studies with individual-level exposures: An exposure-penalized spline approach. <em>Journal of the Royal Satistical Society Series A</em>. 185:1271--1293. <https://doi.org/10.1111/rssa.12831>
+
+Dupont, E., Wood, S. N., & Augustin, N. H. (2022). Spatial+: a novel approach to spatial confounding. <em>Biometrics</em>, 78(4), 1279-1290. <https://doi.org/10.1111/biom.13656>
+
+Gilbert, B., Ogburn, E. L., & Datta, A. (2024). Consistency of common spatial estimators under spatial confounding. *Biometrika*, asae070. <https://arxiv.org/abs/2308.12181>
+
+Hodges, J.S. & Reich, B.J. (2010) Adding Spatially-Correlated Errors Can Mess up the Fixed Effect you Love. <em>The American Statistician</em>, 64(4), 325&ndash;334. <https://doi.org/10.1198/tast.2010.10052>.
+
+Khan, K., & Berrett, C. (2023). Re-thinking spatial confounding in spatial linear mixed models. *arXiv* preprint. <https://arxiv.org/abs/2301.05743>
+
+Paciorek, C.J. (2010). The importance of scale for spatial-confounding bias and precision of spatial regression estimators. <em>Statistical Science</em> 25(1): 107&mdash;125. <https://doi.org/10.1214/10-STS326>
+
+Reich, B.J., Hodges, J.S. & Zadnik, V. (2006) Effects of Residual Smoothing on the Posterior of the Fixed Effects in Disease-Mapping Models. *Biometrics*, 62(4), 1197–1206. <https://doi.org/10.1111/j.1541-0420.2006.00617.x>
+
 Thaden, H., & Kneib, T. (2018). Structural equation models for dealing with spatial confounding. *The American Statistician*, 72(3), 239–252.
 
-Zimmerman, D.L. & Ver Hoef, J.M. (2021) On Deconfounding Spatial Confounding in Linear Models. The American Statistician, 76(2), 159–167. <https://doi.org/10.1080/00031305.2021.1946149>
+Zimmerman, D.L. & Ver Hoef, J.M. (2021) On Deconfounding Spatial Confounding in Linear Models. <em>The American Statistician</em>, 76(2), 159–167. <https://doi.org/10.1080/00031305.2021.1946149>
+
+
+
+
+
 
