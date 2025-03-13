@@ -6,7 +6,7 @@ categories: [Statistics, Public_health]
 ---
 
 <em>
-Re-posting from <a href="https://r-spatial.org">r-spatial.org</a>, with a few updates.
+Re-posting from <a href="https://r-spatial.org">r-spatial.org</a>, with a few updates, introducing the geostan R package for Bayesian spatial analysis. 
 </em>
 
 
