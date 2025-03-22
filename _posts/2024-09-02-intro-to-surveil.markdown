@@ -168,6 +168,7 @@ plot(fit, scale = 100e3)
 
 <p>
 The figure displays the crude rates (as points), an estimate of the time trends (the line), and 95% credible intervals for the trend (the shaded regions).
+</p>
 
 <p>
 We can also put each age group in its own plot:
@@ -198,6 +199,7 @@ Notably, almost all of the decline in CRC incidence in this period was for ages 
 
 <p>
 We can view a summary of results with the <code>print</code> method:
+</p>
 
 {% highlight r %}
 print(fit, scale = 100e3, digits = 3)
@@ -216,7 +218,7 @@ Correlation matrix: FALSE
 5   2003  45-49 years  30.3    28.4     31.8
 ...
 </code></pre>
-</p>
+
 
 ## Custom plots with base R 
 
@@ -297,12 +299,12 @@ We can summarize these age-specific trends by calculating percent change statist
 
 <p>
 The following  two lines of code will use the fitted models to produce cumulative percent change plots for each age group:
+</p>
 
 {% highlight r %}
 fit_pc <- apc(fit)
 plot(fit_pc, cumulative = TRUE)
 {% endhighlight %}
-</p>
 
 <center>
 <figure>
@@ -332,6 +334,7 @@ subset(fit_pc$cpc, time == 2019) |>
  2019  80-84 years -42 -46.5 -36.8
 </samp></pre>
 
+<p>
 From 1999 to 2019, the 45-49 and 50-54 age groups saw CRC incidence increase by 13% and 18%, respectively. The greatest declines occurred for the highest age groups: about 46% for ages 75-79 and 42% for ages 80-84, which is equivalent to an average of just over 2% per year since 1999. (We'll calculate similar statistics for custom date ranges below.)
 </p>
 
