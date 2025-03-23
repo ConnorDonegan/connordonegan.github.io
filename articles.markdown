@@ -4,8 +4,6 @@ title: Articles
 permalink: /articles/
 ---
 
-<em>A selection of my publications</em>
-<br/>
 
 
 <b style="color:Charcoal;">Spatial Uncertainty and Probability</b> <br/>
@@ -27,7 +25,8 @@ Statistical research on correlation with spatial data dates at least to Student'
 This article examines changes in the social geography of colorectal cancer (CRC) incidence following the spread of improved preventive technology circa 2003, namely screening colonoscopy. It adopts a realist approach to social science methodology, and a political-economy of health perspective on disease prevention. <a href="https://doi.org/10.31235/osf.io/27xyn">PDF (open access)</a>
 
 <b style="color:Charcoal;">Colorectal Cancer Incidence, Inequalities, and Prevention Priorities in Urban Texas: Surveillance Study With the 'surveil' Software Package</b><br/>
-<small><i> JMIR Public Health and Surveillance </i> (2022) <a href="https://doi.org/10.2196/34589"> https://doi.org/10.2196/34589 </a> (open access)
+<small> with co-authors Amy Hughes and Simon Craddock Lee.</small><br/>
+<small><i>JMIR Public Health and Surveillance </i> (2022) <a href="https://doi.org/10.2196/34589"> https://doi.org/10.2196/34589 </a> (open access)
 
 Modeling time trends in disease incidence and mortality is a basic public health research task. Inferences need to be made about levels of incidence, rates of change, cumulative changes over time, and differences between any two time trends (between regions, social classes, or whatever). We present a Bayesian methodology and open-source software (<a href="{{site.baseurl}}/statistics/public_health/2024/09/02/intro-to-surveil.html">surveil</a>) for time-tend modeling to provide a standardized workflow for public health research. The software aims to provide an accessible and superior alternative to commonly-used joinpoint regression models.
 
