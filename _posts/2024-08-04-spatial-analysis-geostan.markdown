@@ -1,18 +1,18 @@
 ---
 layout: post
-title:  "Spatial analysis with geostan"
+title:  "Spatial data analysis with geostan"
 author: Connor Donegan
 categories: [Statistics, Public_health]
 ---
 
 <em>
-Re-posting from <a href="https://r-spatial.org">r-spatial.org</a>, with a few updates, introducing the geostan R package for Bayesian spatial analysis. 
+Re-posting from <a href="https://r-spatial.org">r-spatial.org</a> to introduce the geostan R package for Bayesian spatial analysis, but with a few updates (geostan now supports spatial econometric models).
 </em>
 
 
 This post introduces the
 [geostan](https://connordonegan.github.io/geostan) R package for spatial
-analysis. The package is mainly oriented towards areal data, although
+data analysis. The package is mainly oriented towards areal data, although
 some models may also be used for other spatial data types and network data. The package
 implements the spatial error/simultaneous spatial autoregressive (SAR)
 model, spatial lag model, conditional autoregressive (CAR) model, and eigenvector spatial
