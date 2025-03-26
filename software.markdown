@@ -14,7 +14,7 @@ permalink: /software/
 
 Online documentation: [connordonegan.github.io/geostan](https://connordonegan.github.io/geostan)
 
-Introduction to the package: [Spatial analysis with geostan]({{ site.url }}/statistics/public%20health/2024/09/02/spatial-analysis-geostan.html) 
+Introduction to the package: [Spatial data analysis with geostan]({{ site.url }}/statistics/public_health/2024/08/04/spatial-analysis-geostan.html) 
 
 <p style="color:Gray">Donegan, Connor (2021). Building spatial conditional autoregressive (CAR) models in the Stan programming language. <em>OSF Preprints</em>. DOI:<a href="https://osf.io/3ey65/">10.31219/osf.io/3ey65</a></p>
 
@@ -30,11 +30,11 @@ Introduction to the package: [Spatial analysis with geostan]({{ site.url }}/stat
 
 <p> The surveil R package provides time series models for routine public health monitoring tasks: model time trends in mortality or disease incidence rates to make inferences about levels of risk, cumulative and period percent change, age-standardized rates, and health inequalities. This software provides an accessible alternative to joinpoint regression. Basic usage requires introductory-level R programming skills.</p>
 
-Demonstration: [Modeling time trends for disease monitoring studies](https://connordonegan.github.io/surveil-paper)
+Demonstration: [Modeling time trends for disease monitoring studies]({{ site.url }}/statistics/public_health/2024/09/02/intro-to-surveil.html)
 
 Online documentation: [connordonegan.github.io/surveil](https://connordonegan.github.io/surveil)
 
-<p style="color:Gray">Donegan, Connor, Amy E Hughes and Simon J Craddock Lee (2022). Time Series Models for Public Health Surveillance: Colorectal Cancer Incidence, Inequalities, and Prevention Priorities in Urban Texas. Poster presentation to the Interdisciplinary Association of Population Health Science (IAPHS), Minneapolis, MN. <a href="{{ site.baseurl }}/surveil-poster/">Poster PDF.</a> </p>
+<p style="color:Gray">Donegan, Connor, Amy E Hughes and Simon J Craddock Lee (2022). Time Series Models for Public Health Surveillance: Colorectal Cancer Incidence, Inequalities, and Prevention Priorities in Urban Texas. Poster presentation to the Interdisciplinary Association of Population Health Science (IAPHS), Minneapolis, MN. </p>
 
 #### R/Stan code
 
