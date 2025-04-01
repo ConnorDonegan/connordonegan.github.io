@@ -535,8 +535,8 @@ print( states_array )
 Now we can compile the model and draw samples:
 
 {% highlight r %}
-# path to the file where the Stan model code is saved
-mod_file <- "assets/2025/space-time-mortality/ARs.stan"
+# path to the file containing the Stan code
+mod_file <- "https://raw.githubusercontent.com/ConnorDonegan/connordonegan.github.io/refs/heads/main/assets/2025/space-time-mortality/ARs.stan"
 
 # compile the model
 ar_model <- stan_model(mod_file)
@@ -971,7 +971,8 @@ There were no warnings from Stan, and the summary printout shows that the effect
 
 {% highlight r %}
 # compile the model
-car_model <- stan_model("assets/2025/space-time-mortality/CARs.stan")
+mod_file = path = "https://raw.githubusercontent.com/ConnorDonegan/connordonegan.github.io/refs/heads/main/assets/2025/space-time-mortality/CARs.stan"
+car_model <- stan_model(mod_file)
 
 # Sampling. 
 iter = 1e3
@@ -1088,16 +1089,21 @@ generated quantities {
 We are ready to go now:
 
 {% highlight r %}
-car_ar_model <- stan_model("assets/2025/space-time-mortality/CAR_AR.stan")
+# Compile the CAR-AR model
+path = "https://raw.githubusercontent.com/ConnorDonegan/connordonegan.github.io/refs/heads/main/assets/2025/space-time-mortality/CAR_AR.stan"
+car_ar_model <- stan_model(path)
 
+# MCMC settings
 iter = 1e3
 cores = 4
 
+# Draw samples
 S3 <- sampling(car_ar_model,
    data = stan_dl, 
    iter = iter, 
    cores = cores)
 
+# Print summary
 print(S3, pars = c('alpha', 'beta_ar', 'rho', 'tau'))
 {% endhighlight %}
 <pre>
@@ -1129,7 +1135,7 @@ There is one interesting feature of these results already. The estimate for <cod
 
 For each of our three models, we collected samples for the log-likelihoods. Those are for computing information criteria. I will use the DIC for these models. 
 
-(You can use WAIC if you want to; if you check diagnostics using the <a href="http://mc-stan.org/loo/">loo</a> R package, you may find that the diagnostics are crap for your spatial models. As I understand it, that is just a feature of WAIC with auto-correlated data, and it does not necessarily indicate a problem with your model.)
+You can also use WAIC if you want to. A benefit is that the WAIC calculations can be more stable than DIC (run the same model twice and you will find the DIC may differ between runs more than WAIC.) If you check diagnostics using the <a href="http://mc-stan.org/loo/">loo</a> R package, you may notice that the WAIC diagnostics are crap for your spatial models. As I understand it, that is just a feature of WAIC with autocorrelated data, and it does not necessarily indicate a problem with your model. (I used both WAIC and DIC but only report DIC for the sake of brevity.)
 
 This code first defines an R function to calculate DIC from a Stan model (the model must contain a <code>log_lik</code> parameter vector), and then applies it to our three models:
 
@@ -1161,7 +1167,7 @@ rbind(
 3 10001.27  624.69 CAR-AR
 </pre>
 
-For interpretation: lower values of DIC indicate a better fit, and small differences between DICs are not to be given much weight.
+For interpretation: lower values of DIC indicate a better fit, and small differences between DICs are not to be given any weight. 
 
 The CAR-only model looks similar to the AR-only model, while the CAR-AR model has considerably lower DIC than both of the others (a difference of at least -500, including a considerably smaller penalty term). We'll use the CAR-AR model for final section.
 
