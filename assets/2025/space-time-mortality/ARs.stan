@@ -1,3 +1,4 @@
+// Connor Donegan (2024)
 data {
   int S; // sites
   int TT; // time periods

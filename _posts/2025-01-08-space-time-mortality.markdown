@@ -546,7 +546,7 @@ iter = 1e3
 cores = 4
 
 # sampling
-S1 <- sampling(car_ar,
+S1 <- sampling(ar_model,
                data = stan_dl, 
                iter = iter, 
                cores = cores)

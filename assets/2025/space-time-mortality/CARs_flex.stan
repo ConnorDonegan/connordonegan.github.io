@@ -1,3 +1,4 @@
+// Connor Donegan (2024)
 functions {
 #include car_lpdf.stan
 }

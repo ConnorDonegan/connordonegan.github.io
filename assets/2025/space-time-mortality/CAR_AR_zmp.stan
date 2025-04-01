@@ -1,3 +1,4 @@
+// Connor Donegan (2024)
 /*
 Type 0: Partial pooling using iid normal distribution.
 Type 1: AR only, giving one time trend per areal unit.
