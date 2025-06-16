@@ -4,6 +4,12 @@ title: Articles
 permalink: /articles/
 ---
 
+<b style="color:Charcoal;">Probability and the philosophies of science: a realist view</b> <br/>
+<small> <em>SocArxiv</em> <a href="https://doi.org/10.31235/osf.io/k3nf5_v1"> https://doi.org/10.31235/osf.io/k3nf5_v1</a>
+
+<small> This paper discusses probability theory in light of the competing worldviews of philosophical realism and empiricism. The paper pursues the conjecture that a consistent realist methodology can be constructed by integrating the tradition of epistemological probability (after Keynes, Jeffreys, Polya, Cox, Jaynes) with critical realist theories of causality and explanation. The focus is on the relevance of probability theory to qualitative, theoretical, and explanatory reasoning, especially as advanced by Polya's work on analogy. This approach is illustrated by applying it to a portion of Galileo's <em>Dialogue concerning the two chief world systems</em>.
+
+
 <b style="color:Charcoal;">Spatial uncertainty and probability</b> <br/>
 <small>with co-author Yongwan Chun. <em> Oxford Handbook for the Spatial Humanities </em> (forthcoming)
 
