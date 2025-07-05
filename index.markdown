@@ -12,4 +12,4 @@ title: ""
 </figure>
 </center>
 
-<p>Welcome - this site hosts my personal blog, software, articles, and bio. I'll be posting here about my work in spatial statistics, GIS, public health, and whatever else interests me. </p>
+<p>Welcome - this site hosts my personal blog, software, publications, and bio. I'll be posting here about my work in geography and GIS, and whatever else interests me. </p>
