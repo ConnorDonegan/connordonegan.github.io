@@ -15,28 +15,28 @@ I find Franklin's presentation of the realist viewpoint on science to be interes
 
 ### Isn't it obvious?
 
-One reason the phrase 'all models are wrong' may appeal to some of us, if I can take a guess, is an unstated premise that a 'true' claim is one that perfectly describes empirical things or events. The truth is made up of 'the facts of the case'. Because theory is <em>by definition</em> an abstraction (from events, things, etc.), any theoretical model must be 'wrong' or 'untrue' even if it is 'useful'. If theory is at variance with our messy and complicated empirical reality, what kind of naif would believe that a model could be 'true'?[^statistics] 
+One reason the phrase 'all models are wrong' may appeal to many of us, if I can take a guess, is an unstated premise that a 'true' claim is one that perfectly describes empirical things or events. The truth is made up of 'the facts of the case'. Because theory is <em>by definition</em> an abstraction (from events, things, etc.), any theoretical model must be 'wrong' or 'untrue' even if it is 'useful'. If theory is at variance with our messy and complicated empirical reality, what kind of naif would believe that a model could be 'true'?[^statistics] 
 
-This premise, and the fact that some of us hold it, is perhaps the reason why some geographers enjoy repeating that 'the map is not the territory', and why we chuckle at the king who asked for an accurate map (the map would have to be exactly the size of his kingdom; what a naif).
+This is perhaps why geographers enjoy reminding us, correctly of course, that 'the map is not the territory', and chuckle at the king who asked for an accurate map (the map would have to be exactly the size of his kingdom). 
 
 The notion that the best theories are gross simplifications, and that it is legitimate for their premises to be known falsehoods, is standard in orthodox economics (the neoclassical theory). One lineage of this is Milton Friedman's vision for 'positive economics' which contends that economic theory need not be about reality, even plausibly so, it just needs to be able to predict human behavior sufficiently well as to offer guidance in practice. Friedman famously states,
 
 > Truly important and significant hypotheses will be found to have 'assumptions' that are wildly inaccurate descriptive representations of reality, and in general, the more significant the theory, the more unrealistic the assumptions (in this sense). (16)
 
-The concepts of perfect competition and general equilibrium are examples of such unreal theories. (As James Galbraith and Jing Chen argue, general equilibrium is contrary to the laws of thermodynamics, among many other things.) The failure of neoclassical economics as a guide to policy was on full display in the 2008 financial crisis.
+The concepts of perfect competition and general equilibrium are examples of such unreal theories. (As James Galbraith and Jing Chen argue, general equilibrium in economic theory is contrary to the laws of thermodynamics, among many other things.) The failure of neoclassical economics as a guide to policy was on full display in the 2008 financial crisis.
 
 Among the meanings of the word 'model' given by the [Cambridge](https://dictionary.cambridge.org/dictionary/english/model) online dictionary is
 
 > a simple representation of a system or process, especially one that can be used in calculations or predictions of what might happen.
 
-This provides a good summary of how positivist (anti-realist) philosophy understands models. From this premise, a more 'realistic' model might be taken to be one that incorporates more facts and more complicating factors. Insofar as theory is just another word for a model, scientific theories must all be simplifications of what is.  If this is right, we should have the humility to admit that all models are idealizations that depart from reality.
+This provides a good summary of how positivist (anti-realist) philosophy understands models. From this premise, a more 'realistic' or less simple model might be taken to be one that incorporates more facts and more complicating factors. Insofar as theory is just another word for a model, scientific theories must all be simplifications of what is.  If this is right, we should all have the humility to admit that all models are idealizations that depart from reality.
 
 [^statistics]: Unsurprisingly, Box's dictum seems to be most popular in statistics. I'm avoiding that topic in this post because the terrain of theoretical debate is quite different in statistics. One might expect the realist to adopt the view that probabilities must have an objective or mind-independent existence (in order for the theory of probability to be valid), but that is not necessarily the case. The very phrase 'the true model', in reference to statistical models per se, assumes something dubious. If we know one thing about our observations it is usually that they were <em>not</em> generated by any statistical model whatsoever. To ask whether you have used the true statistical model is to commit a category mistake. The most developed realist view of probability holds that probability is part of logic or epistemology, in which case probability 'exists' in the same way that logic exists, but not in the same way that my hand exists. 
 
 
 ### Truth in scientific realism
 
-Scientific realism holds very different understandings of what theory and truth are. I will try to sketch this out before presenting some of Franklin's ideas. Although part of the contention stems from a different understanding of what scientists actually do and have done historically, the difference of viewpoint may also be described as follows.[^harre]
+Scientific realism holds very different understandings of what theory and truth are. I will try to sketch this out before presenting some of Franklin's ideas. Although some of the contention on this issue stems from different understandings of what scientists actually do and have done historically, the difference of viewpoint may also be described as follows.[^harre]
 
 [^harre]: The distinctions I am touching on here are described clearly by Rom Harré in his <em>The Philosophies of Science</em> as the successionist (empiricist) and generative (realist) views. 
 
@@ -50,15 +50,15 @@ The realist viewpoint is not incapable of showing humility. As Harold Jeffreys s
 
 > it is perfectly possible to believe that we are finding out properties of the world without believing that anything we say is necessarily the last word on the matter. (56)
 
-The basic argument of realism, <em>at a minimum</em>, asserts the normative value of holding one's self to a standard of work for which the plausibility or realism of one's assumptions and claims is a critical component of good theory and good research. It is integral to scientific methodology.
+The basic argument of realism, at a minimum, asserts the normative value of holding one's self to a standard of work for which the plausibility or realism of one's assumptions and claims is a critical component of good theory and good research. It is integral to scientific methodology.
 
 Turning again to economic theory, an alternative to the methodology of neoclassical economics can be found in Anwar Shaikh's theory of <em> real competition</em>. It is interesting to see how Shaikh describes his work. As he puts it, orthodox or neoclassical economics 'investigates the workings of a deliberately idealized version of capitalism, from whose vantage point it seeks to characterize the world' (4). Many heterodox (neo-Keynesian) critics of the orthodox theory also start with a theory of perfect competition but hold that our reality is one of many 'imperfections' which are just deviations from the basic theory. His framework differs from both of those:
 
 > The goal of this book is to develop a theoretical structure that is appropriate from the very start to the actual operation of existing developed capitalist countries. Its object of investigation is neither the perfect nor the imperfect but rather the real. (5)
 
-Some of us were under the impression that this was every economist's job description, but in any case it is not obvious how one is to go about developing theory in that way. How does one devise an abstract theory without venturing into a netherworld of ideal-types? 
+This sounds great, but it is not obvious how one is to go about developing theory in that way. How does one devise an abstract theory without venturing into a netherworld of ideal-types? 
 
-This is where I find Franklin's to be relevant to non-mathematicians. Mathematics is quite different from the study of society, and I do not intend to suggest otherwise. So it is all the more interesting that arguments about realism in mathematics should have any important parallels with realist theory in the social sciences. In both mathematics and social science, a key part of the realist argument concerns the question of 'abstraction' or 'theory building' and how to do it well. In part, this is also a question of perspective, of how we are 'looking at' our own theories.
+This is one area where I find Franklin's book to be relevant to non-mathematicians. Mathematics is quite different from the study of society, and I do not intend to suggest otherwise. So it is all the more interesting that arguments about realism in mathematics should have any important parallels with realist theory in the social sciences. In both mathematics and social science, a key part of the realist argument concerns the question of 'abstraction' or 'theory building' and how to do it well. In part, this is also a question of perspective, of how we are 'looking at' and understanding our own theories.
 
 I am no mathematician, but I will do my best to present a passage of Franklin's book that speaks to the question of abstraction or 'theorization' and its relationship to truth and realism. I'll come back to economic theory in the end.
 
