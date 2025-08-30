@@ -74,21 +74,21 @@ No one is seriously entertaining the possibility that these "assumptions" may be
 
 <h3> The economics of biology </h3>
 
-Galbraith and Chen's use of the concept of 'fixed investment' provides a nice entryway to their own way of thinking about economic systems. Or rather, it shows that they have an economic way of to thinking about systems.
+Galbraith and Chen's use of the concept of "fixed investment" provides a nice entryway to their own way of thinking about economic systems. Or rather, it shows that they have an economic way of to thinking about systems.
 
-A simple organism is easier to maintain than one that is large and complex, but the larger organism may be more stable and exhibit a longer life span. Stability and longevity require complex regulatory mechanisms and these use energy; that energy use is a 'fixed cost' of the system. 
+A simple organism is easier to maintain than one that is large and complex, but the larger organism may be more stable and exhibit a longer life span. Stability and longevity require complex regulatory mechanisms and these use energy; that energy use is a "fixed cost" of the system. 
 
 A downside of making large fixed investments (e.g., in a powerful muscular and skeletal system) is that the system is more vulnerable to changes of circumstance. Viruses evolve far more quickly than mammals. Likewise, human beings per se may survive a changing climate but our current global economic systems are another matter. The relative rigidity of global food systems render society dependent on our familiar climate. The economic system, with its many regional production complexes that evolved over decades and centuries, is liable to collapse as the climate changes (a point the authors expand upon somewhat in their concluding chapter).
 
 From these fragments, one can start to piece together Galbraith and Chen's political viewpoint. Many of the social conditions enjoyed by the rich countries of the world require high fixed costs. To have an educated populace capable of filling many technical roles in the production system requires a fixed investment in a public education system. Or on inequality: a high level of inequality is destabilizing. The level of inequality is a basic property of any economic system. One should prefer, rationally, to regulate the level of inequality to maintain systemic stability and to suppress parasitic activity (as Galbraith has written of elsewhere, such as his 2008 book <em>The Predator State</em>).
 
-After dealing with the Arrow-Debreu model, Chapter 1, 'Economics without equilibrium', reviews some prevailing ideas from 'systems theory'. These are among the ideas that mainstream economics is using to account for some of the obvious deficiencies of general equilibrium models. For one, Galbraith and Chen take on the Santa Fe School of economists and scientists who seek to join some tenets from mainstream economics to ideas about physical systems. One of those concepts is that of a complex structure (and fractals), such as the way a large mineral crystal&mdash;often beautiful for their striking patterns and other visual properties&mdash;can emerge from basic chemical structures under certain environmental conditions.
+After dealing with the Arrow-Debreu model, Chapter 1, "Economics without equilibrium," reviews some prevailing ideas from systems theory. These are among the ideas that mainstream economics is using to account for some of the obvious deficiencies of general equilibrium models. For one, Galbraith and Chen take on the Santa Fe School of economists and scientists who seek to join some tenets from mainstream economics to ideas about physical systems. One of those concepts is that of a complex structure (and fractals), such as the way a large mineral crystal&mdash;often beautiful for their striking patterns and other visual properties&mdash;can emerge from basic chemical structures under certain environmental conditions.
 
 The Sante Fe school proceeds as follows:
 
 > There is an underlying observation: complex structures exist, which would not arise under the assumption of a perfectly competitive market. The questions then become, How did they arise? What properties do they exhibit? (Galbraith and Chen, 17-18)
 
-Santa Fe researchers use simple models (statistical models and <em>cellular automata</em>) to show how complex structures could possibly arise 'from free association' (17), as in the mainstream theory of markets. They call the emergence of complex patterns from the interaction of simple elements 'self-organization'. Galbraith and Chen respond:
+Santa Fe researchers use simple models (statistical models and <em>cellular automata</em>) to show how complex structures could possibly arise "from free association" (17), as in the mainstream theory of markets. They call the emergence of complex patterns from the interaction of simple elements "self-organization." Galbraith and Chen respond:
 
 > But living organisms do not grow from the interaction of freely associating, self-organizing atoms, molecules, or cells. Living organisms grow according to plans. They first make an appropriate choice of fixed investment&mdash;they choose materials they can work with, and then they assemble those materials according to blueprints that have been well tested over time. These blueprints are encoded in genes...Maintaining the balance between structures and inputs is the task of living. When it breaks down, life ends. (18)
 
@@ -122,7 +122,7 @@ With their attention trained on energy and resources, entropy serves as their ab
  
 > Since, for survival, all living organisms need to tap into the entropy flow, entropy is a natural measure of value for living systems, including human beings. (64)
 
-A high-quality energy source is one that contains a high concentration of energy. A highly concentrated form energy is a "low-entropy resource," the kind of thing that requires a great deal of effort to produce (whether it be a biological, geological, or human process of production). Such resources are "scarce."
+A high-quality energy source is one that contains a high concentration of energy. A highly concentrated form of energy is a "low-entropy resource," the kind of thing that requires a great deal of effort to produce (whether it be a biological, geological, or human process of production). Such resources are "scarce."
 
 But after all of this consideration for the physics of life processes, what Galbraith and Chen actually present is a theory of market exchange value that hinges on scarcity. The entropy theory of value is really a scarcity theory of value, which is nothing new (as they gladly acknowledge and discuss). It means that sellers in a market can charge more for scarce goods than for goods that are more abundantly available. What they contribute is to codify this idea using the mathematical formula for entropy.
 
