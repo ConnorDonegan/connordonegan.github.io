@@ -149,6 +149,8 @@ As much as I really enjoyed reading <em>Entropy Economics</em> and appreciate th
 
 ### References
 
+Arrow, K. J. & G. Debreu (1954). Existence of an Equilibrium for a Competitive Economy. <em>Econometrica</em> 22(3): 265&mdash;290.
+
 Cockshott, W. P., A. Cottrell, G. J. Michaelson, I. P. Wright, & Y. M. Yakovenko (2009). <em>Classical Econophysics</em>. Routledge.
 
 Farjoun, E. & M. Machover (1983). <em>Laws of Chaos: A Probabilistic Approach to Political Economy</em>. Verso.
