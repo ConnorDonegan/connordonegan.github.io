@@ -158,7 +158,7 @@ So far as I can tell, the theory of real competition is both highly realistic an
 
 Now whether Shaikh has thought through the implications of real competition correctly or not is important but beside the point here. No one will mistake his theory for a consensus viewpoint, but that also is beside the point. Perhaps it a stretch but my point is simply that Shaikh's methodology is an example of a theory from the social sciences that resembles some of the interesting points raised by Franklin (and by others in the realist tradition).
 
-Although a realist philosophy of mathematics could never, I don't think, provide all the required ingredients for a realist philosophy of social science, I still find Franklin's ideas insightful and provocative. Franklin has already written his own book on science and truth, titled <em>What Science Knows: And How It Knows It</em>. I have not yet read it but I look forward it.
+Although a realist philosophy of mathematics could never, I don't think, provide all the required ingredients for a realist philosophy of social science, I still find Franklin's ideas insightful and provocative. Franklin has already written his own book on science and truth, titled <em>What Science Knows: And How It Knows It</em>. I have not yet read it but I look forward to it.
 
 
 ### References
