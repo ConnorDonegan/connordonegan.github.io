@@ -59,9 +59,9 @@ The assumptions were chosen precisely because they were able to provide the desi
 To be fair, Arrow and Debreu present an alternative assumption or "theorem" that Galbraith and Chen do not mention. The second theorem assumes the existence of a kind of labor (or skill) that 1) everyone has and 2) is actually needed by the production system. Their results require the assumption that whenever you lose your job someone else will hire you immediately; they assume that people's skills are not made redundant by changing technology. This assumption (of full employment) is still only one of several.
 --->
 
-Just for fun, here's another assumption required by Arrow and Debreu's model. This one proclaims that there is no scarcity, instead, there is an abundance of everything:
+Just for fun, here's another assumption given by Arrow and Debreu. This one proclaims that there is no scarcity, instead, there is an abundance of everything:
 
-> [Assumption] V asserts that it is possible to arrange the economic system by choice of production and consumption vectors <em>so that an excess supply of all commodities can be achieved</em>. (280, emphasis added)
+> [Assumption] V asserts that it is possible to arrange the economic system by choice of production and consumption vectors <em>so that an excess supply of all commodities can be achieved</em>. (Arrow and Debreu 280, emphasis added)
 
 So not only shall everyone own some of everything,[^alt-theorem] but also there shall never be scarcity. I would like to add that there shall be no hardship suffering either!
 
