@@ -3,15 +3,49 @@ layout: page
 title: About
 permalink: /about/
 ---
+<style>
+span.edu {
+  font-size: smaller;
+}
+</style>
 
-I am a geography, statistics and geospatial information science (GIS) professional currently working as the GIS specialist for the Environment Litigation Group ([ELG](https://www.environmentallitigationgroup.com/)) at Baron and Budd, a leading plaintiff's law firm. I design, develop, manage, and leverage ELG's environmental data infrastructure to investigate water pollution and polluters across the U.S. 
+I am a geography and geographic information systems (GIS) specialist with over a decade of combined professional experience in university research and teaching, GIS, statistical consulting, and data science roles.
 
-I've previously held statistical consulting, data science, and university teaching and research positions. Since 2019, I have published my research in a variety of peer-reviewed journals, spanning the fields of history, statistics, geography, and public health. I have also served as a peer-reviewer for journals of statistics, GIS, and health (such as *Statistics in Medicine*, *Spatial Statistics*, *Transactions in GIS*, *International Journal of GIS*, *Scientific Reports*, and *Nature&mdash;Communications Medicine*).
+I currently work as the GIS specialist for the Environmental Litigation Group ([ELG](https://www.environmentallitigationgroup.com/)) at Baron & Budd, a leading U.S. plaintiff's law firm. I develop, curate, and manage ELG's environmental data infrastructure and use it to investigate water pollution and corporate polluters across the U.S. 
 
-I completed degrees in human geography at University of Minnesota&mdash;Twin Cities (BA) and University of British Columbia&mdash;Vancouver (MA). I was generally focused on the political economy of globalization, labor, and inequality, advised by economic geographers Jamie Peck and Trevor Barnes. My masters research was an archival study of prison labor and repression in post-Reconstruction Florida (the barbaric convict leasing system), which was published in *Florida Historical Quarterly*. 
+My education and interests span social science, computing, and statistics and I have published original research in journals of history, statistics, geography, public health, and open-source software. I have also served as a peer reviewer on an invited/ad-hoc basis for a variety of journals (*Statistics in Medicine*, *Nature&mdash;Communications Medicine*, *Spatial Statistics*, *Transactions in GIS*, *International Journal of GIS*, *Scientific Reports*, etc.).
 
-In 2023 I completed my PhD in Geospatial Information Sciences at The University of Texas at Dallas. My dissertation was about probability theory and research methodology, with case studies contributing to spatial statistics and health geography. Products of that work have been published in *Annals of the American Association of Geographers*, *Geographical Analysis*, and *Oxford Handbook of the Spatial Humanities* (chapter forthcoming). I also developed a pair of open-source statistical software packages for Bayesian modeling, taught *Principles of GIS* to undergraduates, and took part in the spatial statistics research group led by my advisor, Yongwan Chun, and Daniel Griffith.
+I am a big fan of jazz and the guitar, labor unions, reading widely, open-source software, and outdoor excercise (mostly running and biking).
 
-From 2023 to 2025 I was a postdoctoral researcher at University of Texas Southwestern Medical Center (UTSW) where I continued my graduate research on statistical methods for spatial and spatial-temporal data with public health applications, mostly related to cancer prevention research. I was also responsible for geospatial analysis and cartography at UTSW's Simmons Comprehensive Cancer Center.
+<span class="edu">
+<strong>Education</strong>
+</span>
 
-I am a big fan of jazz and I enjoy playing the guitar, politics, reading widely, biking, and running. 
+<span class="edu">
+Postdoctoral Researcher <br>
+School of Public Health & <br>
+Simmons Comprehensive Cancer Center <br>
+University of Texas Southwestern Medical Center <br>
+<em>Spatial statistics, cartography, cancer prevention</em>
+</span>
+
+<span class="edu">
+Doctor of Philosophy <br>
+Geospatial Information Sciences <br>
+The University of Texas at Dallas <br>
+<em>Spatial statistics, probability theory, cancer & health inequalities</em>
+</span>
+
+<span class="edu">
+Master of Arts <br>
+Human Geography <br>
+University of British Columbia <br>
+<em>Political economy, history of the U.S. South</em>
+</span>
+
+<span class="edu">
+Bachelor of Arts <br>
+Human Geography <br>
+University of Minnesota <br>
+<em>Economic geography, urban studies</em>
+</span>
