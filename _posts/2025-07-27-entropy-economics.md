@@ -23,7 +23,7 @@ Much could be said of this exchange. My interest for now is the bind that Walz p
 
 But a number of economists have never accepted the orthodox methods and theories. Some did take the side of labor unions and the left who opposed free trade deals like NAFTA. The argument has always been that corporations pursue these trade deals in order to beat down labor's share of income and to break the unions. 
 
-James Galbraith is among those critical voices in economics, and as a leading heterodox economics he certainly understands the importance of transforming his discipline. That is one reason why his latest book, co-authored with mathematician-economist Jing Chen, is so important. 
+James Galbraith is among those critical voices in economics, and as a leading heterodox economics he certainly understands the importance of transforming his discipline (see his recent [INET commentary](https://www.ineteconomics.org/perspectives/blog/labor-day-2025-the-great-crash-of-the-economists)). That is one reason why his latest book, co-authored with mathematician-economist Jing Chen, is so important. 
 
 <h3> Life out of equilibrium </h3>
 
