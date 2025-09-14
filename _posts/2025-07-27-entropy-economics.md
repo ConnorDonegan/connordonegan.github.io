@@ -45,7 +45,7 @@ Their examples are usually valuable and quite interesting, and the book ultimate
 
 <h3> Economic orthodoxy </h3>
 
-Galbraith and Chen begin their engagement with mainstream economics by discussing a landmark, 1954 paper by Arrow and Debreu. The paper is said to provide a proof of the existence of general equilibrium. It's titled "Existence of an equilibrium for a competitive economy."  Hold your excitement&mdash;by "existence," what the economists mean is that a system of equations can be constructed so as to have a certain kind of formal solution. One just has to be willing to make the right "assumptions."
+Galbraith and Chen begin their engagement with mainstream economics by discussing a landmark, 1954 paper by Arrow and Debreu. The paper is said to provide a proof of the existence of general equilibrium. It's titled "Existence of an equilibrium for a competitive economy."  Hold your excitement&mdash;by "existence," what the economists mean is that a system of equations can be constructed so as to have a certain kind of formal solution (for which supply meets demand and all markets clear, symbolically). One just has to be willing to make the right "assumptions."
 
 The [Arrow-Debreu paper](https://web.stanford.edu/class/msande311/arrow-debreu.pdf) presents the set of assumptions that are needed for an equilibrium solution to exist. Two of their assumptions are presented as key theorems. Their first assumption or "theorem" is that everyone taking part in this economy is supplied with a bit of everything.[^quote_arrow] By everything they mean <em>any and every thing</em> that could be sold: "a positive amount of every commodity" (279).
 
@@ -54,10 +54,6 @@ As Galbraith and Chen write,
 > In effect, the Arrow-Debreu model indicates that equilibrium only occurs in a system in which no one needs to do anything. Production and consumption play no role in the existence of an equilibrium...[it] has nothing to do with market competition or profit maximization. It is present from the beginning. (11)
 
 The assumptions were chosen precisely because they were able to provide the desired result. For the non-economist especially, this can hardly inspire confidence.
-
-<!--- 
-To be fair, Arrow and Debreu present an alternative assumption or "theorem" that Galbraith and Chen do not mention. The second theorem assumes the existence of a kind of labor (or skill) that 1) everyone has and 2) is actually needed by the production system. Their results require the assumption that whenever you lose your job someone else will hire you immediately; they assume that people's skills are not made redundant by changing technology. This assumption (of full employment) is still only one of several.
---->
 
 Just for fun, here's another assumption given by Arrow and Debreu. This one proclaims that there is no scarcity, instead, there is an abundance of everything:
 
@@ -71,6 +67,9 @@ No one is seriously entertaining the possibility that these "assumptions" may be
 
 [^alt-theorem]: Arrow and Debreu present an alternative to the theorem that Galbraith and Chen critique here. The alternative is supposedly more plausible but amounts to the assumption of full employment, which is quite similar to assuming equilibrium. It is surely not a feature of our reality.
 
+<!--- 
+To be fair, Arrow and Debreu present an alternative assumption or "theorem" that Galbraith and Chen do not mention. The second theorem assumes the existence of a kind of labor (or skill) that 1) everyone has and 2) is actually needed by the production system. Their results require the assumption that whenever you lose your job someone else will hire you immediately; they assume that people's skills are not made redundant by changing technology. This assumption (of full employment) is still only one of several.
+--->
 
 <h3> The economics of biology </h3>
 
