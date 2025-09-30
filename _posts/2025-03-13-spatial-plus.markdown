@@ -7,7 +7,7 @@ toc: true
 ---
 
 
-A raft of recent articles in journals of statistics assert that spatial regression models are 'biased'. Some are now referring to this supposed bias as 'spatial confounding'. Red warning flags abound in this literature, and I've written elsewhere why I'm not convinced by these claims. This post walks through some of the relevant concepts for spatial analysis and examines 'spatial+', which is among the more recent proposals for fixing the supposed bias of spatial regression models.
+A raft of recent articles in journals of statistics assert that spatial regression models are 'biased'. Some are now referring to this supposed bias as 'spatial confounding'. Red warning flags abound in this literature, and I've written elsewhere why I'm personally not convinced by these claims. This post walks through some of the relevant concepts for spatial analysis and examines 'spatial+', which is among the more recent proposals for fixing the supposed bias of spatial regression models.
 
 
 **Contents:**
