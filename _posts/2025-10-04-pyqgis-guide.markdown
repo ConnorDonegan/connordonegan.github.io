@@ -14,6 +14,8 @@ I recently read through Gary Sherman's <em>The PyQGIS Programmer's Guide: Extend
 
 This book doesn't follow the 'cookbook' writing style with 'recipes' for obtaining finished products. Instead, Sherman walks through some elementary steps so that the reader has the basic knowledge (and appetite) needed for independent learning.
 
+Sherman is the ideal guide - he is the [founder of QGIS](https://www.xyht.com/spatial-itgis/godfather-of-qgis/) and owner of Locate Press.
+
 Through fourteen chapters (some are quite short, and one is an introduction to Python), Sherman walks readers three different use-cases for PyQGIS:
 
  1. Running scripts: you can use PyQGIS to create convenience functions and procedures that you can run from within a QGIS project. 
