@@ -24,7 +24,7 @@ Through fourteen chapters (some are quite short, and one is an introduction to P
 
 If you're prepared to put in the extra work up front (Sherman's code files will help with this) you can automate a lot of your QGIS workflow and avoid having to manually repeat tasks in QGIS (e.g., opening layers, styling layers, running processes, etc.). In my view at least, PyQGIS is most attractive in the second and third use-cases. 
 
- For those interested, I recommend reading the book. You'll need some QGIS experience under your belt, and you might benefit more if you're already familiar with other applications like [leaflet](https://leafletjs.com/) maps (maybe through [R](https://rstudio.github.io/leaflet/) or [Python](https://python-visualization.github.io/folium/latest/getting_started.html)) or [Shiny](https://shiny.posit.co/) dashboards. 
+ For those interested, I recommend reading the book. You'll need some QGIS experience under your belt, and you might benefit more if you're already familiar with other applications like [leaflet](https://leafletjs.com/) maps (maybe through [R](https://rstudio.github.io/leaflet/) or [Python](https://python-visualization.github.io/folium/latest/getting_started.html)) or [Shiny](https://shiny.posit.co/) dashboards. Best would be some prior experience with PyQt.
 
 I had only minimal experience with PyQGIS prior to reading the book. After reading the book I still have minimal experience - but I think the book was successful on its own terms. I'll share a bit of the material here to provide some sense of what's in the book. Keep in mind that this material is mostly from Chapter 14, after the reader has learned a fair amount about PyQGIS, so don't be too alarmed if you find it intimidating. 
 
@@ -34,7 +34,7 @@ If you speak French, you may like the new [French translation](https://locatepre
 
 If you already have [QGIS](https://qgis.org/) then you should have what you need to get started and follow along if you want to. The QGIS installation includes Python, PyQt, and PyQGIS. I'm working on a Linux system but you may be able to follow along on Windows.
 
-The book was published in 2018, so it uses PyQt5 rather than the latest, PyQt6. Also, I'm going to follow the book in designing the app by writing out the Python code but you might go further and faster with [Qt Designer](https://realpython.com/qt-designer-python/).
+The book was published in 2018, so it uses PyQt5 rather than the latest, PyQt6. The next QGIS release will use PyQt6, so if you decide to learn PyQGIS you may want to start [there](https://www.pythonguis.com/tutorials/pyqt6-creating-your-first-window/). Also, I'm going to follow the book in designing the app by writing out the Python code but you might go further and faster with [Qt Designer](https://realpython.com/qt-designer-python/).
 
 ### A PyQt text editor
 
