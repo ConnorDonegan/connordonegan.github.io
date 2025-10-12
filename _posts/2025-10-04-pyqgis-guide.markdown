@@ -34,7 +34,7 @@ If you speak French, you may like the new [French translation](https://locatepre
 
 If you already have [QGIS](https://qgis.org/) then you should have what you need to get started and follow along if you want to. The QGIS installation includes Python, PyQt, and PyQGIS. I'm working on a Linux system but you may be able to follow along on Windows.
 
-The book was published in 2018, so it uses PyQt5 rather than the latest, PyQt6. The next QGIS release will use PyQt6, so if you decide to learn PyQGIS you may want to start [there](https://www.pythonguis.com/tutorials/pyqt6-creating-your-first-window/). Also, I'm going to follow the book in designing the app by writing out the Python code but you might go further and faster with [Qt Designer](https://realpython.com/qt-designer-python/).
+The book was published in 2018, so it uses PyQt5 rather than the latest, PyQt6. The next QGIS release will use PyQt6, so if you decide to learn PyQGIS you may want to start [there](https://www.pythonguis.com/tutorials/pyqt6-creating-your-first-window/). Also, I'm going to follow the book in designing the app by writing out all the Python code but with practice you might move faster using [Qt Designer](https://realpython.com/qt-designer-python/).
 
 ### A PyQt text editor
 
