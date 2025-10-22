@@ -198,7 +198,7 @@ body {
   list-style: none;
 
   > li {
-    margin-bottom: $spacing-unit;
+    margin-bottom: $spacing-unit * 0.33;
   }
 }
 

@@ -15,7 +15,7 @@ One of the more depressing moments of the 2024 election, for me, was the Walz-Va
 
 [^link]: [https://www.indystar.com/story/news/politics/elections/2024/10/02/full-transcript-vice-presidential-debate/75479146007/](https://www.indystar.com/story/news/politics/elections/2024/10/02/full-transcript-vice-presidential-debate/75479146007/)
 
-If your livelihood, or your entire town, had been devastated by "free trade" deals then you may have heard Vance say just two things: "they lied" and "we're not doing it anymore." Walz's appeal to economic expertise became a self-defeating appeal to the status quo and the dogma of the powers that be.[^reply] 
+If your livelihood, or your entire town, had been devastated by "free trade" deals then you may have heard Vance say just two things: "they lied" and "we're not doing it anymore." Walz's appeal to economic expertise became a self-defeating appeal to the status quo and the dogma of the powers that be.[^reply]
 
 [^reply]: Walz responded that he agrees with Trump's critique of the free trade deals and then charged Trump with creating "the largest trade deficit in history." But no one could possibly confuse his running mate for a labor candidate. His performance in the debate was nothing like the fiery speech I heard him deliver to an audience of union members shortly before the debate. 
 

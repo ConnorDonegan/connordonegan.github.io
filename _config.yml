@@ -20,17 +20,14 @@
 
 title: Connor Donegan
 email: "connor.donegan@gmail.com"
-description: Writing on statistics, GIS, et cetera.
+description: Writing on GIS & geography, statistics, et cetera.
 baseurl: 
-url: "https://connordonegan.github.io"  
+url: "http://connordonegan.github.io"  
 
 # fields that exist in jekyll by default
 author: Connor Donegan
 github_username: ConnorDonegan
 linkedin_username: connor-donegan-8283b427b
-
-# analytics
-google_analytics: G-KZ3W90J8SJ
 
 ## this doesn't seem to worK:
 # show_exerpts: true
@@ -51,6 +48,8 @@ plugins:
   - jekyll-toc
 
 header_pages:
+  - home.markdown
+  - blog.markdown
   - software.markdown
   - articles.markdown
   - about.markdown
